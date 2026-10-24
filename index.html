@@ -1,0 +1,1098 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Batista & Rocha Advogados Associados. Advocacia criminal e empresarial em Brasília, com atuação nacional: penal econômico, contencioso empresarial, órgãos de controle e defesa criminal.">
+<title>Batista &amp; Rocha Advogados Associados · Brasília</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Montserrat:wght@400;500;600&display=swap">
+<!--
+  FOTOS ILUSTRATIVAS — para trocar, substitua os arquivos na pasta fotos/ mantendo os nomes:
+  fotos/escritorio-biblioteca.jpg  (capa da home, 1920x1100, paisagem)
+  fotos/escritorio-reuniao.jpg     (sala de reunião, 1600x1000, paisagem)
+  fotos/escritorio-estudo.jpg      (mesa/estante, 1200x1500, retrato)
+  fotos/equipe-1.jpg / -2 / -3     (Gustavo, Lucas, advogada; 1000x1250, retrato 4:5)
+-->
+<style>
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+[hidden]{display:none!important}
+
+/* Layout: editorial fluido — foto em sangria total na abertura, seções alternando foto e texto, alinhamento à esquerda; azul da marca como única cor, prata nos fios */
+:root{
+  --azul:#162947; --azul-prof:#0e1b30; --azul-medio:#2e4568; --nevoa:#b9c3d1; --gelo:#f5f5f3;
+  --bg:#f5f5f3; --band:#ebecec; --ink:#162947; --body:#2b2f36; --muted:#5e6e85;
+  --line:#d9dadc; --accent:#162947; --pend-bg:#e2e7ee; --dark:#162947; --dark-2:#0e1b30; --on-dark:#f5f5f3; --on-dark-2:#c9d1dc;
+  --f-titulo:"Cormorant Garamond",Garamond,Georgia,serif;
+  --f-texto:Montserrat,"Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1a2c; --band:#14223a; --ink:#f5f5f3; --body:#dde2ea; --muted:#b9c3d1;
+  --line:#2a3f60; --accent:#b9c3d1; --pend-bg:#22355a; --dark:#0b1525; --dark-2:#08101d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1a2c; --band:#14223a; --ink:#f5f5f3; --body:#dde2ea; --muted:#b9c3d1;
+  --line:#2a3f60; --accent:#b9c3d1; --pend-bg:#22355a; --dark:#0b1525; --dark-2:#08101d; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--body);font:400 16px/1.7 var(--f-texto);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:760px){.wrap{padding-left:max(48px,env(safe-area-inset-left,0px));padding-right:max(48px,env(safe-area-inset-right,0px))}}
+a{color:var(--ink)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:var(--f-titulo);font-weight:600;color:var(--ink);text-wrap:balance;margin:0}
+h1{font-size:clamp(2.6rem,6.2vw,5rem);line-height:1.02;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4vw,3.1rem);line-height:1.06}
+h3{font-size:1.55rem;line-height:1.15}
+p{margin:0}
+img{display:block;max-width:100%}
+.rotulo{font:500 11.5px/1.3 var(--f-texto);letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.fio{width:120px;height:2px;background:var(--line);border:0;margin:0}
+.lead{font-size:1.125rem;line-height:1.7;max-width:60ch}
+.prose{max-width:66ch;display:grid;gap:1em}
+.lei{font-size:13px;line-height:1.5;color:var(--muted)}
+.pend{background:var(--pend-bg);border-bottom:1px dashed var(--muted);padding:0 .3em;font-weight:500;color:var(--ink);white-space:nowrap}
+.on-dark .pend{background:rgba(185,195,209,.16);color:#fff;border-color:var(--nevoa)}
+
+/* ---------- movimento ---------- */
+.js [data-reveal]{opacity:.12;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js [data-reveal].in{opacity:1;transform:none}
+.js [data-reveal][data-d="1"]{transition-delay:.08s}.js [data-reveal][data-d="2"]{transition-delay:.16s}.js [data-reveal][data-d="3"]{transition-delay:.24s}
+.foto-wrap{position:relative;overflow:hidden;background:var(--dark)}
+.foto-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.js .foto-wrap[data-reveal] img{transform:scale(1.1)}
+.js .foto-wrap[data-reveal].in img{transform:scale(1)}
+.foto-wrap .cred{position:absolute;left:12px;bottom:10px;font:500 10px/1 var(--f-texto);letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(14,27,48,.55);padding:6px 8px}
+@media (prefers-reduced-motion:reduce){.js [data-reveal],.js .foto-wrap img{opacity:1!important;transform:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* ---------- barra de protótipo + progresso ---------- */
+.proto{background:var(--band);font-size:12.5px;color:var(--muted)}
+.proto .wrap{padding-block:8px;display:flex;gap:6px 14px;flex-wrap:wrap;align-items:center}
+.proto b{color:var(--ink);font-weight:600}
+.progresso{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:2px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:var(--accent);z-index:70}
+
+/* ---------- cabeçalho ---------- */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+.top.rolou{border-bottom-color:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;transition:padding .35s var(--ease)}
+.top.rolou .wrap{padding-block:10px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.marca svg{width:44px;height:44px;flex:none;transition:width .35s var(--ease),height .35s var(--ease)}
+.top.rolou .marca svg{width:36px;height:36px}
+.marca .nm{font:600 1.3rem/1 var(--f-titulo);display:block}
+.marca .sub{font:500 9px/1 var(--f-texto);letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:block;margin-top:5px}
+.nav{display:flex;gap:4px 28px;flex-wrap:wrap;align-items:center}
+.nav a{position:relative;font:500 13.5px/1 var(--f-texto);text-decoration:none;color:var(--body);padding:10px 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:1.5px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav a:hover::after,.nav a[aria-current="page"]::after{transform:scaleX(1)}
+.nav a[aria-current="page"],.nav a:hover{color:var(--ink)}
+.nav .nav-cta{border:1px solid var(--ink);padding:10px 16px;color:var(--ink)}
+.nav .nav-cta::after{display:none}
+.nav .nav-cta:hover{background:var(--ink);color:var(--bg)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);font:500 13px var(--f-texto);padding:9px 14px;cursor:pointer}
+@media (max-width:960px){
+  .menu-btn{display:block}
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;
+       padding:8px max(16px,env(safe-area-inset-right,0px)) 20px max(16px,env(safe-area-inset-left,0px))}
+  .nav.open{display:flex}
+  .nav a{padding:12px 0;font-size:15px}
+}
+
+/* ---------- abertura (home) ---------- */
+.hero{position:relative;min-height:min(86vh,820px);display:flex;align-items:flex-end;overflow:hidden;background:var(--dark-2);color:var(--on-dark)}
+.hero-img{position:absolute;inset:-8% 0 0 0;height:116%;will-change:transform}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,27,48,.94) 0%,rgba(14,27,48,.78) 45%,rgba(14,27,48,.35) 100%),linear-gradient(0deg,rgba(14,27,48,.85) 0%,rgba(14,27,48,0) 45%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-block:120px 72px;display:grid;gap:26px}
+.hero h1{color:var(--on-dark);max-width:15ch}
+.hero .rotulo{color:var(--nevoa)}
+.hero .lead{color:var(--on-dark-2)}
+.hero .fio{background:var(--azul-medio)}
+.hero .agua{position:absolute;z-index:1;right:-6%;bottom:-10%;width:min(560px,70vw);height:auto;color:#fff;opacity:.07;pointer-events:none}
+.hero .cred{position:absolute;z-index:2;right:max(16px,env(safe-area-inset-right,0px));bottom:16px;font:500 10px/1 var(--f-texto);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.linha{display:block;overflow:hidden}
+.linha > span{display:block}
+.js .hero .linha > span{transform:translateY(40%);opacity:.2;transition:transform 1.1s var(--ease),opacity 1.1s var(--ease)}
+.js .hero.pronto .linha > span{transform:none;opacity:1}
+.js .hero.pronto .linha:nth-child(2) > span{transition-delay:.12s}
+.js .hero.pronto .linha:nth-child(3) > span{transition-delay:.24s}
+.portas{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.porta{display:inline-flex;align-items:center;gap:14px;padding:16px 22px;border:1px solid rgba(185,195,209,.45);color:var(--on-dark);text-decoration:none;font:500 14px/1.2 var(--f-texto);transition:background .3s,border-color .3s}
+.porta .seta{display:inline-block;transition:transform .35s var(--ease);color:var(--nevoa)}
+.porta:hover{background:rgba(245,245,243,.08);border-color:var(--nevoa)}
+.porta:hover .seta{transform:translateX(5px)}
+.porta.cheia{background:var(--gelo);color:var(--azul);border-color:var(--gelo)}
+.porta.cheia .seta{color:var(--azul)}
+.porta.cheia:hover{background:#fff}
+
+/* ---------- seções ---------- */
+.sec{padding-block:clamp(72px,10vw,128px)}
+.sec-head{display:grid;gap:16px;margin-bottom:clamp(40px,5vw,64px);max-width:760px}
+.band{background:var(--band)}
+
+/* faixa de manifesto */
+.manifesto{font:500 clamp(1.6rem,3.2vw,2.5rem)/1.25 var(--f-titulo);font-style:italic;color:var(--ink);max-width:26ch}
+
+/* áreas: explorador interativo */
+.explorador{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,5vw,80px);align-items:start}
+@media (max-width:900px){.explorador{grid-template-columns:minmax(0,1fr)}}
+.ex-lista{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.ex-btn{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--line);color:var(--muted);transition:color .3s}
+.ex-btn .n{font:500 12px var(--f-texto);letter-spacing:.2em}
+.ex-btn .t{font:600 clamp(1.5rem,2.6vw,2.1rem)/1.1 var(--f-titulo);transition:transform .45s var(--ease)}
+.ex-btn .s{font-size:18px;transition:transform .35s var(--ease),opacity .3s;opacity:0}
+.ex-btn:hover,.ex-btn[aria-selected="true"]{color:var(--ink)}
+.ex-btn[aria-selected="true"] .t{transform:translateX(10px)}
+.ex-btn[aria-selected="true"] .s,.ex-btn:hover .s{opacity:1}
+.ex-btn:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.ex-paineis{position:sticky;top:110px}
+.ex-painel{display:grid;gap:18px}
+.ex-painel[hidden]{display:none!important}
+.js .ex-painel:not([hidden]){animation:sobe .6s var(--ease)}
+@keyframes sobe{from{opacity:.2;transform:translateY(14px)}to{opacity:1;transform:none}}
+.ex-painel .foto-wrap{aspect-ratio:16/10}
+.ex-painel ul{margin:0;padding-left:1.1em;display:grid;gap:6px}
+.ex-painel ul li::marker{color:var(--muted)}
+.ex-painel .quem{font-size:13.5px;color:var(--muted)}
+.link-seta{display:inline-flex;align-items:center;gap:10px;font:500 14px var(--f-texto);color:var(--ink);text-decoration:none;padding-bottom:4px;background:linear-gradient(var(--ink),var(--ink)) 0 100%/100% 1px no-repeat;transition:background-size .35s var(--ease)}
+.link-seta .seta{transition:transform .35s var(--ease)}
+.link-seta:hover .seta{transform:translateX(5px)}
+@media (max-width:900px){.ex-paineis{position:static}}
+
+/* split foto + texto */
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);align-items:center}
+.split.inv .split-foto{order:2}
+@media (max-width:860px){.split{grid-template-columns:minmax(0,1fr)}.split.inv .split-foto{order:0}}
+.split-foto{aspect-ratio:4/5;max-width:100%}
+.split-foto.paisagem{aspect-ratio:3/2}
+.split-texto{display:grid;gap:22px}
+
+/* esferas interativas */
+.esferas-ui{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:start}
+@media (max-width:860px){.esferas-ui{grid-template-columns:minmax(0,1fr)}}
+.sit-lista{display:grid;gap:8px}
+.sit{all:unset;box-sizing:border-box;cursor:pointer;padding:18px 20px;border:1px solid var(--line);font:600 1.2rem/1.25 var(--f-titulo);color:var(--ink);transition:background .3s,border-color .3s,color .3s;display:flex;justify-content:space-between;gap:16px}
+.sit:hover{border-color:var(--ink)}
+.sit[aria-selected="true"]{background:var(--dark);border-color:var(--dark);color:var(--on-dark)}
+.sit:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sit .seta{font-family:var(--f-texto);font-size:14px;opacity:.6}
+.esf-painel{display:grid;gap:22px;padding-top:6px}
+.esf-grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.esf{padding:18px 16px;border:1px solid var(--line);display:grid;gap:8px;transition:background .45s var(--ease),border-color .45s,color .45s;color:var(--muted)}
+.esf b{font:600 1.15rem/1.1 var(--f-titulo);color:inherit}
+.esf small{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
+.esf.ativa{background:var(--band);border-color:var(--ink);color:var(--ink)}
+.esf-txt{min-height:5.2em}
+
+/* equipe */
+.equipe{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(28px,4vw,48px)}
+.pessoa{display:grid;gap:10px;align-content:start}
+.pessoa .foto-wrap{aspect-ratio:4/5;margin-bottom:10px}
+.pessoa .foto-wrap img{transition:transform 1.4s var(--ease),filter .6s}
+.pessoa:hover .foto-wrap img{transform:scale(1.04)}
+.pessoa .oab{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.pessoa .papel{font:500 11px/1.3 var(--f-texto);letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+
+/* artigos */
+.artigos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,48px)}
+.artigo{display:grid;gap:12px;align-content:start;padding-top:22px;border-top:1px solid var(--line);position:relative}
+.artigo::before{content:"";position:absolute;top:-1px;left:0;width:100%;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.artigo:hover::before{transform:scaleX(1)}
+.artigo h3{font-size:1.45rem}
+.artigo .meta{font-size:12.5px;color:var(--muted)}
+.tag{display:inline-block;font:500 10px/1 var(--f-texto);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border:1px dashed var(--muted);padding:5px 7px;justify-self:start}
+
+/* perguntas */
+.faq{border-top:1px solid var(--line);max-width:880px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:24px;align-items:center;padding:24px 0;font:600 clamp(1.2rem,2vw,1.45rem)/1.25 var(--f-titulo);color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq .mais{flex:none;width:18px;height:18px;position:relative}
+.faq .mais::before,.faq .mais::after{content:"";position:absolute;left:0;top:50%;width:100%;height:1.5px;background:var(--ink);transition:transform .4s var(--ease)}
+.faq .mais::after{transform:rotate(90deg)}
+.faq details[open] .mais::after{transform:rotate(0)}
+.faq .resp{padding:0 0 26px;display:grid;gap:10px;max-width:68ch}
+.js .faq details[open] .resp{animation:sobe .5s var(--ease)}
+
+/* faixa escura */
+.escura{background:var(--dark);color:var(--on-dark-2)}
+.escura h2,.escura h3{color:var(--on-dark)}
+.escura .rotulo{color:var(--nevoa)}
+.escura .link-seta{color:var(--on-dark);background-image:linear-gradient(var(--on-dark),var(--on-dark))}
+
+/* ---------- páginas internas ---------- */
+.pg-hero{position:relative;overflow:hidden;background:var(--dark-2);color:var(--on-dark)}
+.pg-hero .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
+.pg-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,27,48,.95),rgba(14,27,48,.7))}
+.pg-hero .wrap{position:relative;z-index:1;padding-block:clamp(64px,9vw,112px) clamp(48px,6vw,72px);display:grid;gap:20px}
+.pg-hero h1{color:var(--on-dark);font-size:clamp(2.4rem,5vw,4rem);max-width:20ch}
+.pg-hero .lead{color:var(--on-dark-2)}
+.pg-hero .fio{background:var(--azul-medio)}
+.trilha{font-size:12.5px;color:var(--nevoa);letter-spacing:.04em}
+.trilha a{color:var(--nevoa);text-decoration:none}
+.trilha a:hover{text-decoration:underline}
+.duas{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:clamp(40px,6vw,88px);padding-block:clamp(56px,7vw,96px)}
+@media (max-width:960px){.duas{grid-template-columns:minmax(0,1fr)}}
+.bloco{display:grid;gap:18px;padding-bottom:48px;margin-bottom:48px;border-bottom:1px solid var(--line)}
+.bloco:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.lista{list-style:none;margin:0;padding:0}
+.lista li{padding:18px 0;border-top:1px solid var(--line);display:grid;gap:4px;transition:padding-left .4s var(--ease)}
+.lista li:last-child{border-bottom:1px solid var(--line)}
+.lista li:hover{padding-left:10px}
+.lista strong{color:var(--ink);font-weight:600}
+.marcadores{margin:0;padding-left:1.1em;display:grid;gap:10px}
+.marcadores li::marker{color:var(--muted)}
+.ponto{background:var(--band);padding:clamp(24px,4vw,40px);display:grid;gap:14px;border-left:2px solid var(--ink)}
+.ponto h3{font-size:1.5rem}
+.lado{display:grid;gap:32px;align-content:start}
+@media (min-width:961px){.lado{position:sticky;top:110px;align-self:start}}
+.lado-bloco{display:grid;gap:10px;padding-top:16px;border-top:2px solid var(--ink)}
+.lado-bloco a{font-size:14px}
+.lado-bloco p{font-size:14px}
+.atend{background:var(--dark);color:var(--on-dark-2);padding:28px;display:grid;gap:12px}
+.atend h3{color:var(--on-dark);font-size:1.5rem}
+.atend .rotulo{color:var(--nevoa)}
+.atend p{font-size:14.5px}
+
+/* linha do tempo (sequência real) */
+.tempo{list-style:none;margin:0;padding:0;counter-reset:t;position:relative}
+.tempo li{counter-increment:t;display:grid;grid-template-columns:64px minmax(0,1fr);gap:4px 22px;padding:26px 0;border-top:1px solid var(--line)}
+.tempo li::before{content:counter(t);font:600 2.8rem/1 var(--f-titulo);color:var(--accent);grid-row:span 4}
+.tempo h3{font-size:1.4rem}
+.tempo .quando{font:500 11px/1.3 var(--f-texto);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+
+/* contato */
+.dados{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:0 40px}
+.dado{padding:22px 0;border-top:1px solid var(--line);display:grid;gap:6px;align-content:start}
+.dado .v{font:600 1.3rem/1.3 var(--f-titulo);color:var(--ink);word-break:break-word}
+.copiar{justify-self:start;background:none;border:1px solid var(--line);color:var(--ink);font:500 12px var(--f-texto);padding:8px 12px;cursor:pointer;transition:border-color .3s}
+.copiar:hover{border-color:var(--ink)}
+
+/* rodapé */
+.rodape{background:var(--dark-2);color:var(--on-dark-2)}
+.rodape .wrap{padding-block:72px 104px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:40px}
+.rodape svg.logo{width:240px;max-width:100%;height:auto;color:#fff}
+.rodape .rotulo{color:var(--nevoa);margin-bottom:14px;display:block}
+.rodape a{color:var(--on-dark-2);text-decoration:none;font-size:14px;transition:color .2s}
+.rodape a:hover{color:#fff}
+.rodape ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.rodape p{font-size:13.5px;line-height:1.7}
+.rodape .legal{grid-column:1/-1;border-top:1px solid var(--azul-medio);padding-top:24px;font-size:12.5px;color:var(--nevoa);display:flex;flex-wrap:wrap;gap:8px 24px}
+
+/* WhatsApp */
+.wpp{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;
+  display:inline-flex;align-items:center;gap:10px;background:var(--azul);color:#f5f5f3;text-decoration:none;font:500 14px/1 var(--f-texto);padding:14px 18px;
+  box-shadow:0 6px 24px rgba(14,27,48,.28);border:1px solid var(--azul-medio);transition:transform .35s var(--ease),background .3s}
+.wpp svg{width:18px;height:18px}
+.wpp:hover{background:var(--azul-prof);transform:translateY(-2px)}
+
+.js [data-page]:not([hidden]){animation:pagina .55s var(--ease)}
+@keyframes pagina{from{opacity:.3}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.js [data-page]:not([hidden]),.js .ex-painel:not([hidden]),.js .faq details[open] .resp{animation:none}.js .hero .linha>span{transform:none!important;opacity:1!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="mono" viewBox="252 25 552 559"><path fill="currentColor" fill-rule="evenodd" d="M736.39,566.89C740.45,566.41 744.52,565.80 746.50,565.38C751.92,564.21 753.20,563.91 755.06,563.34C756.20,562.99 757.67,562.55 758.34,562.36C759.01,562.17 759.71,561.89 759.90,561.73C760.08,561.58 760.60,561.36 761.06,561.25C761.51,561.14 762.83,560.63 764.00,560.13C765.17,559.62 766.57,559.05 767.11,558.85C769.55,557.95 778.62,553.18 782.64,550.67C783.34,550.23 784.29,549.65 784.74,549.38C785.20,549.10 785.95,548.55 786.41,548.16C787.38,547.34 787.51,546.39 786.82,545.23C786.28,544.32 785.54,544.29 784.30,545.12C783.80,545.47 783.31,545.75 783.21,545.75C783.12,545.75 781.88,546.37 780.46,547.14C777.30,548.83 771.74,551.35 769.38,552.16C763.50,554.18 760.31,555.01 755.12,555.86C745.20,557.49 732.40,557.28 723.75,555.35C720.51,554.62 713.36,552.36 712.25,551.71C712.04,551.59 711.48,551.32 711.00,551.12C709.91,550.66 709.13,550.25 704.75,547.84C703.31,547.05 701.56,546.00 700.88,545.51C700.19,545.02 698.89,544.18 698.00,543.64C696.40,542.68 696.04,542.42 693.72,540.55C693.09,540.04 691.75,539.01 690.75,538.25C688.63,536.65 681.13,529.93 679.50,528.17C678.88,527.50 677.81,526.38 677.12,525.67C676.01,524.53 673.76,522.07 669.98,517.89C668.43,516.17 666.09,513.36 664.88,511.75C664.33,511.03 663.31,509.74 662.61,508.90C661.50,507.56 660.28,505.95 658.30,503.18C657.98,502.74 657.51,502.15 657.25,501.88C657.00,501.60 656.37,500.76 655.85,500.00C655.34,499.24 654.48,498.01 653.95,497.25C653.42,496.49 652.37,494.98 651.61,493.88C650.85,492.77 649.84,491.37 649.37,490.75C648.89,490.13 648.31,489.34 648.08,489.00C647.85,488.66 647.46,488.15 647.21,487.88C646.20,486.75 645.29,485.57 644.69,484.62C644.35,484.07 643.55,482.95 642.92,482.12C642.29,481.30 641.49,480.23 641.13,479.75C640.78,479.27 639.56,477.69 638.43,476.25C636.14,473.33 635.28,472.23 634.00,470.53C633.52,469.89 632.88,469.09 632.57,468.75C632.26,468.41 631.33,467.28 630.48,466.25C629.64,465.22 628.74,464.15 628.49,463.88C628.23,463.60 627.45,462.70 626.75,461.88C624.36,459.05 623.87,458.50 622.12,456.68C621.16,455.67 619.58,454.01 618.61,452.99C615.97,450.21 609.56,444.17 608.86,443.81C608.53,443.63 608.25,443.39 608.25,443.27C608.25,442.93 603.10,439.17 600.80,437.84C598.95,436.76 594.00,434.25 593.07,433.91C589.05,432.46 587.10,431.70 586.91,431.51C586.51,431.11 587.77,430.71 590.21,430.46C594.25,430.05 599.91,428.98 604.00,427.85C608.90,426.50 611.23,425.63 616.39,423.22C616.95,422.96 617.49,422.75 617.58,422.75C617.68,422.75 618.83,422.13 620.14,421.38C621.45,420.62 622.61,420.00 622.71,420.00C622.82,420.00 623.35,419.67 623.89,419.26C624.43,418.85 624.96,418.51 625.06,418.51C625.16,418.50 626.23,417.80 627.43,416.95C636.68,410.40 644.91,400.10 648.25,390.88C648.50,390.19 649.00,388.84 649.36,387.88C650.28,385.42 650.79,383.16 651.51,378.30C652.76,369.83 651.61,357.91 648.84,350.67C648.38,349.45 648.00,348.33 648.00,348.17C648.00,348.01 647.66,347.20 647.25,346.38C646.84,345.55 646.50,344.75 646.50,344.59C646.50,344.44 646.32,344.16 646.10,343.98C645.88,343.80 645.60,343.40 645.49,343.09C645.21,342.35 642.70,338.40 641.62,337.00C641.14,336.38 640.48,335.47 640.15,334.98C639.34,333.78 634.00,328.47 631.85,326.73C630.90,325.96 629.34,324.81 628.38,324.18C627.41,323.54 626.33,322.79 625.96,322.51C625.32,322.02 617.85,318.18 616.36,317.58C608.49,314.40 604.62,313.33 595.00,311.65C590.07,310.79 583.03,310.00 580.27,310.00C578.31,310.00 577.93,309.93 577.48,309.48C577.15,309.15 577.02,308.81 577.13,308.54C577.37,307.95 577.72,304.58 578.05,299.59C578.29,295.88 578.27,294.76 577.90,291.34C577.66,289.16 577.41,286.76 577.35,286.00C577.28,285.24 577.12,284.23 576.98,283.75C576.84,283.27 576.52,281.86 576.26,280.62C575.64,277.66 573.46,271.54 572.48,270.00C572.34,269.79 571.94,269.01 571.58,268.25C571.22,267.49 570.66,266.56 570.33,266.17C570.01,265.78 569.68,265.19 569.60,264.87C569.52,264.54 569.18,264.10 568.85,263.88C568.52,263.67 568.25,263.34 568.25,263.15C568.25,262.97 567.83,262.29 567.31,261.64C563.75,257.14 560.59,253.86 557.20,251.18C556.20,250.38 554.89,249.34 554.29,248.86C553.69,248.39 553.09,248.00 552.95,248.00C552.81,248.00 552.34,247.71 551.91,247.35C549.57,245.40 542.30,241.74 537.00,239.84C531.53,237.88 522.55,235.51 518.25,234.88C514.56,234.34 512.48,233.89 512.46,233.62C512.43,233.34 512.71,233.18 514.82,232.38C515.75,232.02 517.03,231.45 517.67,231.11C518.30,230.78 518.96,230.50 519.12,230.50C519.53,230.50 527.02,226.43 529.00,225.13C529.89,224.55 531.36,223.63 532.25,223.10C533.14,222.57 534.18,221.91 534.55,221.63C534.91,221.35 535.62,220.84 536.12,220.50C537.20,219.75 540.15,217.40 540.94,216.65C541.24,216.36 541.86,215.82 542.31,215.44C544.83,213.33 548.16,209.96 550.78,206.88C554.60,202.37 555.02,201.84 555.62,200.85C555.90,200.40 556.59,199.37 557.15,198.57C558.34,196.88 560.00,193.83 560.00,193.33C560.00,193.14 560.16,192.92 560.35,192.85C560.84,192.66 563.50,187.24 564.75,183.88C565.06,183.05 565.52,181.87 565.78,181.25C566.51,179.52 568.72,171.79 569.29,169.00C569.85,166.28 570.52,161.56 570.89,157.75C571.35,153.04 571.41,141.60 571.00,137.30C570.66,133.74 569.87,128.55 569.53,127.67C569.37,127.28 569.25,126.60 569.25,126.15C569.25,125.70 569.04,124.72 568.79,123.98C568.53,123.23 568.24,122.17 568.14,121.62C567.98,120.76 567.18,118.23 565.49,113.35C565.25,112.65 564.94,111.86 564.80,111.60C564.66,111.34 564.17,110.22 563.72,109.12C563.27,108.03 562.81,107.01 562.71,106.87C562.61,106.72 561.92,105.43 561.17,103.99C560.42,102.55 559.43,100.80 558.96,100.11C558.50,99.41 557.84,98.36 557.50,97.78C556.90,96.76 556.38,96.03 554.77,93.88C554.35,93.33 553.19,91.75 552.17,90.38C550.59,88.22 547.48,84.61 544.53,81.50C544.08,81.02 543.63,80.54 543.54,80.43C541.74,78.28 532.50,70.55 528.12,67.51C525.03,65.36 523.98,64.67 523.00,64.11C522.38,63.76 521.46,63.22 520.95,62.92C518.55,61.50 513.25,58.57 512.25,58.10C510.24,57.17 507.15,55.70 506.25,55.25C505.77,55.01 505.07,54.74 504.69,54.65C504.31,54.56 504.00,54.39 504.00,54.28C504.00,54.04 503.85,53.97 499.62,52.50C497.98,51.92 496.29,51.31 495.88,51.13C493.67,50.19 488.62,48.63 483.00,47.15C482.11,46.91 481.04,46.60 480.62,46.46C480.21,46.32 479.37,46.10 478.75,45.98C478.13,45.86 476.27,45.47 474.62,45.12C467.74,43.65 460.10,42.49 453.12,41.86C447.13,41.32 432.96,41.10 427.51,41.47C414.42,42.36 411.45,42.64 404.50,43.64C399.12,44.41 398.31,44.53 395.62,45.02C392.88,45.52 392.45,45.61 389.62,46.35C386.57,47.15 383.84,47.79 382.53,48.00C381.79,48.12 380.89,48.33 380.53,48.46C380.17,48.59 378.64,49.06 377.12,49.50C375.61,49.94 373.19,50.67 371.75,51.13C370.31,51.58 368.90,52.01 368.62,52.08C368.35,52.16 366.83,52.69 365.25,53.27C363.67,53.85 361.83,54.52 361.17,54.75C360.51,54.99 359.84,55.31 359.68,55.47C359.53,55.62 359.31,55.75 359.20,55.75C359.09,55.75 357.79,56.26 356.31,56.89C350.40,59.40 342.05,63.59 339.12,65.51C338.30,66.05 337.28,66.65 336.86,66.86C336.43,67.06 335.94,67.40 335.76,67.61C335.58,67.82 335.32,68.00 335.18,68.00C334.85,68.00 331.06,70.40 330.25,71.13C329.91,71.43 329.33,71.84 328.96,72.03C328.28,72.38 323.17,76.19 321.38,77.68C320.82,78.13 320.09,78.73 319.75,79.00C316.35,81.69 309.17,88.50 304.88,93.12C300.80,97.50 294.10,106.38 291.25,111.15C289.03,114.88 287.61,117.21 287.22,117.79C286.98,118.15 286.70,118.74 286.61,119.09C286.52,119.44 286.31,119.85 286.13,120.00C285.95,120.14 284.83,122.26 283.64,124.69C280.71,130.66 280.39,131.35 279.61,133.38C279.24,134.34 278.79,135.46 278.60,135.88C278.41,136.29 277.75,138.20 277.12,140.12C276.49,142.05 275.88,143.85 275.76,144.12C275.46,144.80 274.29,149.17 274.11,150.25C274.03,150.73 273.81,151.52 273.63,152.00C272.87,153.99 270.95,164.04 270.25,169.68C270.13,170.67 269.95,171.87 269.86,172.34C269.78,172.82 269.50,175.89 269.26,179.17C268.33,191.65 268.89,206.37 270.61,214.68C270.95,216.30 271.45,218.75 271.73,220.12C272.55,224.11 273.02,225.93 274.07,229.12C274.61,230.78 275.21,232.74 275.40,233.50C275.75,234.88 276.89,238.13 277.76,240.25C278.49,242.03 281.02,247.73 281.40,248.46C281.59,248.83 281.75,249.20 281.75,249.30C281.75,249.40 282.32,250.52 283.03,251.80C283.73,253.08 284.84,255.14 285.49,256.38C288.46,261.99 289.55,263.82 290.37,264.49C290.58,264.67 290.75,264.92 290.75,265.05C290.75,265.37 294.57,271.23 295.19,271.88C295.46,272.15 295.82,272.66 296.00,273.00C296.19,273.34 296.96,274.37 297.73,275.29C298.50,276.20 299.86,277.86 300.75,278.98C303.14,281.97 305.96,285.30 306.58,285.88C306.88,286.16 308.40,287.72 309.97,289.35C312.60,292.11 313.52,292.97 316.09,295.08C316.62,295.52 317.53,296.32 318.11,296.88C320.02,298.69 322.11,300.47 323.50,301.47C324.26,302.01 325.21,302.73 325.62,303.07C326.04,303.40 326.66,303.82 327.00,303.99C327.34,304.17 327.85,304.53 328.12,304.79C329.19,305.81 336.66,310.75 337.14,310.75C337.25,310.75 337.51,310.91 337.73,311.10C338.82,312.07 347.80,316.84 351.94,318.64C352.38,318.84 353.12,319.16 353.56,319.36C355.38,320.16 357.68,321.07 358.62,321.36C359.18,321.52 359.91,321.78 360.25,321.92C360.59,322.07 362.28,322.61 364.00,323.13C365.72,323.65 367.57,324.22 368.12,324.39C368.99,324.67 372.33,325.46 376.00,326.25C378.05,326.70 381.55,327.25 382.32,327.25C382.73,327.25 383.47,327.36 383.97,327.49C384.47,327.62 385.74,327.80 386.79,327.89C387.85,327.97 388.90,328.18 389.14,328.36C389.59,328.69 389.31,328.83 384.91,330.51C383.08,331.21 378.96,333.62 376.80,335.24C373.55,337.70 368.53,342.97 367.28,345.25C367.06,345.65 366.28,346.98 365.56,348.21C364.84,349.43 364.25,350.57 364.25,350.73C364.25,350.89 364.07,351.37 363.86,351.79C363.44,352.60 362.70,355.21 362.04,358.25C361.73,359.67 361.64,361.34 361.66,365.12C361.69,369.52 361.77,370.48 362.33,373.00C363.41,377.81 365.25,383.25 366.15,384.27C366.34,384.49 366.50,384.82 366.50,385.01C366.50,385.19 366.77,385.75 367.09,386.24C367.41,386.73 368.40,388.47 369.28,390.12C370.16,391.77 371.18,393.47 371.56,393.90C372.81,395.34 372.63,395.58 368.94,397.41C365.58,399.07 363.19,400.40 359.53,402.62C359.07,402.90 357.58,404.02 356.21,405.12C354.84,406.23 353.41,407.35 353.05,407.63C352.68,407.91 351.31,409.25 350.00,410.61C348.69,411.97 347.34,413.37 347.00,413.73C346.37,414.38 345.34,415.67 344.33,417.06C344.02,417.48 343.47,418.20 343.09,418.65C342.16,419.76 339.74,423.72 338.67,425.88C337.34,428.56 336.50,430.40 336.49,430.65C336.49,430.77 336.27,431.32 336.00,431.88C335.73,432.43 335.51,433.05 335.51,433.26C335.50,433.48 335.40,433.76 335.28,433.89C334.66,434.56 333.07,440.73 332.32,445.38C331.81,448.56 331.62,457.56 331.98,461.83C332.26,465.14 333.27,470.51 333.89,471.95C334.09,472.40 334.25,472.88 334.25,473.01C334.25,473.45 336.50,479.07 337.35,480.75C338.44,482.91 339.88,485.39 340.50,486.18C340.77,486.53 341.00,486.93 341.00,487.06C341.00,487.33 342.03,488.68 343.03,489.71C343.38,490.08 343.86,490.74 344.09,491.18C344.62,492.21 351.19,498.85 353.09,500.27C356.11,502.53 357.90,503.75 358.81,504.16C359.33,504.39 359.75,504.67 359.75,504.78C359.75,504.98 360.17,505.21 364.75,507.49C365.92,508.07 367.29,508.76 367.80,509.02C368.31,509.28 368.90,509.50 369.12,509.50C369.34,509.50 369.86,509.68 370.28,509.89C370.69,510.10 372.06,510.60 373.33,511.00C374.59,511.39 375.96,511.83 376.38,511.97C377.80,512.43 381.68,513.25 382.49,513.25C382.93,513.25 383.60,513.41 383.96,513.60C385.21,514.26 392.53,515.05 398.62,515.19C403.45,515.29 405.20,515.23 409.50,514.76C412.32,514.46 415.19,514.06 415.88,513.88C416.56,513.69 417.63,513.47 418.25,513.38C421.14,512.94 427.71,510.91 431.12,509.40C434.09,508.08 435.33,507.36 440.77,503.75C443.28,502.09 445.05,500.77 446.95,499.15C449.70,496.80 457.04,489.55 458.74,487.50C461.03,484.75 461.17,484.72 463.35,486.51C467.27,489.73 468.21,490.47 469.30,491.27C470.42,492.08 471.95,493.28 475.88,496.38C476.84,497.14 478.34,498.30 479.21,498.95C480.08,499.59 481.28,500.52 481.87,501.00C482.47,501.48 483.53,502.32 484.24,502.88C484.94,503.43 486.22,504.44 487.07,505.13C487.93,505.82 489.30,506.88 490.12,507.50C490.95,508.11 492.06,508.99 492.59,509.45C493.12,509.92 493.96,510.47 494.47,510.68C494.97,510.89 495.66,511.25 496.00,511.48C497.03,512.17 499.81,513.19 501.52,513.51C502.40,513.68 503.46,513.93 503.88,514.07C504.35,514.24 510.46,514.37 520.56,514.44C535.18,514.54 536.51,514.52 536.65,514.14C536.85,513.63 536.23,513.15 534.88,512.75C533.35,512.30 531.50,511.46 531.50,511.23C531.50,510.58 532.96,510.50 544.24,510.50C554.88,510.50 556.03,510.46 556.17,510.09C556.34,509.66 556.27,509.60 553.91,508.31C549.71,506.01 546.57,501.36 545.02,495.12C544.62,493.48 544.16,491.03 544.02,489.70C543.84,488.13 543.75,477.45 543.75,459.67C543.75,433.71 543.78,432.05 544.19,431.68C544.57,431.34 546.10,431.29 557.00,431.27C566.28,431.26 570.16,431.35 572.50,431.62C577.38,432.18 579.18,432.46 580.56,432.87C581.27,433.08 582.10,433.25 582.42,433.25C582.74,433.25 583.42,433.48 583.93,433.75C584.45,434.02 584.98,434.25 585.12,434.25C585.48,434.25 588.68,435.58 589.87,436.21C590.42,436.51 590.97,436.75 591.10,436.75C591.22,436.75 591.70,437.03 592.15,437.38C592.60,437.72 593.07,438.00 593.20,438.00C593.32,438.00 593.87,438.33 594.42,438.72C594.97,439.12 595.77,439.63 596.20,439.85C597.12,440.32 603.04,445.41 605.89,448.17C608.21,450.42 613.28,456.09 614.46,457.75C614.90,458.37 615.65,459.38 616.13,460.00C617.43,461.69 619.05,463.94 619.75,465.02C620.09,465.56 620.99,466.96 621.75,468.15C622.51,469.34 623.41,470.74 623.75,471.27C624.09,471.80 624.93,473.17 625.60,474.31C626.27,475.44 627.15,476.91 627.54,477.57C627.93,478.22 628.25,478.82 628.25,478.89C628.25,479.00 633.30,488.14 634.39,490.00C634.59,490.34 635.27,491.69 635.89,493.00C636.52,494.31 637.13,495.54 637.26,495.75C637.39,495.96 637.62,496.40 637.76,496.73C638.38,498.18 640.70,502.70 644.94,510.75C645.27,511.37 645.84,512.39 646.20,513.02C646.57,513.65 647.36,515.00 647.95,516.02C648.54,517.04 649.33,518.35 649.70,518.94C653.77,525.35 655.35,527.78 655.65,528.02C655.84,528.18 656.00,528.45 656.00,528.62C656.00,528.80 656.59,529.67 657.31,530.56C658.03,531.45 659.08,532.83 659.62,533.62C660.57,534.98 661.70,536.41 663.20,538.16C663.57,538.59 664.27,539.42 664.75,540.01C666.48,542.12 667.67,543.41 669.63,545.28C670.73,546.32 672.26,547.78 673.04,548.53C674.80,550.22 676.90,552.00 677.12,552.00C677.22,552.00 678.04,552.65 678.96,553.45C680.80,555.05 680.61,554.92 684.27,557.36C688.46,560.15 688.63,560.25 689.06,560.25C689.29,560.25 689.55,560.38 689.64,560.53C689.74,560.69 690.56,561.14 691.47,561.55C692.38,561.96 693.58,562.49 694.12,562.74C694.67,562.98 695.54,563.37 696.04,563.59C696.54,563.82 697.11,564.00 697.30,564.00C697.49,564.00 698.31,564.24 699.13,564.53C699.95,564.81 701.36,565.21 702.25,565.41C703.14,565.61 704.66,565.94 705.62,566.15C709.69,567.05 712.03,567.20 722.75,567.22C730.49,567.24 734.19,567.15 736.39,566.89Z  M401.93,508.10C400.13,507.92 397.54,507.44 396.00,507.01C394.49,506.59 393.12,506.25 392.94,506.24C392.77,506.24 392.34,506.02 392.00,505.75C391.66,505.48 391.19,505.26 390.97,505.26C390.32,505.25 385.12,502.89 383.75,501.98C382.13,500.91 377.93,498.07 377.24,497.58C376.82,497.28 376.24,496.74 375.97,496.39C375.69,496.04 375.36,495.75 375.23,495.75C374.90,495.75 369.54,490.16 367.92,488.12C366.84,486.76 363.53,481.81 363.14,480.96C362.93,480.50 362.62,479.90 362.44,479.63C362.27,479.35 361.94,478.85 361.72,478.50C361.18,477.67 358.25,471.02 358.25,470.64C358.25,470.47 357.97,469.65 357.63,468.81C356.88,466.98 355.42,461.04 354.89,457.75C354.08,452.66 353.97,444.57 354.63,439.38C354.82,437.86 355.70,433.16 355.99,432.12C356.64,429.75 358.40,424.44 358.88,423.38C361.14,418.42 362.70,415.62 365.45,411.62C367.84,408.15 368.69,407.12 372.00,403.67C374.56,401.01 375.18,400.49 375.72,400.55C376.19,400.61 377.06,401.47 379.06,403.88C382.84,408.42 383.49,409.18 384.64,410.48C385.19,411.11 385.97,412.02 386.36,412.50C387.22,413.57 389.78,416.46 391.12,417.90C391.68,418.48 392.50,419.45 392.96,420.04C393.95,421.32 397.39,425.05 401.75,429.58C403.47,431.36 405.59,433.57 406.46,434.47C407.33,435.38 408.88,436.97 409.89,438.00C411.96,440.11 421.82,449.67 424.86,452.52C425.94,453.54 427.25,454.77 427.75,455.25C428.25,455.73 429.66,457.02 430.89,458.12C433.09,460.11 437.02,463.76 438.28,464.99C438.63,465.34 439.42,466.07 440.03,466.62C440.64,467.18 442.43,468.82 444.00,470.28C445.58,471.74 448.39,474.25 450.24,475.86C452.09,477.47 453.75,479.00 453.94,479.27C454.13,479.54 454.61,479.92 455.02,480.13C456.58,480.94 455.92,482.18 451.44,486.78C447.84,490.47 441.66,496.00 441.12,496.00C441.02,496.00 440.51,496.37 439.98,496.81C437.94,498.55 432.48,502.11 431.17,502.56C430.73,502.71 430.10,503.01 429.77,503.22C429.15,503.62 426.94,504.60 425.62,505.05C425.21,505.19 424.54,505.46 424.12,505.63C423.71,505.81 422.40,506.24 421.21,506.60C415.47,508.33 408.96,508.83 401.93,508.10Z  M512.24,500.68C509.64,498.96 506.20,496.30 500.79,491.81C497.37,488.98 492.49,484.79 485.00,478.25C479.66,473.58 477.76,472.00 477.49,472.00C477.37,472.00 476.89,471.63 476.42,471.19C475.96,470.74 475.17,470.06 474.66,469.68C473.51,468.80 473.48,468.03 474.52,466.39C476.26,463.64 479.32,457.61 482.51,450.62C483.14,449.24 485.05,445.23 486.80,441.62C487.20,440.80 487.71,439.79 487.93,439.38C488.50,438.31 488.75,437.83 489.70,436.00C490.16,435.11 490.69,434.21 490.87,434.00C491.05,433.79 491.38,433.23 491.60,432.75C491.82,432.27 492.26,431.47 492.56,430.97C492.87,430.47 493.46,429.48 493.88,428.76C494.29,428.05 494.92,427.08 495.28,426.61C495.64,426.15 496.07,425.42 496.25,425.01C496.42,424.59 496.66,424.25 496.78,424.25C496.90,424.25 497.26,423.83 497.59,423.31C498.43,421.98 502.18,418.29 503.26,417.75C505.34,416.69 504.97,416.00 502.16,415.70C501.18,415.60 498.24,415.34 495.62,415.14C493.01,414.93 490.59,414.70 490.25,414.63C489.69,414.51 486.57,414.24 476.88,413.49C475.23,413.37 471.21,413.02 467.96,412.72C462.39,412.22 460.25,412.22 460.25,412.75C460.25,412.95 461.09,413.59 463.96,415.55C464.41,415.87 465.29,416.55 465.91,417.06C466.53,417.58 467.11,418.00 467.22,418.00C467.57,418.00 472.23,422.38 473.07,423.50C474.84,425.88 476.07,428.63 476.76,431.78C477.22,433.89 476.95,440.68 476.27,444.12C475.47,448.18 474.02,452.86 472.63,455.88C470.26,461.01 468.93,463.49 468.48,463.63C467.96,463.80 467.63,463.55 463.09,459.63C461.97,458.67 460.48,457.43 459.77,456.88C459.06,456.32 458.12,455.54 457.67,455.12C457.23,454.71 455.64,453.31 454.14,452.00C452.63,450.69 450.93,449.15 450.35,448.56C449.77,447.98 449.18,447.50 449.04,447.50C448.89,447.50 447.95,446.68 446.95,445.69C445.94,444.69 444.18,443.03 443.03,442.00C440.42,439.65 440.32,439.55 431.76,431.25C427.86,427.47 423.03,422.70 421.02,420.65C419.02,418.60 417.16,416.74 416.91,416.52C416.65,416.30 416.31,415.98 416.16,415.81C416.00,415.63 414.42,414.00 412.65,412.18C410.88,410.36 409.08,408.46 408.65,407.94C408.22,407.43 407.64,406.76 407.35,406.44C401.52,400.09 394.38,391.51 391.90,387.88C391.43,387.19 390.59,386.01 390.03,385.25C388.35,382.96 384.64,377.42 384.42,376.89C384.31,376.61 384.06,376.21 383.86,375.99C383.36,375.43 379.47,367.78 379.23,366.88C379.12,366.46 378.75,365.36 378.39,364.43C377.45,361.92 376.92,357.39 377.23,354.46C377.61,350.81 377.95,349.09 378.60,347.42C378.93,346.57 379.33,345.46 379.49,344.96C379.65,344.45 379.94,343.90 380.14,343.74C380.34,343.57 380.50,343.33 380.50,343.19C380.50,342.85 382.69,339.59 383.37,338.91C383.67,338.60 384.02,338.19 384.14,337.98C384.51,337.38 387.27,335.11 388.62,334.29C391.56,332.50 395.45,330.98 398.41,330.46C399.21,330.31 401.50,330.14 403.50,330.08C407.77,329.94 410.97,330.45 411.94,331.42C412.61,332.09 412.63,332.67 412.13,336.39C411.58,340.54 410.54,345.01 409.52,347.62C407.90,351.81 407.94,351.74 405.38,354.36C403.83,355.94 402.44,357.12 401.72,357.46C401.09,357.77 400.37,358.23 400.12,358.51C399.87,358.78 399.35,359.00 398.96,359.00C398.43,359.00 398.25,359.12 398.25,359.47C398.25,360.19 399.52,360.25 414.91,360.25C427.34,360.25 428.98,360.29 429.26,360.64C429.77,361.26 430.07,370.56 429.66,373.00C429.41,374.45 429.83,375.12 430.82,374.87C431.20,374.77 432.71,373.49 434.31,371.91C437.37,368.88 438.16,367.97 438.59,367.01C438.74,366.66 439.12,366.01 439.42,365.56C439.72,365.10 440.13,364.00 440.33,363.11C440.54,362.21 440.88,361.21 441.10,360.88L441.49,360.28L473.31,360.19C507.29,360.08 504.77,360.16 514.50,358.86C517.60,358.44 518.18,358.51 518.38,359.34C518.46,359.63 518.48,389.18 518.44,425.00L518.37,490.12L517.69,493.25C516.94,496.68 515.68,500.86 515.23,501.40C514.74,501.99 513.92,501.79 512.24,500.68Z  M544.06,428.22C543.66,427.81 543.60,351.50 544.00,350.75C544.14,350.50 545.12,349.81 546.19,349.23C549.27,347.55 551.59,346.19 552.06,345.79C552.31,345.59 552.71,345.30 552.97,345.15C554.07,344.50 555.47,343.50 555.62,343.25C555.71,343.11 556.43,342.52 557.21,341.94C558.81,340.76 563.89,335.67 565.31,333.84C565.82,333.17 566.61,332.15 567.06,331.58C567.51,331.00 568.16,330.12 568.50,329.63C568.84,329.13 569.43,328.32 569.81,327.83C570.19,327.34 570.50,326.84 570.50,326.72C570.50,326.60 570.90,325.89 571.38,325.13C572.24,323.78 572.75,322.62 574.61,317.75C575.11,316.44 575.64,315.07 575.78,314.71C575.93,314.34 576.19,313.98 576.37,313.91C576.78,313.75 581.87,314.15 584.12,314.52C592.19,315.84 598.90,318.46 606.13,323.12C607.46,323.99 609.83,326.11 612.27,328.62C614.08,330.50 617.50,334.93 617.50,335.40C617.50,335.56 617.65,335.82 617.84,335.97C618.16,336.23 621.08,341.92 622.03,344.12C622.75,345.79 624.17,350.48 624.72,353.00C626.74,362.32 627.06,375.21 625.47,383.75C624.77,387.50 623.86,391.11 623.08,393.25C621.85,396.59 619.71,401.43 618.99,402.50C618.76,402.84 618.29,403.63 617.95,404.25C615.26,409.08 609.09,415.78 604.41,418.96C601.53,420.91 596.86,423.51 595.38,423.99C594.83,424.17 594.26,424.39 594.12,424.49C593.48,424.95 587.76,426.65 584.88,427.25C580.22,428.22 578.34,428.31 561.25,428.42C547.88,428.51 544.31,428.47 544.06,428.22Z  M442.31,356.23C442.00,356.11 441.64,355.76 441.51,355.44C440.85,353.80 440.75,345.85 440.75,292.78L440.75,238.01L441.35,237.62C441.89,237.26 444.45,237.23 466.41,237.32C487.05,237.41 491.36,237.49 494.01,237.83C497.46,238.27 501.33,238.89 502.88,239.25C503.43,239.38 504.85,239.70 506.05,239.98C507.25,240.25 508.56,240.65 508.97,240.86C509.39,241.08 509.96,241.25 510.25,241.25C510.69,241.25 511.75,241.63 514.38,242.73C515.62,243.25 520.26,245.58 521.51,246.32C524.24,247.91 524.58,248.13 525.35,248.78C525.78,249.14 526.50,249.62 526.96,249.86C528.09,250.44 535.32,257.64 535.88,258.75C536.12,259.23 536.69,260.06 537.15,260.59C537.60,261.12 538.20,262.02 538.48,262.59C538.76,263.16 539.14,263.91 539.34,264.25C540.32,265.99 541.98,269.49 542.24,270.38C542.40,270.93 542.64,271.60 542.76,271.88C543.66,273.86 544.90,279.00 545.51,283.25C546.29,288.76 546.57,293.63 546.41,298.87C546.20,305.51 545.82,308.75 545.19,309.31C544.73,309.72 543.46,309.75 526.12,309.75C508.15,309.75 507.54,309.77 506.97,310.23L506.38,310.71L508.25,311.61C510.61,312.74 511.65,313.52 513.12,315.25C515.53,318.11 517.34,323.04 518.24,329.25C518.57,331.52 518.60,349.09 518.28,349.70C518.02,350.19 514.64,352.00 513.98,352.00C513.79,352.00 513.06,352.28 512.38,352.62C511.69,352.96 510.96,353.24 510.75,353.25C510.54,353.25 509.48,353.54 508.38,353.90C505.33,354.87 498.33,355.95 493.05,356.25C487.48,356.57 443.14,356.55 442.31,356.23Z  M409.50,326.95C408.74,326.82 406.46,326.66 404.42,326.59C400.49,326.46 399.96,326.26 400.84,325.28C401.07,325.04 401.25,324.66 401.25,324.45C401.25,323.63 400.69,323.51 398.11,323.79C392.61,324.37 380.64,323.07 372.00,320.96C367.48,319.86 363.52,318.48 359.88,316.76C356.93,315.36 352.01,312.91 351.25,312.45C349.31,311.28 344.54,308.07 343.15,307.01C342.34,306.38 341.05,305.41 340.28,304.83C339.51,304.26 338.51,303.44 338.07,303.02C337.63,302.60 337.13,302.25 336.98,302.25C336.71,302.25 333.97,299.66 328.62,294.35C327.52,293.26 325.95,291.55 325.12,290.55C323.47,288.56 322.47,287.38 321.12,285.88C320.63,285.32 319.62,284.03 318.88,283.00C318.15,281.97 317.24,280.73 316.88,280.25C316.09,279.20 312.50,273.64 312.04,272.75C311.56,271.81 310.45,269.82 309.38,268.00C307.20,264.29 307.08,264.07 304.95,259.38C304.27,257.86 303.55,256.29 303.35,255.88C302.60,254.27 300.75,249.47 300.75,249.12C300.75,248.91 300.52,248.33 300.25,247.82C299.98,247.30 299.75,246.75 299.75,246.59C299.75,246.43 299.32,245.19 298.79,243.84C297.62,240.82 297.26,239.70 296.25,235.88C295.81,234.22 295.30,232.31 295.11,231.62C294.91,230.94 294.53,229.31 294.24,228.00C293.96,226.69 293.57,224.89 293.37,224.00C292.99,222.20 292.11,217.82 291.75,215.88C291.63,215.19 291.40,213.44 291.26,212.00C291.11,210.56 290.88,208.81 290.76,208.12C290.28,205.53 289.62,197.53 289.38,191.38C289.18,186.43 289.58,175.48 290.12,171.12C290.86,165.09 291.54,160.14 291.91,158.12C292.11,157.03 292.42,155.28 292.61,154.25C293.01,152.00 294.55,145.86 295.36,143.25C295.68,142.22 296.25,140.36 296.62,139.12C296.99,137.89 297.45,136.54 297.64,136.12C297.83,135.71 298.61,133.76 299.38,131.79C300.15,129.82 300.88,128.02 301.00,127.79C301.82,126.23 304.25,120.91 304.25,120.65C304.25,120.47 304.46,120.13 304.73,119.90C304.99,119.66 305.28,119.18 305.36,118.84C305.45,118.49 305.78,117.80 306.10,117.29C306.41,116.79 307.16,115.53 307.75,114.50C308.34,113.47 309.08,112.23 309.38,111.75C309.68,111.27 310.54,109.86 311.28,108.62C312.02,107.39 312.71,106.34 312.82,106.29C312.92,106.24 313.19,105.85 313.42,105.41C313.64,104.98 314.09,104.29 314.43,103.88C315.48,102.58 319.36,97.48 319.77,96.85C319.99,96.52 320.46,95.94 320.81,95.56C321.16,95.18 322.69,93.53 324.20,91.88C327.19,88.61 330.51,85.34 333.61,82.62C334.70,81.66 335.84,80.65 336.15,80.38C336.45,80.10 337.31,79.41 338.04,78.83C338.77,78.26 340.01,77.29 340.78,76.67C341.55,76.05 342.51,75.38 342.91,75.17C343.30,74.97 343.90,74.51 344.23,74.15C344.56,73.79 344.94,73.50 345.07,73.50C345.20,73.50 345.66,73.21 346.09,72.85C347.16,71.97 351.27,69.41 355.38,67.07C356.48,66.44 357.94,65.60 358.62,65.21C359.31,64.81 360.04,64.38 360.25,64.27C361.03,63.82 365.99,61.50 369.00,60.18C374.16,57.92 374.35,57.84 375.11,57.65C375.51,57.55 376.52,57.15 377.36,56.77C380.91,55.13 388.03,52.91 393.45,51.74C394.54,51.51 397.55,50.75 399.88,50.14C400.56,49.95 402.36,49.62 403.88,49.39C405.39,49.16 407.41,48.81 408.38,48.61C409.34,48.41 410.91,48.13 411.88,47.99C412.84,47.85 414.13,47.62 414.75,47.48C415.37,47.34 417.45,47.13 419.38,47.01C421.30,46.90 424.96,46.61 427.50,46.37C431.26,46.02 433.59,45.97 440.00,46.09C444.33,46.17 448.83,46.35 450.00,46.49C451.17,46.63 453.42,46.86 455.00,47.00C456.58,47.14 458.24,47.38 458.69,47.53C459.14,47.67 460.49,47.95 461.69,48.13C464.92,48.63 466.06,48.88 469.38,49.75C471.02,50.18 472.83,50.64 473.39,50.75C474.65,51.02 479.11,52.43 480.16,52.90C480.60,53.09 481.13,53.25 481.34,53.25C481.56,53.25 482.33,53.52 483.06,53.85C483.78,54.19 485.11,54.77 486.00,55.14C486.89,55.52 489.20,56.58 491.12,57.51C493.05,58.44 494.86,59.27 495.15,59.35C495.45,59.44 495.89,59.73 496.13,60.01C496.38,60.28 496.69,60.50 496.83,60.50C496.97,60.50 497.66,60.88 498.36,61.34C499.05,61.80 500.47,62.67 501.50,63.26C502.53,63.86 503.99,64.87 504.75,65.50C505.51,66.13 506.46,66.86 506.88,67.12C507.71,67.64 508.77,68.47 511.21,70.52C512.13,71.28 513.04,72.01 513.25,72.14C513.58,72.35 519.45,78.40 520.86,80.00C522.99,82.40 524.53,84.27 525.09,85.12C526.19,86.80 526.58,87.34 527.30,88.20C527.69,88.65 528.00,89.15 528.00,89.31C528.00,89.46 528.22,89.83 528.49,90.11C528.97,90.63 530.51,93.20 531.49,95.12C531.77,95.67 532.34,96.69 532.75,97.38C535.22,101.50 537.52,107.19 540.08,115.50C544.09,128.54 545.12,143.41 543.14,159.75C542.95,161.33 542.61,163.47 542.39,164.50C542.17,165.53 541.87,166.99 541.72,167.75C541.57,168.51 541.22,170.03 540.94,171.12C540.66,172.22 540.28,173.74 540.11,174.50C539.93,175.26 539.67,176.21 539.52,176.62C539.38,177.04 538.91,178.56 538.49,180.00C537.53,183.26 535.66,188.45 535.00,189.69C534.72,190.20 534.50,190.87 534.50,191.17C534.50,191.47 534.40,191.78 534.27,191.86C534.15,191.94 533.19,193.71 532.13,195.81C531.07,197.91 530.06,199.79 529.88,200.00C529.71,200.21 529.48,200.64 529.38,200.95C529.19,201.58 528.98,201.94 526.67,205.50C524.15,209.38 523.17,210.64 519.16,215.12C514.70,220.11 508.99,224.88 504.62,227.28C502.75,228.31 498.79,230.20 498.00,230.44C497.52,230.58 496.17,230.99 495.00,231.35C492.74,232.03 489.29,232.65 485.64,233.03C484.40,233.15 473.99,233.23 462.49,233.19C444.96,233.14 441.51,233.07 441.15,232.77C440.76,232.45 440.74,229.76 440.83,192.15C440.90,166.46 441.03,151.20 441.20,150.00C441.85,145.29 443.95,138.81 445.96,135.33C446.93,133.64 448.56,131.85 450.33,130.51C451.74,129.44 454.43,128.00 455.00,128.00C455.58,128.00 456.41,127.06 456.10,126.75C455.95,126.60 445.21,126.50 427.12,126.49L398.38,126.47L398.38,127.05C398.38,127.48 398.58,127.69 399.17,127.88C399.60,128.02 400.17,128.32 400.42,128.53C400.67,128.75 401.44,129.24 402.12,129.63C403.67,130.49 407.19,134.09 407.91,135.55C409.13,137.98 409.35,138.51 410.40,141.50C411.01,143.21 411.50,144.90 411.50,145.25C411.51,145.59 411.73,146.94 412.00,148.25C412.48,150.59 412.49,152.10 412.50,238.62C412.51,321.47 412.49,326.64 412.08,326.94C411.61,327.28 411.48,327.28 409.50,326.95Z"></path></symbol><symbol id="logo" viewBox="17 17 931 719"><path fill="currentColor" fill-rule="evenodd" d="M282.55,654.12C286.21,653.36 288.89,652.28 291.34,650.57C292.86,649.52 294.72,647.86 295.25,647.10C297.17,644.35 297.88,643.03 298.80,640.46C299.30,639.05 299.36,638.42 299.36,634.62C299.35,630.57 299.32,630.29 298.66,628.62C296.76,623.83 293.99,620.81 288.63,617.68C287.66,617.11 284.18,615.29 280.88,613.63C277.57,611.96 274.59,610.42 274.25,610.20C273.91,609.98 273.36,609.72 273.03,609.62C271.31,609.11 267.68,605.48 266.49,603.08C265.73,601.55 265.63,601.11 265.55,598.88C265.47,596.71 265.54,596.11 266.09,594.44C266.44,593.38 267.01,592.08 267.37,591.57C268.09,590.50 270.48,588.00 270.77,588.00C270.87,588.00 271.30,587.72 271.71,587.37C272.15,587.00 273.30,586.51 274.42,586.21C276.04,585.79 276.83,585.72 279.00,585.83C281.89,585.99 283.67,586.43 285.75,587.53C286.51,587.92 287.20,588.25 287.30,588.25C288.08,588.25 292.64,592.17 293.13,593.25C293.49,594.05 295.39,595.70 295.65,595.44C295.69,595.39 295.75,593.46 295.77,591.15C295.82,586.01 295.90,586.16 292.25,584.51C287.60,582.42 283.99,581.64 278.88,581.63C274.78,581.62 272.15,582.18 268.88,583.76C266.36,584.97 262.35,588.84 261.13,591.25C260.45,592.59 259.65,595.43 259.25,597.92C258.69,601.40 259.80,606.53 261.65,608.97C264.71,613.01 268.36,615.70 275.25,619.01C277.24,619.96 279.16,620.91 279.50,621.11C279.84,621.30 281.39,622.16 282.94,623.00C284.48,623.84 285.86,624.74 286.00,625.00C286.14,625.26 286.49,625.54 286.79,625.64C287.40,625.83 289.34,627.70 290.22,628.96C290.55,629.41 291.14,630.47 291.54,631.30C292.19,632.62 292.30,633.18 292.42,635.72C292.59,639.24 292.19,641.08 290.75,643.50C289.72,645.23 287.71,647.32 286.23,648.20C285.73,648.50 284.55,649.05 283.60,649.41C282.08,650.00 281.52,650.09 278.88,650.09C277.23,650.10 275.20,649.96 274.38,649.79C271.86,649.26 267.28,646.98 265.51,645.36C263.64,643.66 262.20,642.07 261.73,641.19C261.46,640.67 261.11,640.25 260.95,640.25C260.79,640.25 260.41,640.01 260.10,639.72C259.10,638.78 258.99,639.23 259.06,644.01C259.14,649.27 258.98,648.96 262.50,650.80C266.15,652.70 269.34,653.68 273.38,654.13C277.27,654.56 280.43,654.56 282.55,654.12Z  M486.00,654.26C488.51,653.93 491.12,653.08 493.43,651.86C496.11,650.45 497.27,649.61 500.94,646.40C501.87,645.59 502.86,644.83 503.15,644.70C503.83,644.38 504.97,644.91 506.75,646.38C507.51,647.00 508.46,647.69 508.87,647.91C509.28,648.14 509.92,648.62 510.29,648.97C511.34,649.99 512.67,651.00 512.95,651.00C513.10,651.00 513.55,651.28 513.96,651.63C515.35,652.80 519.84,654.50 521.55,654.50C524.15,654.50 527.17,652.46 528.39,649.89C529.20,648.18 528.99,648.00 526.24,648.00C524.40,648.00 523.69,647.87 521.96,647.24C519.46,646.31 515.54,643.78 512.03,640.81C511.50,640.37 510.95,640.00 510.80,640.00C510.38,640.00 509.00,638.18 509.00,637.62C509.00,637.34 509.57,636.35 510.26,635.43C510.95,634.51 511.69,633.39 511.89,632.94C512.09,632.49 512.47,631.84 512.72,631.50C512.98,631.16 513.83,629.81 514.61,628.50C515.39,627.19 516.12,625.96 516.25,625.75C516.38,625.54 516.78,624.70 517.15,623.88C517.51,623.05 518.36,621.21 519.03,619.80C519.70,618.38 520.25,617.07 520.25,616.89C520.25,616.71 520.46,616.30 520.71,615.97C521.12,615.43 522.19,613.54 523.57,610.92C524.03,610.03 524.04,609.93 523.66,609.55C523.31,609.21 522.56,609.14 518.69,609.12C513.08,609.09 512.65,609.16 512.54,610.09C512.50,610.50 512.64,610.99 512.89,611.26C513.38,611.81 513.99,614.19 514.00,615.58C514.00,616.61 513.28,619.67 512.46,622.12C512.00,623.49 510.79,625.86 508.20,630.47C507.69,631.38 507.13,632.41 506.96,632.75C506.46,633.78 505.44,634.75 504.87,634.75C504.51,634.75 503.04,633.39 500.23,630.44C493.95,623.85 493.80,623.69 489.61,618.84C488.92,618.03 488.08,616.94 487.76,616.40L487.16,615.43L488.05,614.65C488.54,614.22 489.42,613.54 490.00,613.12C491.69,611.94 496.80,607.86 497.58,607.08C498.85,605.82 500.75,603.19 501.51,601.64C503.47,597.65 503.27,592.29 501.01,588.35C500.34,587.17 498.21,585.12 496.38,583.86C495.33,583.15 491.98,582.07 489.75,581.73C486.47,581.23 481.57,581.95 478.78,583.36C471.05,587.25 468.20,596.15 471.79,605.19C473.16,608.65 474.62,611.33 476.51,613.88C477.02,614.56 477.52,615.38 477.62,615.70C477.85,616.48 477.23,617.37 476.02,617.99C475.48,618.26 474.53,618.91 473.91,619.43C473.28,619.95 472.41,620.66 471.96,621.00C468.00,624.05 465.08,628.05 464.12,631.76C463.55,633.97 463.55,638.29 464.13,640.88C465.13,645.34 467.56,648.92 471.29,651.41C474.78,653.74 480.94,654.93 486.00,654.26Z  M668.76,654.12C674.47,653.36 678.95,651.90 682.80,649.57C688.88,645.88 693.00,641.59 695.83,636.00C696.29,635.11 696.78,634.15 696.92,633.88C698.67,630.59 699.93,624.74 700.15,618.92C700.37,612.95 699.52,607.00 697.86,602.92C697.52,602.09 697.25,601.28 697.25,601.12C697.25,600.95 697.04,600.55 696.78,600.22C696.53,599.89 696.23,599.34 696.12,599.00C695.92,598.33 694.24,595.84 692.77,594.01C690.08,590.66 685.86,587.22 682.11,585.32C680.34,584.43 674.77,582.50 673.94,582.50C673.63,582.50 672.81,582.32 672.12,582.10C670.33,581.54 661.21,581.53 658.25,582.08C657.08,582.30 655.51,582.59 654.75,582.73C653.16,583.03 649.93,584.17 647.57,585.28C645.48,586.25 640.77,589.39 639.64,590.56C639.34,590.87 638.71,591.47 638.23,591.90C636.66,593.32 633.54,597.59 632.39,599.90C630.96,602.79 630.80,603.15 630.01,605.49C628.73,609.22 628.23,612.48 628.07,617.99C627.93,623.04 628.04,624.24 629.04,628.75C630.42,634.92 633.92,641.06 638.50,645.31C640.79,647.44 645.98,651.00 646.80,651.00C646.95,651.00 647.42,651.21 647.85,651.46C649.07,652.19 654.62,653.73 657.38,654.10C660.84,654.56 665.37,654.57 668.76,654.12Z  M754.00,653.91C758.92,652.96 761.31,652.13 765.50,649.95C769.73,647.74 770.22,647.21 770.24,644.84C770.25,643.89 770.15,643.51 769.85,643.40C769.12,643.12 768.59,643.25 768.02,643.85C767.71,644.19 767.15,644.53 766.79,644.62C766.42,644.71 765.76,645.07 765.31,645.41C764.48,646.04 761.96,647.25 761.47,647.25C761.32,647.25 760.85,647.41 760.41,647.61C759.22,648.15 755.64,648.95 753.12,649.24C747.58,649.88 742.43,649.28 738.00,647.51C737.38,647.26 736.58,646.94 736.23,646.80C735.60,646.55 733.19,645.00 731.11,643.51C729.92,642.65 727.20,639.79 726.28,638.41C723.36,634.06 722.24,631.54 720.88,626.25C719.73,621.78 719.60,613.34 720.61,609.26C721.28,606.53 722.05,604.10 722.73,602.50C723.12,601.61 723.50,600.71 723.59,600.50C724.45,598.46 728.97,592.82 730.61,591.74C731.03,591.47 731.94,590.84 732.62,590.36C734.69,588.91 737.99,587.46 741.25,586.58C742.53,586.23 743.90,586.14 747.75,586.13C752.39,586.13 752.74,586.16 755.00,586.83C758.00,587.73 761.90,589.62 764.00,591.22C765.38,592.26 766.93,593.80 768.65,595.83C768.86,596.08 769.28,596.25 769.58,596.20C770.12,596.13 770.12,596.07 770.12,591.57C770.12,586.23 770.22,586.45 767.24,585.22C762.92,583.43 761.60,583.04 757.12,582.23C754.00,581.66 745.88,581.37 743.69,581.75C732.80,583.66 729.12,585.29 722.38,591.19C719.35,593.85 716.35,598.22 714.62,602.48C711.76,609.55 710.90,617.08 712.11,624.50C712.53,627.03 713.65,631.33 714.15,632.29C714.34,632.67 714.50,633.09 714.50,633.22C714.50,633.36 715.08,634.52 715.78,635.80C716.49,637.08 717.28,638.54 717.53,639.05C717.79,639.56 718.15,640.06 718.34,640.17C718.52,640.28 719.08,640.94 719.58,641.62C720.65,643.10 721.92,644.36 724.53,646.53C726.57,648.23 726.86,648.43 730.25,650.37C733.10,652.00 739.14,653.87 742.39,654.11C743.32,654.19 744.14,654.31 744.22,654.39C744.51,654.67 751.92,654.31 754.00,653.91Z  M60.38,653.14C63.95,653.08 67.44,652.90 68.12,652.75C68.81,652.60 69.88,652.38 70.50,652.26C72.72,651.84 76.49,650.17 77.88,648.99C78.15,648.75 78.68,648.41 79.06,648.21C79.43,648.02 80.54,646.97 81.53,645.87C83.13,644.09 83.75,643.07 85.01,640.12C85.13,639.85 85.35,638.61 85.50,637.37C86.00,633.33 85.07,628.91 83.18,626.29C80.61,622.73 76.23,619.70 72.15,618.65C70.35,618.20 69.71,617.68 70.26,617.14C70.46,616.94 71.23,616.55 71.97,616.26C74.68,615.20 78.80,611.59 79.68,609.50C79.88,609.02 80.25,608.40 80.49,608.12C81.15,607.38 82.21,603.77 82.49,601.37C82.75,599.03 82.53,597.02 81.74,594.78C81.47,594.02 81.25,593.24 81.25,593.04C81.25,592.85 80.97,592.36 80.62,591.95C80.28,591.55 80.00,591.08 80.00,590.91C80.00,590.63 78.08,588.55 76.22,586.81C74.32,585.04 70.09,583.58 65.20,583.00C64.15,582.88 58.60,582.76 52.87,582.73C43.45,582.70 42.41,582.73 42.04,583.11C41.65,583.49 41.66,583.55 42.16,583.95C42.46,584.18 42.94,584.87 43.24,585.46C44.50,587.99 44.50,587.86 44.48,617.75C44.47,633.08 44.41,646.13 44.35,646.75C44.20,648.37 43.59,650.04 42.75,651.16C42.34,651.69 42.01,652.31 42.01,652.54C41.99,653.46 42.04,653.46 60.38,653.14Z  M106.66,653.26C107.31,653.23 107.24,652.34 106.47,650.82L105.67,649.25L105.96,647.19C106.23,645.28 107.11,642.18 107.89,640.38C109.42,636.87 111.62,631.43 111.88,630.50C111.98,630.16 112.33,629.42 112.66,628.85C112.98,628.29 113.25,627.64 113.25,627.42C113.25,627.19 113.47,626.77 113.75,626.50C114.24,626.01 114.58,626.00 126.24,626.00C134.62,626.00 138.41,626.09 138.85,626.28C139.19,626.44 139.60,626.92 139.76,627.34C140.28,628.75 141.04,630.61 141.51,631.62C141.77,632.17 142.20,633.24 142.47,634.00C142.97,635.40 144.20,638.40 144.86,639.83C145.06,640.27 145.39,641.08 145.59,641.62C145.79,642.17 146.24,643.31 146.59,644.14C146.94,644.98 147.42,646.53 147.66,647.59C148.08,649.49 148.07,649.54 147.54,650.83C146.96,652.24 146.87,652.89 147.23,653.11C147.36,653.19 150.15,653.27 153.45,653.28C159.14,653.30 160.50,653.16 160.50,652.55C160.50,652.45 159.97,651.76 159.31,651.02C158.66,650.27 157.88,649.26 157.58,648.77C156.67,647.28 154.51,642.77 153.38,640.00C153.02,639.11 152.50,637.90 152.23,637.32C151.97,636.73 151.75,636.19 151.75,636.11C151.75,635.97 150.66,633.36 149.86,631.59C149.66,631.15 149.50,630.70 149.50,630.57C149.50,630.44 149.06,629.31 148.52,628.05C147.98,626.79 147.47,625.43 147.38,625.02C147.29,624.62 147.06,624.15 146.86,623.99C146.66,623.82 146.50,623.54 146.50,623.35C146.50,623.16 146.04,622.02 145.48,620.82C144.93,619.61 143.79,616.90 142.97,614.79C141.34,610.63 140.94,609.65 140.23,608.12C139.97,607.58 139.19,605.72 138.50,604.00C137.81,602.28 137.08,600.54 136.89,600.12C136.49,599.29 135.57,597.06 134.46,594.25C134.06,593.22 133.57,592.04 133.38,591.62C133.19,591.21 132.51,589.58 131.87,588.00C131.24,586.42 130.51,584.67 130.27,584.12C130.03,583.58 129.68,582.67 129.51,582.12C129.33,581.58 129.08,580.99 128.94,580.82C128.53,580.29 127.34,581.36 126.85,582.69C126.61,583.34 126.27,584.05 126.08,584.27C125.90,584.49 125.75,584.81 125.75,584.99C125.75,585.17 125.31,586.34 124.77,587.60C123.80,589.86 123.04,591.69 121.00,596.75C120.41,598.19 119.68,599.94 119.36,600.64C119.04,601.34 118.26,603.14 117.63,604.64C116.99,606.14 116.32,607.71 116.13,608.12C114.98,610.66 113.99,613.07 113.55,614.40C113.28,615.24 112.93,616.14 112.77,616.40C112.62,616.66 112.18,617.66 111.79,618.62C110.77,621.14 109.14,624.95 107.74,628.12C107.07,629.64 106.23,631.66 105.86,632.62C105.05,634.75 103.39,638.75 102.73,640.14C102.47,640.70 102.25,641.26 102.25,641.38C102.25,641.50 101.34,643.43 100.22,645.68C98.92,648.29 97.80,650.20 97.08,651.00C95.88,652.33 95.77,653.02 96.70,653.24C97.14,653.34 104.80,653.36 106.66,653.26Z  M196.45,653.02C197.04,652.86 197.59,652.57 197.66,652.37C197.73,652.18 197.49,651.62 197.11,651.13C196.73,650.64 196.19,649.59 195.91,648.80C195.39,647.39 195.39,647.04 195.31,617.79C195.24,591.24 195.27,588.14 195.62,587.60L196.01,587.00L201.82,587.00C208.14,587.01 209.58,587.20 212.12,588.41C212.91,588.78 214.14,589.63 214.87,590.29C216.73,591.98 216.85,591.92 216.67,589.44C216.41,585.99 216.03,583.47 215.73,583.10C215.48,582.80 211.81,582.76 191.67,582.81L167.90,582.88L167.44,583.66C167.19,584.09 166.88,585.33 166.75,586.41C166.62,587.49 166.44,588.78 166.35,589.28C166.22,590.02 166.30,590.28 166.78,590.72L167.36,591.27L168.12,590.41C169.16,589.22 171.87,587.81 173.91,587.37C176.32,586.86 187.06,586.84 187.48,587.35C187.69,587.60 187.75,595.43 187.69,617.94L187.62,648.19L186.55,650.28C185.42,652.48 185.37,653.16 186.33,653.30C187.74,653.50 195.49,653.29 196.45,653.02Z  M241.36,653.26C242.19,652.94 242.17,652.53 241.25,651.03C239.54,648.26 239.65,650.34 239.56,619.25C239.48,588.92 239.53,587.37 240.74,585.83C241.02,585.48 241.25,585.05 241.25,584.88C241.25,584.71 241.47,584.37 241.75,584.12C242.37,583.57 242.39,583.08 241.81,582.89C240.87,582.60 230.64,582.66 230.06,582.97C229.44,583.30 229.33,583.87 229.82,584.18C230.55,584.62 231.56,587.31 231.79,589.39C231.92,590.57 231.99,603.67 231.95,619.55L231.88,647.62L231.32,648.97C231.02,649.71 230.48,650.74 230.12,651.26C228.86,653.08 228.94,653.11 234.88,653.26C237.76,653.33 240.26,653.42 240.42,653.45C240.58,653.48 241.01,653.39 241.36,653.26Z  M339.71,653.15C340.19,652.85 340.04,651.92 339.34,650.89C337.80,648.63 337.89,650.44 337.81,617.78C337.74,589.45 337.76,587.91 338.18,587.44C338.61,586.97 338.90,586.95 345.12,587.07C351.28,587.18 351.71,587.22 353.31,587.81C354.23,588.15 355.62,588.92 356.38,589.53C358.49,591.18 358.70,591.31 359.02,591.11C359.31,590.93 359.31,590.85 358.76,586.38C358.44,583.75 357.98,582.94 356.72,582.75C356.26,582.68 345.60,582.68 333.04,582.75C307.04,582.89 309.67,582.62 309.36,585.22C309.27,585.99 309.06,587.31 308.89,588.15C308.57,589.72 308.63,591.15 309.04,591.40C309.16,591.47 310.03,590.86 310.96,590.03C313.85,587.47 315.76,587.01 323.56,587.01C328.92,587.00 329.28,587.03 329.75,587.50C330.24,587.99 330.25,588.32 330.23,616.06C330.21,647.67 330.17,648.65 328.67,650.85C328.30,651.38 328.00,652.02 328.00,652.27C328.00,653.26 328.68,653.38 334.18,653.35C337.07,653.33 339.56,653.24 339.71,653.15Z  M376.06,652.80C376.54,652.32 376.54,652.30 375.84,651.22C375.20,650.24 375.13,649.91 375.14,648.12C375.15,645.55 375.65,643.88 378.24,637.83C378.66,636.85 379.00,635.98 379.00,635.90C379.00,635.83 379.26,635.17 379.58,634.44C380.39,632.60 380.86,631.44 381.76,629.07C383.01,625.73 381.78,626.00 395.87,626.00L407.91,626.00L408.45,626.57C408.75,626.89 409.21,627.76 409.47,628.51C409.95,629.89 410.37,630.94 412.40,635.76C413.00,637.21 413.50,638.48 413.50,638.59C413.50,638.79 414.46,640.98 415.27,642.62C415.89,643.88 417.24,648.42 417.25,649.25C417.25,649.60 417.02,650.30 416.75,650.82C416.07,652.08 416.10,652.96 416.81,653.20C417.12,653.31 419.95,653.37 423.09,653.35C428.52,653.31 428.83,653.29 429.32,652.79L429.84,652.27L428.48,650.80C426.47,648.62 425.12,646.20 423.12,641.25C422.49,639.67 421.71,637.81 421.40,637.12C421.08,636.44 420.58,635.20 420.27,634.38C419.96,633.55 419.50,632.42 419.25,631.88C419.01,631.33 418.38,629.81 417.87,628.50C417.36,627.19 416.86,626.01 416.76,625.88C416.66,625.74 416.32,624.89 416.00,624.00C415.68,623.11 415.33,622.26 415.22,622.11C415.01,621.84 413.99,619.41 412.85,616.50C412.50,615.61 411.95,614.26 411.62,613.50C411.30,612.74 410.52,610.83 409.88,609.25C409.25,607.67 408.51,605.90 408.24,605.32C407.97,604.73 407.75,604.18 407.75,604.10C407.75,604.01 407.25,602.80 406.65,601.40C406.04,600.01 404.96,597.47 404.25,595.75C403.54,594.03 402.79,592.27 402.60,591.84C402.41,591.40 402.25,590.95 402.25,590.84C402.26,590.72 401.81,589.61 401.26,588.38C400.72,587.14 399.86,585.06 399.36,583.75C398.31,581.00 398.11,580.70 397.40,580.80C396.74,580.89 395.98,582.37 394.21,587.00C393.66,588.44 393.12,589.74 393.02,589.88C392.92,590.01 392.57,590.86 392.24,591.75C391.92,592.64 391.40,593.87 391.08,594.47C390.76,595.08 390.50,595.71 390.50,595.88C390.50,596.17 389.82,597.84 388.76,600.12C387.78,602.25 386.41,605.42 386.01,606.50C385.77,607.12 385.30,608.25 384.96,609.00C384.61,609.76 384.14,610.96 383.91,611.65C383.68,612.35 383.26,613.36 382.99,613.89C382.72,614.42 382.50,615.04 382.50,615.27C382.50,615.50 382.34,615.82 382.14,615.99C381.94,616.15 381.70,616.64 381.61,617.07C381.51,617.50 381.34,618.03 381.23,618.24C380.77,619.08 379.25,622.58 379.25,622.80C379.25,622.92 378.80,623.93 378.25,625.03C377.70,626.13 377.25,627.14 377.25,627.27C377.25,627.40 377.03,627.98 376.76,628.57C376.49,629.15 376.06,630.19 375.79,630.88C374.62,633.87 373.45,636.69 372.99,637.64C372.72,638.20 372.50,638.82 372.50,639.02C372.50,639.21 372.27,639.71 372.00,640.12C371.73,640.54 371.50,641.02 371.50,641.20C371.50,641.47 370.07,644.43 367.88,648.72C367.60,649.26 366.89,650.27 366.29,650.98C365.70,651.68 365.25,652.45 365.30,652.69C365.40,653.23 367.14,653.40 372.10,653.33C375.17,653.29 375.64,653.22 376.06,652.80Z  M580.55,653.26C580.65,653.25 580.84,653.04 580.98,652.79C581.17,652.43 581.04,652.07 580.37,651.14C578.56,648.59 578.67,650.72 578.57,617.61C578.48,588.46 578.49,587.84 578.96,587.41C579.38,587.03 580.00,586.98 583.91,586.99C588.56,587.00 591.45,587.19 591.88,587.50C592.01,587.60 592.58,587.82 593.12,588.00C597.09,589.22 600.84,593.67 601.90,598.38C602.73,602.03 602.57,604.62 601.32,608.25C600.23,611.39 597.46,614.60 594.50,616.13C592.37,617.23 590.73,617.55 586.78,617.65C584.40,617.71 582.81,617.85 582.59,618.03C582.02,618.51 582.21,619.45 583.09,620.44C583.55,620.95 584.02,621.56 584.15,621.79C584.27,622.02 584.85,622.75 585.44,623.42C586.02,624.08 587.23,625.58 588.13,626.75C589.02,627.92 590.21,629.44 590.77,630.12C591.68,631.25 594.00,634.21 599.06,640.71C599.99,641.90 601.22,643.49 601.79,644.25C602.37,645.01 603.46,646.38 604.23,647.30C606.25,649.74 607.64,651.55 607.97,652.18C608.40,653.00 609.64,653.22 614.31,653.28C618.06,653.33 618.54,653.29 618.99,652.88C619.67,652.27 619.63,652.08 618.77,651.64C617.30,650.88 609.87,643.09 608.00,640.34C607.79,640.04 606.22,638.04 604.50,635.89C602.78,633.75 600.98,631.45 600.50,630.80C600.02,630.14 598.95,628.76 598.12,627.74C597.30,626.71 596.32,625.48 595.94,625.00C595.56,624.52 594.80,623.56 594.25,622.88C592.95,621.24 592.95,620.67 594.26,620.15C594.81,619.93 595.39,619.75 595.55,619.75C596.14,619.75 599.44,618.11 601.24,616.92C602.27,616.24 603.62,615.12 604.24,614.43C605.72,612.80 608.00,609.75 608.00,609.40C608.00,609.25 608.18,608.79 608.41,608.38C609.62,606.12 610.11,600.45 609.38,597.08C608.55,593.23 606.97,590.49 604.16,588.04C602.67,586.75 599.98,585.00 599.48,585.00C599.34,585.00 598.81,584.78 598.29,584.52C597.78,584.26 595.92,583.75 594.16,583.40C591.01,582.76 590.81,582.75 580.00,582.75C573.97,582.75 568.86,582.82 568.65,582.90C568.10,583.11 568.15,583.58 568.78,584.15C569.53,584.83 570.19,586.24 570.62,588.05C570.94,589.39 570.99,593.87 570.99,618.50C570.99,646.73 570.98,647.41 570.49,648.87C570.21,649.70 569.64,650.80 569.23,651.32C568.37,652.39 568.36,653.04 569.20,653.24C569.62,653.34 577.59,653.35 580.55,653.26Z  M799.19,653.03C800.02,652.59 800.01,651.84 799.18,650.71C797.95,649.05 797.91,648.51 797.82,634.38C797.75,622.11 797.77,621.10 798.17,620.81C798.50,620.57 802.64,620.50 816.84,620.50C833.47,620.50 835.13,620.54 835.54,620.91C835.97,621.30 836.00,621.99 835.98,632.73C835.96,647.22 835.91,647.78 834.49,650.62C833.52,652.54 833.44,652.84 833.78,653.09C834.37,653.52 845.08,653.45 845.61,653.01C846.16,652.55 846.10,652.19 845.27,651.15C844.87,650.65 844.31,649.46 844.02,648.52C843.51,646.82 843.50,646.49 843.50,618.44C843.50,599.84 843.59,589.61 843.76,588.68C844.00,587.37 845.10,584.71 845.81,583.68C846.07,583.32 846.06,583.19 845.75,583.00C845.54,582.86 842.84,582.76 839.59,582.75C833.24,582.75 832.79,582.85 833.72,584.03C834.25,584.71 835.05,586.41 835.52,587.88C835.77,588.63 835.87,592.17 835.94,602.12C836.02,614.50 836.00,615.38 835.59,615.68C835.25,615.93 831.32,616.00 816.85,616.00C806.78,616.00 798.36,615.93 798.15,615.85C797.79,615.71 797.75,614.32 797.75,602.66C797.76,588.30 797.80,587.79 799.29,585.05C800.56,582.69 800.69,582.75 794.09,582.75C789.14,582.75 788.36,582.80 787.95,583.17C787.51,583.57 787.51,583.60 787.97,584.10C788.24,584.39 788.75,585.34 789.12,586.21C790.22,588.86 790.30,591.37 790.19,620.46C790.08,649.98 790.18,648.24 788.45,651.04C787.62,652.39 787.61,652.36 788.74,652.96C789.39,653.31 790.26,653.37 794.08,653.35C797.08,653.33 798.83,653.22 799.19,653.03Z  M869.44,653.15C870.16,652.91 870.15,652.77 869.25,651.09C868.38,649.45 868.28,648.06 868.89,645.66C869.32,643.94 870.43,640.71 870.93,639.75C871.10,639.41 871.25,639.01 871.25,638.86C871.25,638.71 871.48,638.13 871.75,637.56C872.02,636.99 872.25,636.40 872.25,636.25C872.25,636.11 872.53,635.43 872.88,634.75C873.22,634.07 873.50,633.31 873.50,633.06C873.50,632.81 873.65,632.39 873.84,632.12C874.03,631.85 874.67,630.47 875.25,629.05C875.84,627.64 876.52,626.37 876.77,626.24C877.04,626.10 882.06,626.00 889.30,626.00C899.84,626.00 901.46,626.05 901.94,626.39C902.25,626.60 902.50,626.97 902.50,627.21C902.50,627.45 902.73,628.09 903.01,628.63C903.29,629.18 903.72,630.19 903.97,630.88C904.42,632.15 907.36,639.49 908.88,643.12C910.58,647.20 910.93,649.77 910.03,651.45C909.86,651.77 909.75,652.27 909.80,652.58C909.87,653.12 909.93,653.13 915.88,653.25C919.17,653.32 922.18,653.33 922.56,653.28C923.62,653.14 923.43,652.39 921.99,650.99C921.30,650.32 920.57,649.37 920.37,648.90C920.17,648.42 919.89,647.96 919.74,647.87C919.47,647.70 918.34,645.37 917.14,642.50C916.76,641.61 916.25,640.42 916.00,639.88C915.75,639.33 914.96,637.36 914.24,635.50C913.52,633.64 912.78,631.90 912.59,631.63C912.40,631.36 912.25,630.98 912.25,630.79C912.25,630.51 910.84,627.11 909.38,623.88C909.19,623.46 908.44,621.61 907.72,619.75C906.99,617.89 906.26,616.21 906.10,616.00C905.94,615.79 905.73,615.34 905.64,615.00C905.55,614.66 905.21,613.76 904.89,613.00C903.58,609.92 901.67,605.28 901.13,603.86C900.82,603.02 900.44,602.12 900.29,601.86C899.76,600.87 899.20,599.59 898.88,598.62C898.70,598.08 898.02,596.39 897.37,594.88C896.72,593.36 895.94,591.45 895.63,590.62C894.71,588.17 893.27,584.67 892.90,584.00C892.72,583.66 892.43,582.95 892.26,582.43C892.06,581.82 891.70,581.36 891.23,581.11C890.52,580.75 890.49,580.75 890.00,581.56C889.73,582.01 889.50,582.61 889.50,582.89C889.50,583.17 889.39,583.51 889.26,583.64C889.13,583.77 888.51,585.17 887.88,586.75C887.24,588.33 886.62,589.73 886.49,589.86C886.36,589.99 886.25,590.28 886.25,590.49C886.25,590.71 886.02,591.30 885.75,591.82C885.48,592.33 885.25,592.86 885.25,593.00C885.25,593.21 884.62,594.69 882.24,600.12C882.00,600.67 881.22,602.53 880.51,604.25C879.80,605.97 879.12,607.60 878.99,607.88C878.87,608.15 878.14,609.89 877.38,611.75C876.61,613.61 875.83,615.46 875.63,615.88C875.44,616.29 874.93,617.47 874.50,618.50C874.08,619.53 873.51,620.88 873.25,621.50C872.99,622.12 872.31,623.75 871.73,625.12C871.15,626.50 870.36,628.38 869.96,629.29C869.57,630.21 869.25,631.12 869.25,631.32C869.25,631.52 869.08,631.83 868.88,632.00C868.67,632.17 868.50,632.47 868.50,632.66C868.50,633.08 866.96,636.80 864.50,642.38C862.90,645.98 860.79,649.87 859.85,650.95C858.63,652.35 858.60,652.42 859.11,652.98C859.41,653.32 860.18,653.37 864.17,653.35C866.76,653.34 869.13,653.25 869.44,653.15Z  M660.29,649.62C656.32,648.71 651.52,646.77 650.12,645.51C649.85,645.26 649.29,644.89 648.88,644.68C648.16,644.32 645.74,642.06 644.14,640.26C643.73,639.80 642.72,638.40 641.89,637.14C637.79,630.92 636.00,623.91 636.36,615.50C636.72,607.21 638.42,601.68 642.21,596.50C646.04,591.25 649.51,588.76 655.75,586.79C657.82,586.13 662.70,585.76 665.50,586.04C667.56,586.24 671.45,587.09 672.24,587.51C672.45,587.63 673.29,588.01 674.11,588.37C677.25,589.74 679.58,591.33 681.95,593.71C686.11,597.90 688.14,601.08 689.88,606.12C693.08,615.41 692.49,626.98 688.37,635.88C687.98,636.70 687.41,637.69 687.08,638.08C686.76,638.47 686.50,638.92 686.50,639.08C686.50,639.87 679.87,646.25 679.05,646.25C678.92,646.25 678.53,646.48 678.17,646.76C677.29,647.46 674.27,648.69 672.00,649.30C669.49,649.96 662.62,650.15 660.29,649.62Z  M482.62,649.09C480.48,648.51 478.18,647.53 477.13,646.75C474.01,644.44 471.71,641.17 470.91,637.88C470.02,634.22 470.17,631.92 471.53,628.53C472.61,625.82 473.16,625.18 477.89,621.14C479.08,620.13 480.12,619.68 480.79,619.89C481.19,620.01 483.02,622.19 484.90,624.78C485.18,625.17 486.82,626.99 488.54,628.81C490.26,630.63 492.32,632.86 493.12,633.75C494.95,635.79 496.19,637.03 498.25,638.88C500.25,640.68 500.31,640.77 499.97,641.66C499.68,642.44 498.33,643.63 494.02,646.95C493.61,647.26 492.45,647.86 491.45,648.28C489.79,648.98 489.33,649.06 486.38,649.14C484.59,649.19 482.90,649.16 482.62,649.09Z  M52.55,648.62L51.97,648.20L52.05,634.61C52.12,622.26 52.16,620.98 52.55,620.60C52.91,620.23 53.56,620.18 57.55,620.21C65.54,620.28 67.38,620.55 70.59,622.16C72.71,623.22 75.11,626.15 76.34,629.18C77.11,631.08 77.12,631.21 77.12,635.12C77.12,638.92 77.08,639.22 76.41,640.95C75.22,644.01 73.48,645.80 70.25,647.31C67.41,648.64 66.33,648.80 59.50,648.92C53.83,649.02 53.06,648.99 52.55,648.62Z  M395.15,621.56C388.85,621.52 385.81,621.41 385.58,621.22C385.05,620.78 385.18,620.20 386.38,617.55C386.99,616.19 387.50,614.95 387.50,614.82C387.50,614.59 389.26,610.27 390.24,608.12C390.48,607.58 390.81,606.79 390.95,606.38C391.95,603.52 394.85,596.32 395.10,596.05C395.66,595.48 396.18,596.00 397.00,597.95C397.44,599.01 397.89,599.99 398.00,600.12C398.19,600.35 398.44,601.02 399.74,604.65C399.99,605.35 400.32,606.14 400.46,606.40C400.83,607.07 401.42,608.45 401.82,609.62C402.25,610.87 403.92,615.03 404.53,616.38C405.47,618.46 406.20,620.67 406.04,620.92C405.83,621.25 404.84,621.77 404.58,621.69C404.47,621.66 400.22,621.60 395.15,621.56Z  M888.33,621.56C879.11,621.49 879.03,621.49 878.86,620.97C878.72,620.50 879.23,618.84 880.32,616.25C882.04,612.17 882.83,610.25 883.05,609.62C883.20,609.21 883.43,608.66 883.56,608.40C883.95,607.63 885.22,604.53 886.02,602.38C886.43,601.27 886.93,600.02 887.13,599.59C887.34,599.15 887.50,598.74 887.50,598.66C887.50,598.08 888.61,595.75 888.88,595.75C889.35,595.75 890.42,597.20 890.63,598.12C890.73,598.54 891.01,599.33 891.25,599.88C892.93,603.66 896.34,612.03 897.26,614.62C897.50,615.31 897.87,616.21 898.08,616.62C899.01,618.48 899.73,620.51 899.59,620.88C899.42,621.31 898.43,621.79 897.92,621.69C897.76,621.66 893.44,621.60 888.33,621.56Z  M116.30,621.20C115.87,620.77 115.93,620.12 116.51,618.99C116.79,618.44 117.86,615.88 118.90,613.31C119.93,610.73 120.93,608.29 121.13,607.88C121.32,607.46 122.00,605.77 122.63,604.12C123.26,602.48 123.99,600.67 124.24,600.12C124.50,599.58 124.91,598.47 125.16,597.67C125.41,596.87 125.75,596.10 125.92,595.97C126.44,595.53 127.18,596.17 127.64,597.43C127.87,598.09 128.27,599.08 128.51,599.62C128.75,600.17 129.59,602.26 130.38,604.25C131.16,606.24 131.89,607.99 132.00,608.12C132.11,608.26 132.31,608.77 132.45,609.25C132.82,610.52 135.01,615.79 135.41,616.37C135.60,616.64 135.75,617.02 135.75,617.22C135.75,617.42 136.04,618.19 136.40,618.94C136.81,619.81 136.99,620.52 136.89,620.90L136.74,621.50L126.67,621.50C119.17,621.50 116.52,621.42 116.30,621.20Z  M52.50,615.77C52.18,615.55 52.12,613.65 52.07,601.67C52.01,588.19 52.02,587.81 52.50,587.38C52.94,586.97 53.46,586.95 58.43,587.06C64.41,587.21 65.18,587.36 68.09,589.00C69.77,589.95 72.15,592.05 72.39,592.79C72.48,593.07 72.80,593.67 73.11,594.13C74.89,596.74 75.42,602.18 74.26,605.75C73.92,606.78 73.36,608.06 73.01,608.60C72.66,609.13 72.21,609.88 72.00,610.26C71.63,610.96 70.24,612.25 68.41,613.61C67.87,614.00 66.58,614.65 65.53,615.06C63.69,615.77 63.45,615.79 58.25,615.91C54.79,615.99 52.74,615.94 52.50,615.77Z  M483.62,610.94C483.12,610.35 482.54,609.55 482.32,609.14C482.11,608.74 481.58,607.90 481.15,607.27C479.21,604.48 477.51,600.84 476.87,598.05C476.40,596.03 476.39,593.18 476.86,592.16C477.06,591.73 477.34,590.92 477.48,590.35C477.85,588.93 479.82,586.72 481.45,585.91C483.34,584.96 485.84,584.58 487.86,584.92C491.34,585.52 493.53,587.18 495.16,590.44L496.12,592.38L496.12,596.00C496.11,598.14 495.97,600.09 495.79,600.75C495.34,602.35 493.47,605.41 492.05,606.88C490.68,608.30 487.80,610.68 486.50,611.47C485.21,612.25 484.67,612.15 483.62,610.94Z  M736.39,566.89C740.45,566.41 744.52,565.80 746.50,565.38C751.92,564.21 753.20,563.91 755.06,563.34C756.20,562.99 757.67,562.55 758.34,562.36C759.01,562.17 759.71,561.89 759.90,561.73C760.08,561.58 760.60,561.36 761.06,561.25C761.51,561.14 762.83,560.63 764.00,560.13C765.17,559.62 766.57,559.05 767.11,558.85C769.55,557.95 778.62,553.18 782.64,550.67C783.34,550.23 784.29,549.65 784.74,549.38C785.20,549.10 785.95,548.55 786.41,548.16C787.38,547.34 787.51,546.39 786.82,545.23C786.28,544.32 785.54,544.29 784.30,545.12C783.80,545.47 783.31,545.75 783.21,545.75C783.12,545.75 781.88,546.37 780.46,547.14C777.30,548.83 771.74,551.35 769.38,552.16C763.50,554.18 760.31,555.01 755.12,555.86C745.20,557.49 732.40,557.28 723.75,555.35C720.51,554.62 713.36,552.36 712.25,551.71C712.04,551.59 711.48,551.32 711.00,551.12C709.91,550.66 709.13,550.25 704.75,547.84C703.31,547.05 701.56,546.00 700.88,545.51C700.19,545.02 698.89,544.18 698.00,543.64C696.40,542.68 696.04,542.42 693.72,540.55C693.09,540.04 691.75,539.01 690.75,538.25C688.63,536.65 681.13,529.93 679.50,528.17C678.88,527.50 677.81,526.38 677.12,525.67C676.01,524.53 673.76,522.07 669.98,517.89C668.43,516.17 666.09,513.36 664.88,511.75C664.33,511.03 663.31,509.74 662.61,508.90C661.50,507.56 660.28,505.95 658.30,503.18C657.98,502.74 657.51,502.15 657.25,501.88C657.00,501.60 656.37,500.76 655.85,500.00C655.34,499.24 654.48,498.01 653.95,497.25C653.42,496.49 652.37,494.98 651.61,493.88C650.85,492.77 649.84,491.37 649.37,490.75C648.89,490.13 648.31,489.34 648.08,489.00C647.85,488.66 647.46,488.15 647.21,487.88C646.20,486.75 645.29,485.57 644.69,484.62C644.35,484.07 643.55,482.95 642.92,482.12C642.29,481.30 641.49,480.23 641.13,479.75C640.78,479.27 639.56,477.69 638.43,476.25C636.14,473.33 635.28,472.23 634.00,470.53C633.52,469.89 632.88,469.09 632.57,468.75C632.26,468.41 631.33,467.28 630.48,466.25C629.64,465.22 628.74,464.15 628.49,463.88C628.23,463.60 627.45,462.70 626.75,461.88C624.36,459.05 623.87,458.50 622.12,456.68C621.16,455.67 619.58,454.01 618.61,452.99C615.97,450.21 609.56,444.17 608.86,443.81C608.53,443.63 608.25,443.39 608.25,443.27C608.25,442.93 603.10,439.17 600.80,437.84C598.95,436.76 594.00,434.25 593.07,433.91C589.05,432.46 587.10,431.70 586.91,431.51C586.51,431.11 587.77,430.71 590.21,430.46C594.25,430.05 599.91,428.98 604.00,427.85C608.90,426.50 611.23,425.63 616.39,423.22C616.95,422.96 617.49,422.75 617.58,422.75C617.68,422.75 618.83,422.13 620.14,421.38C621.45,420.62 622.61,420.00 622.71,420.00C622.82,420.00 623.35,419.67 623.89,419.26C624.43,418.85 624.96,418.51 625.06,418.51C625.16,418.50 626.23,417.80 627.43,416.95C636.68,410.40 644.91,400.10 648.25,390.88C648.50,390.19 649.00,388.84 649.36,387.88C650.28,385.42 650.79,383.16 651.51,378.30C652.76,369.83 651.61,357.91 648.84,350.67C648.38,349.45 648.00,348.33 648.00,348.17C648.00,348.01 647.66,347.20 647.25,346.38C646.84,345.55 646.50,344.75 646.50,344.59C646.50,344.44 646.32,344.16 646.10,343.98C645.88,343.80 645.60,343.40 645.49,343.09C645.21,342.35 642.70,338.40 641.62,337.00C641.14,336.38 640.48,335.47 640.15,334.98C639.34,333.78 634.00,328.47 631.85,326.73C630.90,325.96 629.34,324.81 628.38,324.18C627.41,323.54 626.33,322.79 625.96,322.51C625.32,322.02 617.85,318.18 616.36,317.58C608.49,314.40 604.62,313.33 595.00,311.65C590.07,310.79 583.03,310.00 580.27,310.00C578.31,310.00 577.93,309.93 577.48,309.48C577.15,309.15 577.02,308.81 577.13,308.54C577.37,307.95 577.72,304.58 578.05,299.59C578.29,295.88 578.27,294.76 577.90,291.34C577.66,289.16 577.41,286.76 577.35,286.00C577.28,285.24 577.12,284.23 576.98,283.75C576.84,283.27 576.52,281.86 576.26,280.62C575.64,277.66 573.46,271.54 572.48,270.00C572.34,269.79 571.94,269.01 571.58,268.25C571.22,267.49 570.66,266.56 570.33,266.17C570.01,265.78 569.68,265.19 569.60,264.87C569.52,264.54 569.18,264.10 568.85,263.88C568.52,263.67 568.25,263.34 568.25,263.15C568.25,262.97 567.83,262.29 567.31,261.64C563.75,257.14 560.59,253.86 557.20,251.18C556.20,250.38 554.89,249.34 554.29,248.86C553.69,248.39 553.09,248.00 552.95,248.00C552.81,248.00 552.34,247.71 551.91,247.35C549.57,245.40 542.30,241.74 537.00,239.84C531.53,237.88 522.55,235.51 518.25,234.88C514.56,234.34 512.48,233.89 512.46,233.62C512.43,233.34 512.71,233.18 514.82,232.38C515.75,232.02 517.03,231.45 517.67,231.11C518.30,230.78 518.96,230.50 519.12,230.50C519.53,230.50 527.02,226.43 529.00,225.13C529.89,224.55 531.36,223.63 532.25,223.10C533.14,222.57 534.18,221.91 534.55,221.63C534.91,221.35 535.62,220.84 536.12,220.50C537.20,219.75 540.15,217.40 540.94,216.65C541.24,216.36 541.86,215.82 542.31,215.44C544.83,213.33 548.16,209.96 550.78,206.88C554.60,202.37 555.02,201.84 555.62,200.85C555.90,200.40 556.59,199.37 557.15,198.57C558.34,196.88 560.00,193.83 560.00,193.33C560.00,193.14 560.16,192.92 560.35,192.85C560.84,192.66 563.50,187.24 564.75,183.88C565.06,183.05 565.52,181.87 565.78,181.25C566.51,179.52 568.72,171.79 569.29,169.00C569.85,166.28 570.52,161.56 570.89,157.75C571.35,153.04 571.41,141.60 571.00,137.30C570.66,133.74 569.87,128.55 569.53,127.67C569.37,127.28 569.25,126.60 569.25,126.15C569.25,125.70 569.04,124.72 568.79,123.98C568.53,123.23 568.24,122.17 568.14,121.62C567.98,120.76 567.18,118.23 565.49,113.35C565.25,112.65 564.94,111.86 564.80,111.60C564.66,111.34 564.17,110.22 563.72,109.12C563.27,108.03 562.81,107.01 562.71,106.87C562.61,106.72 561.92,105.43 561.17,103.99C560.42,102.55 559.43,100.80 558.96,100.11C558.50,99.41 557.84,98.36 557.50,97.78C556.90,96.76 556.38,96.03 554.77,93.88C554.35,93.33 553.19,91.75 552.17,90.38C550.59,88.22 547.48,84.61 544.53,81.50C544.08,81.02 543.63,80.54 543.54,80.43C541.74,78.28 532.50,70.55 528.12,67.51C525.03,65.36 523.98,64.67 523.00,64.11C522.38,63.76 521.46,63.22 520.95,62.92C518.55,61.50 513.25,58.57 512.25,58.10C510.24,57.17 507.15,55.70 506.25,55.25C505.77,55.01 505.07,54.74 504.69,54.65C504.31,54.56 504.00,54.39 504.00,54.28C504.00,54.04 503.85,53.97 499.62,52.50C497.98,51.92 496.29,51.31 495.88,51.13C493.67,50.19 488.62,48.63 483.00,47.15C482.11,46.91 481.04,46.60 480.62,46.46C480.21,46.32 479.37,46.10 478.75,45.98C478.13,45.86 476.27,45.47 474.62,45.12C467.74,43.65 460.10,42.49 453.12,41.86C447.13,41.32 432.96,41.10 427.51,41.47C414.42,42.36 411.45,42.64 404.50,43.64C399.12,44.41 398.31,44.53 395.62,45.02C392.88,45.52 392.45,45.61 389.62,46.35C386.57,47.15 383.84,47.79 382.53,48.00C381.79,48.12 380.89,48.33 380.53,48.46C380.17,48.59 378.64,49.06 377.12,49.50C375.61,49.94 373.19,50.67 371.75,51.13C370.31,51.58 368.90,52.01 368.62,52.08C368.35,52.16 366.83,52.69 365.25,53.27C363.67,53.85 361.83,54.52 361.17,54.75C360.51,54.99 359.84,55.31 359.68,55.47C359.53,55.62 359.31,55.75 359.20,55.75C359.09,55.75 357.79,56.26 356.31,56.89C350.40,59.40 342.05,63.59 339.12,65.51C338.30,66.05 337.28,66.65 336.86,66.86C336.43,67.06 335.94,67.40 335.76,67.61C335.58,67.82 335.32,68.00 335.18,68.00C334.85,68.00 331.06,70.40 330.25,71.13C329.91,71.43 329.33,71.84 328.96,72.03C328.28,72.38 323.17,76.19 321.38,77.68C320.82,78.13 320.09,78.73 319.75,79.00C316.35,81.69 309.17,88.50 304.88,93.12C300.80,97.50 294.10,106.38 291.25,111.15C289.03,114.88 287.61,117.21 287.22,117.79C286.98,118.15 286.70,118.74 286.61,119.09C286.52,119.44 286.31,119.85 286.13,120.00C285.95,120.14 284.83,122.26 283.64,124.69C280.71,130.66 280.39,131.35 279.61,133.38C279.24,134.34 278.79,135.46 278.60,135.88C278.41,136.29 277.75,138.20 277.12,140.12C276.49,142.05 275.88,143.85 275.76,144.12C275.46,144.80 274.29,149.17 274.11,150.25C274.03,150.73 273.81,151.52 273.63,152.00C272.87,153.99 270.95,164.04 270.25,169.68C270.13,170.67 269.95,171.87 269.86,172.34C269.78,172.82 269.50,175.89 269.26,179.17C268.33,191.65 268.89,206.37 270.61,214.68C270.95,216.30 271.45,218.75 271.73,220.12C272.55,224.11 273.02,225.93 274.07,229.12C274.61,230.78 275.21,232.74 275.40,233.50C275.75,234.88 276.89,238.13 277.76,240.25C278.49,242.03 281.02,247.73 281.40,248.46C281.59,248.83 281.75,249.20 281.75,249.30C281.75,249.40 282.32,250.52 283.03,251.80C283.73,253.08 284.84,255.14 285.49,256.38C288.46,261.99 289.55,263.82 290.37,264.49C290.58,264.67 290.75,264.92 290.75,265.05C290.75,265.37 294.57,271.23 295.19,271.88C295.46,272.15 295.82,272.66 296.00,273.00C296.19,273.34 296.96,274.37 297.73,275.29C298.50,276.20 299.86,277.86 300.75,278.98C303.14,281.97 305.96,285.30 306.58,285.88C306.88,286.16 308.40,287.72 309.97,289.35C312.60,292.11 313.52,292.97 316.09,295.08C316.62,295.52 317.53,296.32 318.11,296.88C320.02,298.69 322.11,300.47 323.50,301.47C324.26,302.01 325.21,302.73 325.62,303.07C326.04,303.40 326.66,303.82 327.00,303.99C327.34,304.17 327.85,304.53 328.12,304.79C329.19,305.81 336.66,310.75 337.14,310.75C337.25,310.75 337.51,310.91 337.73,311.10C338.82,312.07 347.80,316.84 351.94,318.64C352.38,318.84 353.12,319.16 353.56,319.36C355.38,320.16 357.68,321.07 358.62,321.36C359.18,321.52 359.91,321.78 360.25,321.92C360.59,322.07 362.28,322.61 364.00,323.13C365.72,323.65 367.57,324.22 368.12,324.39C368.99,324.67 372.33,325.46 376.00,326.25C378.05,326.70 381.55,327.25 382.32,327.25C382.73,327.25 383.47,327.36 383.97,327.49C384.47,327.62 385.74,327.80 386.79,327.89C387.85,327.97 388.90,328.18 389.14,328.36C389.59,328.69 389.31,328.83 384.91,330.51C383.08,331.21 378.96,333.62 376.80,335.24C373.55,337.70 368.53,342.97 367.28,345.25C367.06,345.65 366.28,346.98 365.56,348.21C364.84,349.43 364.25,350.57 364.25,350.73C364.25,350.89 364.07,351.37 363.86,351.79C363.44,352.60 362.70,355.21 362.04,358.25C361.73,359.67 361.64,361.34 361.66,365.12C361.69,369.52 361.77,370.48 362.33,373.00C363.41,377.81 365.25,383.25 366.15,384.27C366.34,384.49 366.50,384.82 366.50,385.01C366.50,385.19 366.77,385.75 367.09,386.24C367.41,386.73 368.40,388.47 369.28,390.12C370.16,391.77 371.18,393.47 371.56,393.90C372.81,395.34 372.63,395.58 368.94,397.41C365.58,399.07 363.19,400.40 359.53,402.62C359.07,402.90 357.58,404.02 356.21,405.12C354.84,406.23 353.41,407.35 353.05,407.63C352.68,407.91 351.31,409.25 350.00,410.61C348.69,411.97 347.34,413.37 347.00,413.73C346.37,414.38 345.34,415.67 344.33,417.06C344.02,417.48 343.47,418.20 343.09,418.65C342.16,419.76 339.74,423.72 338.67,425.88C337.34,428.56 336.50,430.40 336.49,430.65C336.49,430.77 336.27,431.32 336.00,431.88C335.73,432.43 335.51,433.05 335.51,433.26C335.50,433.48 335.40,433.76 335.28,433.89C334.66,434.56 333.07,440.73 332.32,445.38C331.81,448.56 331.62,457.56 331.98,461.83C332.26,465.14 333.27,470.51 333.89,471.95C334.09,472.40 334.25,472.88 334.25,473.01C334.25,473.45 336.50,479.07 337.35,480.75C338.44,482.91 339.88,485.39 340.50,486.18C340.77,486.53 341.00,486.93 341.00,487.06C341.00,487.33 342.03,488.68 343.03,489.71C343.38,490.08 343.86,490.74 344.09,491.18C344.62,492.21 351.19,498.85 353.09,500.27C356.11,502.53 357.90,503.75 358.81,504.16C359.33,504.39 359.75,504.67 359.75,504.78C359.75,504.98 360.17,505.21 364.75,507.49C365.92,508.07 367.29,508.76 367.80,509.02C368.31,509.28 368.90,509.50 369.12,509.50C369.34,509.50 369.86,509.68 370.28,509.89C370.69,510.10 372.06,510.60 373.33,511.00C374.59,511.39 375.96,511.83 376.38,511.97C377.80,512.43 381.68,513.25 382.49,513.25C382.93,513.25 383.60,513.41 383.96,513.60C385.21,514.26 392.53,515.05 398.62,515.19C403.45,515.29 405.20,515.23 409.50,514.76C412.32,514.46 415.19,514.06 415.88,513.88C416.56,513.69 417.63,513.47 418.25,513.38C421.14,512.94 427.71,510.91 431.12,509.40C434.09,508.08 435.33,507.36 440.77,503.75C443.28,502.09 445.05,500.77 446.95,499.15C449.70,496.80 457.04,489.55 458.74,487.50C461.03,484.75 461.17,484.72 463.35,486.51C467.27,489.73 468.21,490.47 469.30,491.27C470.42,492.08 471.95,493.28 475.88,496.38C476.84,497.14 478.34,498.30 479.21,498.95C480.08,499.59 481.28,500.52 481.87,501.00C482.47,501.48 483.53,502.32 484.24,502.88C484.94,503.43 486.22,504.44 487.07,505.13C487.93,505.82 489.30,506.88 490.12,507.50C490.95,508.11 492.06,508.99 492.59,509.45C493.12,509.92 493.96,510.47 494.47,510.68C494.97,510.89 495.66,511.25 496.00,511.48C497.03,512.17 499.81,513.19 501.52,513.51C502.40,513.68 503.46,513.93 503.88,514.07C504.35,514.24 510.46,514.37 520.56,514.44C535.18,514.54 536.51,514.52 536.65,514.14C536.85,513.63 536.23,513.15 534.88,512.75C533.35,512.30 531.50,511.46 531.50,511.23C531.50,510.58 532.96,510.50 544.24,510.50C554.88,510.50 556.03,510.46 556.17,510.09C556.34,509.66 556.27,509.60 553.91,508.31C549.71,506.01 546.57,501.36 545.02,495.12C544.62,493.48 544.16,491.03 544.02,489.70C543.84,488.13 543.75,477.45 543.75,459.67C543.75,433.71 543.78,432.05 544.19,431.68C544.57,431.34 546.10,431.29 557.00,431.27C566.28,431.26 570.16,431.35 572.50,431.62C577.38,432.18 579.18,432.46 580.56,432.87C581.27,433.08 582.10,433.25 582.42,433.25C582.74,433.25 583.42,433.48 583.93,433.75C584.45,434.02 584.98,434.25 585.12,434.25C585.48,434.25 588.68,435.58 589.87,436.21C590.42,436.51 590.97,436.75 591.10,436.75C591.22,436.75 591.70,437.03 592.15,437.38C592.60,437.72 593.07,438.00 593.20,438.00C593.32,438.00 593.87,438.33 594.42,438.72C594.97,439.12 595.77,439.63 596.20,439.85C597.12,440.32 603.04,445.41 605.89,448.17C608.21,450.42 613.28,456.09 614.46,457.75C614.90,458.37 615.65,459.38 616.13,460.00C617.43,461.69 619.05,463.94 619.75,465.02C620.09,465.56 620.99,466.96 621.75,468.15C622.51,469.34 623.41,470.74 623.75,471.27C624.09,471.80 624.93,473.17 625.60,474.31C626.27,475.44 627.15,476.91 627.54,477.57C627.93,478.22 628.25,478.82 628.25,478.89C628.25,479.00 633.30,488.14 634.39,490.00C634.59,490.34 635.27,491.69 635.89,493.00C636.52,494.31 637.13,495.54 637.26,495.75C637.39,495.96 637.62,496.40 637.76,496.73C638.38,498.18 640.70,502.70 644.94,510.75C645.27,511.37 645.84,512.39 646.20,513.02C646.57,513.65 647.36,515.00 647.95,516.02C648.54,517.04 649.33,518.35 649.70,518.94C653.77,525.35 655.35,527.78 655.65,528.02C655.84,528.18 656.00,528.45 656.00,528.62C656.00,528.80 656.59,529.67 657.31,530.56C658.03,531.45 659.08,532.83 659.62,533.62C660.57,534.98 661.70,536.41 663.20,538.16C663.57,538.59 664.27,539.42 664.75,540.01C666.48,542.12 667.67,543.41 669.63,545.28C670.73,546.32 672.26,547.78 673.04,548.53C674.80,550.22 676.90,552.00 677.12,552.00C677.22,552.00 678.04,552.65 678.96,553.45C680.80,555.05 680.61,554.92 684.27,557.36C688.46,560.15 688.63,560.25 689.06,560.25C689.29,560.25 689.55,560.38 689.64,560.53C689.74,560.69 690.56,561.14 691.47,561.55C692.38,561.96 693.58,562.49 694.12,562.74C694.67,562.98 695.54,563.37 696.04,563.59C696.54,563.82 697.11,564.00 697.30,564.00C697.49,564.00 698.31,564.24 699.13,564.53C699.95,564.81 701.36,565.21 702.25,565.41C703.14,565.61 704.66,565.94 705.62,566.15C709.69,567.05 712.03,567.20 722.75,567.22C730.49,567.24 734.19,567.15 736.39,566.89Z  M401.93,508.10C400.13,507.92 397.54,507.44 396.00,507.01C394.49,506.59 393.12,506.25 392.94,506.24C392.77,506.24 392.34,506.02 392.00,505.75C391.66,505.48 391.19,505.26 390.97,505.26C390.32,505.25 385.12,502.89 383.75,501.98C382.13,500.91 377.93,498.07 377.24,497.58C376.82,497.28 376.24,496.74 375.97,496.39C375.69,496.04 375.36,495.75 375.23,495.75C374.90,495.75 369.54,490.16 367.92,488.12C366.84,486.76 363.53,481.81 363.14,480.96C362.93,480.50 362.62,479.90 362.44,479.63C362.27,479.35 361.94,478.85 361.72,478.50C361.18,477.67 358.25,471.02 358.25,470.64C358.25,470.47 357.97,469.65 357.63,468.81C356.88,466.98 355.42,461.04 354.89,457.75C354.08,452.66 353.97,444.57 354.63,439.38C354.82,437.86 355.70,433.16 355.99,432.12C356.64,429.75 358.40,424.44 358.88,423.38C361.14,418.42 362.70,415.62 365.45,411.62C367.84,408.15 368.69,407.12 372.00,403.67C374.56,401.01 375.18,400.49 375.72,400.55C376.19,400.61 377.06,401.47 379.06,403.88C382.84,408.42 383.49,409.18 384.64,410.48C385.19,411.11 385.97,412.02 386.36,412.50C387.22,413.57 389.78,416.46 391.12,417.90C391.68,418.48 392.50,419.45 392.96,420.04C393.95,421.32 397.39,425.05 401.75,429.58C403.47,431.36 405.59,433.57 406.46,434.47C407.33,435.38 408.88,436.97 409.89,438.00C411.96,440.11 421.82,449.67 424.86,452.52C425.94,453.54 427.25,454.77 427.75,455.25C428.25,455.73 429.66,457.02 430.89,458.12C433.09,460.11 437.02,463.76 438.28,464.99C438.63,465.34 439.42,466.07 440.03,466.62C440.64,467.18 442.43,468.82 444.00,470.28C445.58,471.74 448.39,474.25 450.24,475.86C452.09,477.47 453.75,479.00 453.94,479.27C454.13,479.54 454.61,479.92 455.02,480.13C456.58,480.94 455.92,482.18 451.44,486.78C447.84,490.47 441.66,496.00 441.12,496.00C441.02,496.00 440.51,496.37 439.98,496.81C437.94,498.55 432.48,502.11 431.17,502.56C430.73,502.71 430.10,503.01 429.77,503.22C429.15,503.62 426.94,504.60 425.62,505.05C425.21,505.19 424.54,505.46 424.12,505.63C423.71,505.81 422.40,506.24 421.21,506.60C415.47,508.33 408.96,508.83 401.93,508.10Z  M512.24,500.68C509.64,498.96 506.20,496.30 500.79,491.81C497.37,488.98 492.49,484.79 485.00,478.25C479.66,473.58 477.76,472.00 477.49,472.00C477.37,472.00 476.89,471.63 476.42,471.19C475.96,470.74 475.17,470.06 474.66,469.68C473.51,468.80 473.48,468.03 474.52,466.39C476.26,463.64 479.32,457.61 482.51,450.62C483.14,449.24 485.05,445.23 486.80,441.62C487.20,440.80 487.71,439.79 487.93,439.38C488.50,438.31 488.75,437.83 489.70,436.00C490.16,435.11 490.69,434.21 490.87,434.00C491.05,433.79 491.38,433.23 491.60,432.75C491.82,432.27 492.26,431.47 492.56,430.97C492.87,430.47 493.46,429.48 493.88,428.76C494.29,428.05 494.92,427.08 495.28,426.61C495.64,426.15 496.07,425.42 496.25,425.01C496.42,424.59 496.66,424.25 496.78,424.25C496.90,424.25 497.26,423.83 497.59,423.31C498.43,421.98 502.18,418.29 503.26,417.75C505.34,416.69 504.97,416.00 502.16,415.70C501.18,415.60 498.24,415.34 495.62,415.14C493.01,414.93 490.59,414.70 490.25,414.63C489.69,414.51 486.57,414.24 476.88,413.49C475.23,413.37 471.21,413.02 467.96,412.72C462.39,412.22 460.25,412.22 460.25,412.75C460.25,412.95 461.09,413.59 463.96,415.55C464.41,415.87 465.29,416.55 465.91,417.06C466.53,417.58 467.11,418.00 467.22,418.00C467.57,418.00 472.23,422.38 473.07,423.50C474.84,425.88 476.07,428.63 476.76,431.78C477.22,433.89 476.95,440.68 476.27,444.12C475.47,448.18 474.02,452.86 472.63,455.88C470.26,461.01 468.93,463.49 468.48,463.63C467.96,463.80 467.63,463.55 463.09,459.63C461.97,458.67 460.48,457.43 459.77,456.88C459.06,456.32 458.12,455.54 457.67,455.12C457.23,454.71 455.64,453.31 454.14,452.00C452.63,450.69 450.93,449.15 450.35,448.56C449.77,447.98 449.18,447.50 449.04,447.50C448.89,447.50 447.95,446.68 446.95,445.69C445.94,444.69 444.18,443.03 443.03,442.00C440.42,439.65 440.32,439.55 431.76,431.25C427.86,427.47 423.03,422.70 421.02,420.65C419.02,418.60 417.16,416.74 416.91,416.52C416.65,416.30 416.31,415.98 416.16,415.81C416.00,415.63 414.42,414.00 412.65,412.18C410.88,410.36 409.08,408.46 408.65,407.94C408.22,407.43 407.64,406.76 407.35,406.44C401.52,400.09 394.38,391.51 391.90,387.88C391.43,387.19 390.59,386.01 390.03,385.25C388.35,382.96 384.64,377.42 384.42,376.89C384.31,376.61 384.06,376.21 383.86,375.99C383.36,375.43 379.47,367.78 379.23,366.88C379.12,366.46 378.75,365.36 378.39,364.43C377.45,361.92 376.92,357.39 377.23,354.46C377.61,350.81 377.95,349.09 378.60,347.42C378.93,346.57 379.33,345.46 379.49,344.96C379.65,344.45 379.94,343.90 380.14,343.74C380.34,343.57 380.50,343.33 380.50,343.19C380.50,342.85 382.69,339.59 383.37,338.91C383.67,338.60 384.02,338.19 384.14,337.98C384.51,337.38 387.27,335.11 388.62,334.29C391.56,332.50 395.45,330.98 398.41,330.46C399.21,330.31 401.50,330.14 403.50,330.08C407.77,329.94 410.97,330.45 411.94,331.42C412.61,332.09 412.63,332.67 412.13,336.39C411.58,340.54 410.54,345.01 409.52,347.62C407.90,351.81 407.94,351.74 405.38,354.36C403.83,355.94 402.44,357.12 401.72,357.46C401.09,357.77 400.37,358.23 400.12,358.51C399.87,358.78 399.35,359.00 398.96,359.00C398.43,359.00 398.25,359.12 398.25,359.47C398.25,360.19 399.52,360.25 414.91,360.25C427.34,360.25 428.98,360.29 429.26,360.64C429.77,361.26 430.07,370.56 429.66,373.00C429.41,374.45 429.83,375.12 430.82,374.87C431.20,374.77 432.71,373.49 434.31,371.91C437.37,368.88 438.16,367.97 438.59,367.01C438.74,366.66 439.12,366.01 439.42,365.56C439.72,365.10 440.13,364.00 440.33,363.11C440.54,362.21 440.88,361.21 441.10,360.88L441.49,360.28L473.31,360.19C507.29,360.08 504.77,360.16 514.50,358.86C517.60,358.44 518.18,358.51 518.38,359.34C518.46,359.63 518.48,389.18 518.44,425.00L518.37,490.12L517.69,493.25C516.94,496.68 515.68,500.86 515.23,501.40C514.74,501.99 513.92,501.79 512.24,500.68Z  M544.06,428.22C543.66,427.81 543.60,351.50 544.00,350.75C544.14,350.50 545.12,349.81 546.19,349.23C549.27,347.55 551.59,346.19 552.06,345.79C552.31,345.59 552.71,345.30 552.97,345.15C554.07,344.50 555.47,343.50 555.62,343.25C555.71,343.11 556.43,342.52 557.21,341.94C558.81,340.76 563.89,335.67 565.31,333.84C565.82,333.17 566.61,332.15 567.06,331.58C567.51,331.00 568.16,330.12 568.50,329.63C568.84,329.13 569.43,328.32 569.81,327.83C570.19,327.34 570.50,326.84 570.50,326.72C570.50,326.60 570.90,325.89 571.38,325.13C572.24,323.78 572.75,322.62 574.61,317.75C575.11,316.44 575.64,315.07 575.78,314.71C575.93,314.34 576.19,313.98 576.37,313.91C576.78,313.75 581.87,314.15 584.12,314.52C592.19,315.84 598.90,318.46 606.13,323.12C607.46,323.99 609.83,326.11 612.27,328.62C614.08,330.50 617.50,334.93 617.50,335.40C617.50,335.56 617.65,335.82 617.84,335.97C618.16,336.23 621.08,341.92 622.03,344.12C622.75,345.79 624.17,350.48 624.72,353.00C626.74,362.32 627.06,375.21 625.47,383.75C624.77,387.50 623.86,391.11 623.08,393.25C621.85,396.59 619.71,401.43 618.99,402.50C618.76,402.84 618.29,403.63 617.95,404.25C615.26,409.08 609.09,415.78 604.41,418.96C601.53,420.91 596.86,423.51 595.38,423.99C594.83,424.17 594.26,424.39 594.12,424.49C593.48,424.95 587.76,426.65 584.88,427.25C580.22,428.22 578.34,428.31 561.25,428.42C547.88,428.51 544.31,428.47 544.06,428.22Z  M442.31,356.23C442.00,356.11 441.64,355.76 441.51,355.44C440.85,353.80 440.75,345.85 440.75,292.78L440.75,238.01L441.35,237.62C441.89,237.26 444.45,237.23 466.41,237.32C487.05,237.41 491.36,237.49 494.01,237.83C497.46,238.27 501.33,238.89 502.88,239.25C503.43,239.38 504.85,239.70 506.05,239.98C507.25,240.25 508.56,240.65 508.97,240.86C509.39,241.08 509.96,241.25 510.25,241.25C510.69,241.25 511.75,241.63 514.38,242.73C515.62,243.25 520.26,245.58 521.51,246.32C524.24,247.91 524.58,248.13 525.35,248.78C525.78,249.14 526.50,249.62 526.96,249.86C528.09,250.44 535.32,257.64 535.88,258.75C536.12,259.23 536.69,260.06 537.15,260.59C537.60,261.12 538.20,262.02 538.48,262.59C538.76,263.16 539.14,263.91 539.34,264.25C540.32,265.99 541.98,269.49 542.24,270.38C542.40,270.93 542.64,271.60 542.76,271.88C543.66,273.86 544.90,279.00 545.51,283.25C546.29,288.76 546.57,293.63 546.41,298.87C546.20,305.51 545.82,308.75 545.19,309.31C544.73,309.72 543.46,309.75 526.12,309.75C508.15,309.75 507.54,309.77 506.97,310.23L506.38,310.71L508.25,311.61C510.61,312.74 511.65,313.52 513.12,315.25C515.53,318.11 517.34,323.04 518.24,329.25C518.57,331.52 518.60,349.09 518.28,349.70C518.02,350.19 514.64,352.00 513.98,352.00C513.79,352.00 513.06,352.28 512.38,352.62C511.69,352.96 510.96,353.24 510.75,353.25C510.54,353.25 509.48,353.54 508.38,353.90C505.33,354.87 498.33,355.95 493.05,356.25C487.48,356.57 443.14,356.55 442.31,356.23Z  M409.50,326.95C408.74,326.82 406.46,326.66 404.42,326.59C400.49,326.46 399.96,326.26 400.84,325.28C401.07,325.04 401.25,324.66 401.25,324.45C401.25,323.63 400.69,323.51 398.11,323.79C392.61,324.37 380.64,323.07 372.00,320.96C367.48,319.86 363.52,318.48 359.88,316.76C356.93,315.36 352.01,312.91 351.25,312.45C349.31,311.28 344.54,308.07 343.15,307.01C342.34,306.38 341.05,305.41 340.28,304.83C339.51,304.26 338.51,303.44 338.07,303.02C337.63,302.60 337.13,302.25 336.98,302.25C336.71,302.25 333.97,299.66 328.62,294.35C327.52,293.26 325.95,291.55 325.12,290.55C323.47,288.56 322.47,287.38 321.12,285.88C320.63,285.32 319.62,284.03 318.88,283.00C318.15,281.97 317.24,280.73 316.88,280.25C316.09,279.20 312.50,273.64 312.04,272.75C311.56,271.81 310.45,269.82 309.38,268.00C307.20,264.29 307.08,264.07 304.95,259.38C304.27,257.86 303.55,256.29 303.35,255.88C302.60,254.27 300.75,249.47 300.75,249.12C300.75,248.91 300.52,248.33 300.25,247.82C299.98,247.30 299.75,246.75 299.75,246.59C299.75,246.43 299.32,245.19 298.79,243.84C297.62,240.82 297.26,239.70 296.25,235.88C295.81,234.22 295.30,232.31 295.11,231.62C294.91,230.94 294.53,229.31 294.24,228.00C293.96,226.69 293.57,224.89 293.37,224.00C292.99,222.20 292.11,217.82 291.75,215.88C291.63,215.19 291.40,213.44 291.26,212.00C291.11,210.56 290.88,208.81 290.76,208.12C290.28,205.53 289.62,197.53 289.38,191.38C289.18,186.43 289.58,175.48 290.12,171.12C290.86,165.09 291.54,160.14 291.91,158.12C292.11,157.03 292.42,155.28 292.61,154.25C293.01,152.00 294.55,145.86 295.36,143.25C295.68,142.22 296.25,140.36 296.62,139.12C296.99,137.89 297.45,136.54 297.64,136.12C297.83,135.71 298.61,133.76 299.38,131.79C300.15,129.82 300.88,128.02 301.00,127.79C301.82,126.23 304.25,120.91 304.25,120.65C304.25,120.47 304.46,120.13 304.73,119.90C304.99,119.66 305.28,119.18 305.36,118.84C305.45,118.49 305.78,117.80 306.10,117.29C306.41,116.79 307.16,115.53 307.75,114.50C308.34,113.47 309.08,112.23 309.38,111.75C309.68,111.27 310.54,109.86 311.28,108.62C312.02,107.39 312.71,106.34 312.82,106.29C312.92,106.24 313.19,105.85 313.42,105.41C313.64,104.98 314.09,104.29 314.43,103.88C315.48,102.58 319.36,97.48 319.77,96.85C319.99,96.52 320.46,95.94 320.81,95.56C321.16,95.18 322.69,93.53 324.20,91.88C327.19,88.61 330.51,85.34 333.61,82.62C334.70,81.66 335.84,80.65 336.15,80.38C336.45,80.10 337.31,79.41 338.04,78.83C338.77,78.26 340.01,77.29 340.78,76.67C341.55,76.05 342.51,75.38 342.91,75.17C343.30,74.97 343.90,74.51 344.23,74.15C344.56,73.79 344.94,73.50 345.07,73.50C345.20,73.50 345.66,73.21 346.09,72.85C347.16,71.97 351.27,69.41 355.38,67.07C356.48,66.44 357.94,65.60 358.62,65.21C359.31,64.81 360.04,64.38 360.25,64.27C361.03,63.82 365.99,61.50 369.00,60.18C374.16,57.92 374.35,57.84 375.11,57.65C375.51,57.55 376.52,57.15 377.36,56.77C380.91,55.13 388.03,52.91 393.45,51.74C394.54,51.51 397.55,50.75 399.88,50.14C400.56,49.95 402.36,49.62 403.88,49.39C405.39,49.16 407.41,48.81 408.38,48.61C409.34,48.41 410.91,48.13 411.88,47.99C412.84,47.85 414.13,47.62 414.75,47.48C415.37,47.34 417.45,47.13 419.38,47.01C421.30,46.90 424.96,46.61 427.50,46.37C431.26,46.02 433.59,45.97 440.00,46.09C444.33,46.17 448.83,46.35 450.00,46.49C451.17,46.63 453.42,46.86 455.00,47.00C456.58,47.14 458.24,47.38 458.69,47.53C459.14,47.67 460.49,47.95 461.69,48.13C464.92,48.63 466.06,48.88 469.38,49.75C471.02,50.18 472.83,50.64 473.39,50.75C474.65,51.02 479.11,52.43 480.16,52.90C480.60,53.09 481.13,53.25 481.34,53.25C481.56,53.25 482.33,53.52 483.06,53.85C483.78,54.19 485.11,54.77 486.00,55.14C486.89,55.52 489.20,56.58 491.12,57.51C493.05,58.44 494.86,59.27 495.15,59.35C495.45,59.44 495.89,59.73 496.13,60.01C496.38,60.28 496.69,60.50 496.83,60.50C496.97,60.50 497.66,60.88 498.36,61.34C499.05,61.80 500.47,62.67 501.50,63.26C502.53,63.86 503.99,64.87 504.75,65.50C505.51,66.13 506.46,66.86 506.88,67.12C507.71,67.64 508.77,68.47 511.21,70.52C512.13,71.28 513.04,72.01 513.25,72.14C513.58,72.35 519.45,78.40 520.86,80.00C522.99,82.40 524.53,84.27 525.09,85.12C526.19,86.80 526.58,87.34 527.30,88.20C527.69,88.65 528.00,89.15 528.00,89.31C528.00,89.46 528.22,89.83 528.49,90.11C528.97,90.63 530.51,93.20 531.49,95.12C531.77,95.67 532.34,96.69 532.75,97.38C535.22,101.50 537.52,107.19 540.08,115.50C544.09,128.54 545.12,143.41 543.14,159.75C542.95,161.33 542.61,163.47 542.39,164.50C542.17,165.53 541.87,166.99 541.72,167.75C541.57,168.51 541.22,170.03 540.94,171.12C540.66,172.22 540.28,173.74 540.11,174.50C539.93,175.26 539.67,176.21 539.52,176.62C539.38,177.04 538.91,178.56 538.49,180.00C537.53,183.26 535.66,188.45 535.00,189.69C534.72,190.20 534.50,190.87 534.50,191.17C534.50,191.47 534.40,191.78 534.27,191.86C534.15,191.94 533.19,193.71 532.13,195.81C531.07,197.91 530.06,199.79 529.88,200.00C529.71,200.21 529.48,200.64 529.38,200.95C529.19,201.58 528.98,201.94 526.67,205.50C524.15,209.38 523.17,210.64 519.16,215.12C514.70,220.11 508.99,224.88 504.62,227.28C502.75,228.31 498.79,230.20 498.00,230.44C497.52,230.58 496.17,230.99 495.00,231.35C492.74,232.03 489.29,232.65 485.64,233.03C484.40,233.15 473.99,233.23 462.49,233.19C444.96,233.14 441.51,233.07 441.15,232.77C440.76,232.45 440.74,229.76 440.83,192.15C440.90,166.46 441.03,151.20 441.20,150.00C441.85,145.29 443.95,138.81 445.96,135.33C446.93,133.64 448.56,131.85 450.33,130.51C451.74,129.44 454.43,128.00 455.00,128.00C455.58,128.00 456.41,127.06 456.10,126.75C455.95,126.60 445.21,126.50 427.12,126.49L398.38,126.47L398.38,127.05C398.38,127.48 398.58,127.69 399.17,127.88C399.60,128.02 400.17,128.32 400.42,128.53C400.67,128.75 401.44,129.24 402.12,129.63C403.67,130.49 407.19,134.09 407.91,135.55C409.13,137.98 409.35,138.51 410.40,141.50C411.01,143.21 411.50,144.90 411.50,145.25C411.51,145.59 411.73,146.94 412.00,148.25C412.48,150.59 412.49,152.10 412.50,238.62C412.51,321.47 412.49,326.64 412.08,326.94C411.61,327.28 411.48,327.28 409.50,326.95Z M159.37714285714293 711.0 169.43428571428578 689.0H171.72857142857148L181.78571428571433 711.0H179.33428571428578L176.69428571428577 705.1228571428571H164.4371428571429L161.79714285714292 711.0ZM175.84571428571434 703.2371428571429 170.56571428571434 691.42 165.28571428571433 703.2371428571429Z M195.78571428571433 711.0V689.0H204.7428571428572Q208.2628571428572 689.0 210.91857142857148 690.3985714285714Q213.57428571428576 691.7971428571428 215.05142857142863 694.28Q216.52857142857147 696.7628571428571 216.52857142857147 700.0Q216.52857142857147 703.2371428571429 215.05142857142863 705.72Q213.57428571428576 708.2028571428572 210.91857142857148 709.6014285714286Q208.2628571428572 711.0 204.7428571428572 711.0ZM198.11142857142863 708.9885714285714H204.6171428571429Q207.54000000000005 708.9885714285714 209.69285714285718 707.8414285714285Q211.84571428571434 706.6942857142857 213.04000000000005 704.6671428571428Q214.23428571428576 702.64 214.23428571428576 700.0Q214.23428571428576 697.3285714285714 213.04000000000005 695.3171428571429Q211.84571428571434 693.3057142857143 209.69285714285718 692.1585714285715Q207.54000000000005 691.0114285714286 204.6171428571429 691.0114285714286H198.11142857142863Z M240.27142857142863 711.0 230.5285714285715 689.0H233.0428571428572L241.46571428571434 708.14L249.95142857142864 689.0H252.3085714285715L242.56571428571434 711.0Z M277.8742857142858 711.1885714285714Q275.39142857142866 711.1885714285714 273.2700000000001 710.3557142857143Q271.14857142857153 709.5228571428571 269.59285714285727 707.9985714285715Q268.03714285714295 706.4742857142858 267.17285714285725 704.4471428571428Q266.30857142857155 702.42 266.30857142857155 700.0Q266.30857142857155 697.58 267.17285714285725 695.5528571428572Q268.03714285714295 693.5257142857142 269.59285714285727 692.0014285714285Q271.14857142857153 690.4771428571429 273.25428571428586 689.6442857142857Q275.3600000000001 688.8114285714286 277.8742857142858 688.8114285714286Q280.35714285714295 688.8114285714286 282.4628571428573 689.6442857142857Q284.56857142857154 690.4771428571429 286.12428571428586 691.9857142857143Q287.6800000000001 693.4942857142858 288.5442857142858 695.537142857143Q289.4085714285715 697.58 289.4085714285715 700.0Q289.4085714285715 702.42 288.5442857142858 704.462857142857Q287.6800000000001 706.5057142857142 286.12428571428586 708.0142857142857Q284.56857142857154 709.5228571428571 282.4628571428573 710.3557142857143Q280.35714285714295 711.1885714285714 277.8742857142858 711.1885714285714ZM277.8742857142858 709.1142857142858Q279.8542857142858 709.1142857142858 281.5357142857144 708.4385714285714Q283.21714285714296 707.7628571428571 284.45857142857153 706.5214285714285Q285.7000000000001 705.28 286.39142857142866 703.63Q287.0828571428572 701.98 287.0828571428572 700.0Q287.0828571428572 698.02 286.39142857142866 696.37Q285.7000000000001 694.72 284.45857142857153 693.4785714285715Q283.21714285714296 692.2371428571429 281.5357142857144 691.5614285714286Q279.8542857142858 690.8857142857142 277.8742857142858 690.8857142857142Q275.89428571428584 690.8857142857142 274.197142857143 691.5614285714286Q272.5000000000001 692.2371428571429 271.25857142857154 693.4785714285715Q270.01714285714297 694.72 269.3100000000001 696.37Q268.60285714285726 698.02 268.60285714285726 700.0Q268.60285714285726 701.9485714285714 269.3100000000001 703.6142857142856Q270.01714285714297 705.28 271.25857142857154 706.5214285714285Q272.5000000000001 707.7628571428571 274.197142857143 708.4385714285714Q275.89428571428584 709.1142857142858 277.8742857142858 709.1142857142858Z M315.00571428571436 711.1885714285714Q312.4914285714286 711.1885714285714 310.37000000000006 710.3557142857143Q308.2485714285715 709.5228571428571 306.6928571428572 708.0142857142857Q305.1371428571429 706.5057142857142 304.2728571428572 704.462857142857Q303.4085714285715 702.42 303.4085714285715 700.0Q303.4085714285715 697.58 304.2728571428572 695.537142857143Q305.1371428571429 693.4942857142858 306.70857142857153 691.9857142857143Q308.2800000000001 690.4771428571429 310.40142857142865 689.6442857142857Q312.5228571428572 688.8114285714286 315.03714285714295 688.8114285714286Q317.55142857142863 688.8114285714286 319.6414285714286 689.5971428571429Q321.73142857142864 690.3828571428571 323.2085714285715 691.9857142857143L321.76285714285723 693.4628571428572Q320.38000000000005 692.08 318.7142857142858 691.4828571428571Q317.0485714285715 690.8857142857142 315.1314285714286 690.8857142857142Q313.08857142857147 690.8857142857142 311.37571428571437 691.5614285714286Q309.6628571428572 692.2371428571429 308.3900000000001 693.4785714285715Q307.11714285714294 694.72 306.4100000000001 696.37Q305.7028571428572 698.02 305.7028571428572 700.0Q305.7028571428572 701.9485714285714 306.4100000000001 703.6142857142856Q307.11714285714294 705.28 308.3900000000001 706.5214285714285Q309.6628571428572 707.7628571428571 311.37571428571437 708.4385714285714Q313.08857142857147 709.1142857142858 315.1000000000001 709.1142857142858Q316.9857142857144 709.1142857142858 318.6828571428572 708.5485714285714Q319.8142857142858 708.1714285714286 320.85142857142864 707.3857142857142V700.0H323.0828571428572V708.3914285714286Q321.5114285714286 709.7742857142857 319.40571428571434 710.4814285714285Q317.30000000000007 711.1885714285714 315.00571428571436 711.1885714285714Z M337.2085714285715 711.0 347.26571428571435 689.0H349.56000000000006L359.61714285714294 711.0H357.16571428571433L354.52571428571434 705.1228571428571H342.2685714285715L339.6285714285715 711.0ZM353.67714285714294 703.2371428571429 348.3971428571429 691.42 343.11714285714294 703.2371428571429Z M373.6171428571429 711.0V689.0H382.57428571428574Q386.0942857142857 689.0 388.75 690.3985714285714Q391.4057142857143 691.7971428571428 392.8828571428571 694.28Q394.36 696.7628571428571 394.36 700.0Q394.36 703.2371428571429 392.8828571428571 705.72Q391.4057142857143 708.2028571428572 388.75 709.6014285714286Q386.0942857142857 711.0 382.57428571428574 711.0ZM375.9428571428571 708.9885714285714H382.4485714285714Q385.37142857142857 708.9885714285714 387.5242857142857 707.8414285714285Q389.6771428571428 706.6942857142857 390.87142857142857 704.6671428571428Q392.0657142857143 702.64 392.0657142857143 700.0Q392.0657142857143 697.3285714285714 390.87142857142857 695.3171428571429Q389.6771428571428 693.3057142857143 387.5242857142857 692.1585714285715Q385.37142857142857 691.0114285714286 382.4485714285714 691.0114285714286H375.9428571428571Z M419.92571428571426 711.1885714285714Q417.4428571428571 711.1885714285714 415.32142857142856 710.3557142857143Q413.2 709.5228571428571 411.64428571428573 707.9985714285715Q410.0885714285714 706.4742857142858 409.2242857142857 704.4471428571428Q408.36 702.42 408.36 700.0Q408.36 697.58 409.2242857142857 695.5528571428572Q410.0885714285714 693.5257142857142 411.64428571428573 692.0014285714285Q413.2 690.4771428571429 415.3057142857143 689.6442857142857Q417.4114285714286 688.8114285714286 419.92571428571426 688.8114285714286Q422.4085714285714 688.8114285714286 424.51428571428573 689.6442857142857Q426.62 690.4771428571429 428.1757142857143 691.9857142857143Q429.7314285714286 693.4942857142858 430.5957142857143 695.537142857143Q431.46 697.58 431.46 700.0Q431.46 702.42 430.5957142857143 704.462857142857Q429.7314285714286 706.5057142857142 428.1757142857143 708.0142857142857Q426.62 709.5228571428571 424.51428571428573 710.3557142857143Q422.4085714285714 711.1885714285714 419.92571428571426 711.1885714285714ZM419.92571428571426 709.1142857142858Q421.9057142857143 709.1142857142858 423.58714285714285 708.4385714285714Q425.2685714285714 707.7628571428571 426.51 706.5214285714285Q427.75142857142856 705.28 428.4428571428571 703.63Q429.1342857142857 701.98 429.1342857142857 700.0Q429.1342857142857 698.02 428.4428571428571 696.37Q427.75142857142856 694.72 426.51 693.4785714285715Q425.2685714285714 692.2371428571429 423.58714285714285 691.5614285714286Q421.9057142857143 690.8857142857142 419.92571428571426 690.8857142857142Q417.9457142857143 690.8857142857142 416.24857142857144 691.5614285714286Q414.5514285714286 692.2371428571429 413.31 693.4785714285715Q412.06857142857143 694.72 411.3614285714286 696.37Q410.6542857142857 698.02 410.6542857142857 700.0Q410.6542857142857 701.9485714285714 411.3614285714286 703.6142857142856Q412.06857142857143 705.28 413.31 706.5214285714285Q414.5514285714286 707.7628571428571 416.24857142857144 708.4385714285714Q417.9457142857143 709.1142857142858 419.92571428571426 709.1142857142858Z M453.63142857142856 711.1885714285714Q451.18 711.1885714285714 448.9328571428572 710.3871428571429Q446.6857142857143 709.5857142857143 445.46 708.3285714285714L446.37142857142857 706.5371428571428Q447.5342857142857 707.6685714285715 449.49857142857144 708.4385714285714Q451.46285714285716 709.2085714285714 453.63142857142856 709.2085714285714Q455.7057142857143 709.2085714285714 457.01 708.69Q458.3142857142857 708.1714285714286 458.9271428571428 707.2914285714286Q459.54 706.4114285714286 459.54 705.3428571428572Q459.54 704.0542857142857 458.8014285714286 703.2685714285715Q458.0628571428571 702.4828571428571 456.8685714285714 702.0271428571428Q455.6742857142857 701.5714285714286 454.2285714285714 701.2257142857143Q452.78285714285715 700.88 451.33714285714285 700.4871428571428Q449.89142857142855 700.0942857142857 448.68142857142857 699.4342857142857Q447.4714285714286 698.7742857142857 446.73285714285714 697.69Q445.9942857142857 696.6057142857143 445.9942857142857 694.8457142857143Q445.9942857142857 693.2114285714285 446.8585714285714 691.8442857142857Q447.72285714285715 690.4771428571429 449.51428571428573 689.6442857142857Q451.30571428571426 688.8114285714286 454.10285714285715 688.8114285714286Q455.95714285714286 688.8114285714286 457.78 689.3299999999999Q459.60285714285715 689.8485714285714 460.92285714285714 690.76L460.13714285714286 692.6142857142858Q458.72285714285715 691.6714285714286 457.1357142857143 691.2314285714285Q455.54857142857145 690.7914285714286 454.07142857142856 690.7914285714286Q452.0914285714286 690.7914285714286 450.8028571428572 691.3257142857143Q449.51428571428573 691.86 448.9014285714286 692.7557142857142Q448.2885714285714 693.6514285714286 448.2885714285714 694.7828571428571Q448.2885714285714 696.0714285714286 449.02714285714285 696.8571428571429Q449.7657142857143 697.6428571428571 450.9757142857143 698.0828571428572Q452.1857142857143 698.5228571428571 453.6314285714286 698.8685714285714Q455.07714285714286 699.2142857142857 456.50714285714287 699.6228571428571Q457.9371428571429 700.0314285714286 459.14714285714285 700.6757142857143Q460.35714285714283 701.32 461.0957142857143 702.3885714285715Q461.8342857142857 703.4571428571429 461.8342857142857 705.1857142857143Q461.8342857142857 706.7885714285715 460.95428571428573 708.1557142857143Q460.07428571428574 709.5228571428571 458.26714285714286 710.3557142857143Q456.46 711.1885714285714 453.63142857142856 711.1885714285714Z M495.83428571428567 711.0 505.89142857142855 689.0H508.18571428571425L518.2428571428571 711.0H515.7914285714286L513.1514285714286 705.1228571428571H500.8942857142857L498.2542857142857 711.0ZM512.3028571428571 703.2371428571429 507.0228571428571 691.42 501.74285714285713 703.2371428571429Z M540.4142857142857 711.1885714285714Q537.962857142857 711.1885714285714 535.7157142857143 710.3871428571429Q533.4685714285714 709.5857142857143 532.2428571428571 708.3285714285714L533.1542857142857 706.5371428571428Q534.3171428571428 707.6685714285715 536.2814285714285 708.4385714285714Q538.2457142857143 709.2085714285714 540.4142857142857 709.2085714285714Q542.4885714285714 709.2085714285714 543.7928571428571 708.69Q545.0971428571428 708.1714285714286 545.7099999999999 707.2914285714286Q546.3228571428571 706.4114285714286 546.3228571428571 705.3428571428572Q546.3228571428571 704.0542857142857 545.5842857142857 703.2685714285715Q544.8457142857143 702.4828571428571 543.6514285714286 702.0271428571428Q542.4571428571428 701.5714285714286 541.0114285714285 701.2257142857143Q539.5657142857142 700.88 538.1199999999999 700.4871428571428Q536.6742857142857 700.0942857142857 535.4642857142857 699.4342857142857Q534.2542857142856 698.7742857142857 533.5157142857142 697.69Q532.7771428571428 696.6057142857143 532.7771428571428 694.8457142857143Q532.7771428571428 693.2114285714285 533.6414285714286 691.8442857142857Q534.5057142857142 690.4771428571429 536.2971428571428 689.6442857142857Q538.0885714285714 688.8114285714286 540.8857142857142 688.8114285714286Q542.74 688.8114285714286 544.5628571428572 689.3299999999999Q546.3857142857142 689.8485714285714 547.7057142857143 690.76L546.92 692.6142857142858Q545.5057142857142 691.6714285714286 543.9185714285713 691.2314285714285Q542.3314285714285 690.7914285714286 540.8542857142857 690.7914285714286Q538.8742857142856 690.7914285714286 537.5857142857142 691.3257142857143Q536.2971428571428 691.86 535.6842857142857 692.7557142857142Q535.0714285714286 693.6514285714286 535.0714285714286 694.7828571428571Q535.0714285714286 696.0714285714286 535.81 696.8571428571429Q536.5485714285713 697.6428571428571 537.7585714285714 698.0828571428572Q538.9685714285714 698.5228571428571 540.4142857142856 698.8685714285714Q541.8599999999999 699.2142857142857 543.29 699.6228571428571Q544.7199999999999 700.0314285714286 545.93 700.6757142857143Q547.14 701.32 547.8785714285714 702.3885714285715Q548.6171428571428 703.4571428571429 548.6171428571428 705.1857142857143Q548.6171428571428 706.7885714285715 547.7371428571428 708.1557142857143Q546.8571428571428 709.5228571428571 545.05 710.3557142857143Q543.2428571428571 711.1885714285714 540.4142857142857 711.1885714285714Z M570.7885714285713 711.1885714285714Q568.3371428571427 711.1885714285714 566.0899999999999 710.3871428571429Q563.842857142857 709.5857142857143 562.6171428571428 708.3285714285714L563.5285714285714 706.5371428571428Q564.6914285714284 707.6685714285715 566.6557142857141 708.4385714285714Q568.6199999999999 709.2085714285714 570.7885714285713 709.2085714285714Q572.862857142857 709.2085714285714 574.1671428571427 708.69Q575.4714285714284 708.1714285714286 576.0842857142856 707.2914285714286Q576.6971428571427 706.4114285714286 576.6971428571427 705.3428571428572Q576.6971428571427 704.0542857142857 575.9585714285713 703.2685714285715Q575.2199999999999 702.4828571428571 574.0257142857142 702.0271428571428Q572.8314285714284 701.5714285714286 571.3857142857141 701.2257142857143Q569.9399999999998 700.88 568.4942857142855 700.4871428571428Q567.0485714285713 700.0942857142857 565.8385714285713 699.4342857142857Q564.6285714285713 698.7742857142857 563.8899999999999 697.69Q563.1514285714285 696.6057142857143 563.1514285714285 694.8457142857143Q563.1514285714285 693.2114285714285 564.0157142857142 691.8442857142857Q564.8799999999999 690.4771428571429 566.6714285714285 689.6442857142857Q568.462857142857 688.8114285714286 571.2599999999999 688.8114285714286Q573.1142857142856 688.8114285714286 574.9371428571428 689.3299999999999Q576.7599999999999 689.8485714285714 578.0799999999999 690.76L577.2942857142856 692.6142857142858Q575.8799999999999 691.6714285714286 574.292857142857 691.2314285714285Q572.7057142857142 690.7914285714286 571.2285714285713 690.7914285714286Q569.2485714285713 690.7914285714286 567.9599999999998 691.3257142857143Q566.6714285714285 691.86 566.0585714285713 692.7557142857142Q565.4457142857142 693.6514285714286 565.4457142857142 694.7828571428571Q565.4457142857142 696.0714285714286 566.1842857142856 696.8571428571429Q566.922857142857 697.6428571428571 568.132857142857 698.0828571428572Q569.342857142857 698.5228571428571 570.7885714285712 698.8685714285714Q572.2342857142855 699.2142857142857 573.6642857142856 699.6228571428571Q575.0942857142855 700.0314285714286 576.3042857142856 700.6757142857143Q577.5142857142856 701.32 578.252857142857 702.3885714285715Q578.9914285714284 703.4571428571429 578.9914285714284 705.1857142857143Q578.9914285714284 706.7885714285715 578.1114285714284 708.1557142857143Q577.2314285714284 709.5228571428571 575.4242857142856 710.3557142857143Q573.6171428571428 711.1885714285714 570.7885714285713 711.1885714285714Z M604.5571428571427 711.1885714285714Q602.0742857142856 711.1885714285714 599.952857142857 710.3557142857143Q597.8314285714284 709.5228571428571 596.2757142857141 707.9985714285715Q594.7199999999998 706.4742857142858 593.8557142857142 704.4471428571428Q592.9914285714284 702.42 592.9914285714284 700.0Q592.9914285714284 697.58 593.8557142857142 695.5528571428572Q594.7199999999998 693.5257142857142 596.2757142857141 692.0014285714285Q597.8314285714284 690.4771428571429 599.9371428571427 689.6442857142857Q602.042857142857 688.8114285714286 604.5571428571427 688.8114285714286Q607.0399999999998 688.8114285714286 609.1457142857141 689.6442857142857Q611.2514285714284 690.4771428571429 612.8071428571427 691.9857142857143Q614.3628571428569 693.4942857142858 615.2271428571427 695.537142857143Q616.0914285714284 697.58 616.0914285714284 700.0Q616.0914285714284 702.42 615.2271428571427 704.462857142857Q614.3628571428569 706.5057142857142 612.8071428571427 708.0142857142857Q611.2514285714284 709.5228571428571 609.1457142857141 710.3557142857143Q607.0399999999998 711.1885714285714 604.5571428571427 711.1885714285714ZM604.5571428571427 709.1142857142858Q606.5371428571426 709.1142857142858 608.2185714285712 708.4385714285714Q609.8999999999997 707.7628571428571 611.1414285714284 706.5214285714285Q612.3828571428569 705.28 613.0742857142855 703.63Q613.7657142857141 701.98 613.7657142857141 700.0Q613.7657142857141 698.02 613.0742857142855 696.37Q612.3828571428569 694.72 611.1414285714284 693.4785714285715Q609.8999999999997 692.2371428571429 608.2185714285712 691.5614285714286Q606.5371428571426 690.8857142857142 604.5571428571427 690.8857142857142Q602.5771428571427 690.8857142857142 600.8799999999999 691.5614285714286Q599.182857142857 692.2371428571429 597.9414285714283 693.4785714285715Q596.6999999999998 694.72 595.992857142857 696.37Q595.2857142857141 698.02 595.2857142857141 700.0Q595.2857142857141 701.9485714285714 595.992857142857 703.6142857142856Q596.6999999999998 705.28 597.9414285714283 706.5214285714285Q599.182857142857 707.7628571428571 600.8799999999999 708.4385714285714Q602.5771428571427 709.1142857142858 604.5571428571427 709.1142857142858Z M641.5942857142857 711.1885714285714Q639.1114285714285 711.1885714285714 637.0057142857142 710.3557142857143Q634.9 709.5228571428571 633.3599999999999 708.0142857142857Q631.8199999999999 706.5057142857142 630.9557142857143 704.462857142857Q630.0914285714285 702.42 630.0914285714285 700.0Q630.0914285714285 697.58 630.9557142857143 695.537142857143Q631.8199999999999 693.4942857142858 633.3757142857143 691.9857142857143Q634.9314285714286 690.4771428571429 637.0371428571428 689.6442857142857Q639.1428571428571 688.8114285714286 641.6257142857143 688.8114285714286Q644.0142857142856 688.8114285714286 646.1199999999999 689.6128571428571Q648.2257142857143 690.4142857142857 649.6714285714285 692.0171428571429L648.1942857142857 693.4942857142858Q646.842857142857 692.1114285714286 645.2085714285713 691.4985714285715Q643.5742857142857 690.8857142857142 641.6885714285713 690.8857142857142Q639.7085714285714 690.8857142857142 638.0114285714285 691.5614285714286Q636.3142857142857 692.2371428571429 635.0571428571428 693.4785714285715Q633.8 694.72 633.0928571428572 696.37Q632.3857142857142 698.02 632.3857142857142 700.0Q632.3857142857142 701.98 633.0928571428572 703.63Q633.8 705.28 635.0571428571428 706.5214285714285Q636.3142857142857 707.7628571428571 638.0114285714285 708.4385714285714Q639.7085714285714 709.1142857142858 641.6885714285713 709.1142857142858Q643.5742857142857 709.1142857142858 645.2085714285713 708.4857142857143Q646.842857142857 707.8571428571429 648.1942857142857 706.4742857142858L649.6714285714285 707.9514285714286Q648.2257142857143 709.5542857142857 646.1199999999999 710.3714285714286Q644.0142857142856 711.1885714285714 641.5942857142857 711.1885714285714Z M663.6714285714285 711.0V689.0H665.9971428571428V711.0Z M679.9971428571428 711.0 690.0542857142856 689.0H692.3485714285713L702.4057142857141 711.0H699.9542857142856L697.3142857142856 705.1228571428571H685.0571428571427L682.4171428571427 711.0ZM696.4657142857142 703.2371428571429 691.1857142857142 691.42 685.9057142857141 703.2371428571429Z M716.4057142857141 711.0V689.0H725.3628571428569Q728.8828571428569 689.0 731.5385714285712 690.3985714285714Q734.1942857142856 691.7971428571428 735.6714285714284 694.28Q737.1485714285712 696.7628571428571 737.1485714285712 700.0Q737.1485714285712 703.2371428571429 735.6714285714284 705.72Q734.1942857142856 708.2028571428572 731.5385714285712 709.6014285714286Q728.8828571428569 711.0 725.3628571428569 711.0ZM718.7314285714284 708.9885714285714H725.2371428571427Q728.1599999999999 708.9885714285714 730.312857142857 707.8414285714285Q732.4657142857141 706.6942857142857 733.6599999999999 704.6671428571428Q734.8542857142855 702.64 734.8542857142855 700.0Q734.8542857142855 697.3285714285714 733.6599999999999 695.3171428571429Q732.4657142857141 693.3057142857143 730.312857142857 692.1585714285715Q728.1599999999999 691.0114285714286 725.2371428571427 691.0114285714286H718.7314285714284Z M762.7142857142856 711.1885714285714Q760.2314285714284 711.1885714285714 758.1099999999999 710.3557142857143Q755.9885714285713 709.5228571428571 754.432857142857 707.9985714285715Q752.8771428571426 706.4742857142858 752.012857142857 704.4471428571428Q751.1485714285712 702.42 751.1485714285712 700.0Q751.1485714285712 697.58 752.012857142857 695.5528571428572Q752.8771428571426 693.5257142857142 754.432857142857 692.0014285714285Q755.9885714285713 690.4771428571429 758.0942857142855 689.6442857142857Q760.1999999999998 688.8114285714286 762.7142857142856 688.8114285714286Q765.1971428571427 688.8114285714286 767.302857142857 689.6442857142857Q769.4085714285712 690.4771428571429 770.9642857142856 691.9857142857143Q772.5199999999998 693.4942857142858 773.3842857142855 695.537142857143Q774.2485714285713 697.58 774.2485714285713 700.0Q774.2485714285713 702.42 773.3842857142855 704.462857142857Q772.5199999999998 706.5057142857142 770.9642857142856 708.0142857142857Q769.4085714285712 709.5228571428571 767.302857142857 710.3557142857143Q765.1971428571427 711.1885714285714 762.7142857142856 711.1885714285714ZM762.7142857142856 709.1142857142858Q764.6942857142855 709.1142857142858 766.375714285714 708.4385714285714Q768.0571428571426 707.7628571428571 769.2985714285712 706.5214285714285Q770.5399999999997 705.28 771.2314285714283 703.63Q771.922857142857 701.98 771.922857142857 700.0Q771.922857142857 698.02 771.2314285714283 696.37Q770.5399999999997 694.72 769.2985714285712 693.4785714285715Q768.0571428571426 692.2371428571429 766.375714285714 691.5614285714286Q764.6942857142855 690.8857142857142 762.7142857142856 690.8857142857142Q760.7342857142855 690.8857142857142 759.0371428571427 691.5614285714286Q757.3399999999998 692.2371428571429 756.0985714285712 693.4785714285715Q754.8571428571427 694.72 754.1499999999999 696.37Q753.442857142857 698.02 753.442857142857 700.0Q753.442857142857 701.9485714285714 754.1499999999999 703.6142857142856Q754.8571428571427 705.28 756.0985714285712 706.5214285714285Q757.3399999999998 707.7628571428571 759.0371428571427 708.4385714285714Q760.7342857142855 709.1142857142858 762.7142857142856 709.1142857142858Z M796.42 711.1885714285714Q793.9685714285713 711.1885714285714 791.7214285714285 710.3871428571429Q789.4742857142857 709.5857142857143 788.2485714285714 708.3285714285714L789.16 706.5371428571428Q790.3228571428571 707.6685714285715 792.2871428571427 708.4385714285714Q794.2514285714285 709.2085714285714 796.42 709.2085714285714Q798.4942857142856 709.2085714285714 799.7985714285713 708.69Q801.102857142857 708.1714285714286 801.7157142857142 707.2914285714286Q802.3285714285713 706.4114285714286 802.3285714285713 705.3428571428572Q802.3285714285713 704.0542857142857 801.5899999999999 703.2685714285715Q800.8514285714285 702.4828571428571 799.6571428571428 702.0271428571428Q798.462857142857 701.5714285714286 797.0171428571427 701.2257142857143Q795.5714285714284 700.88 794.1257142857141 700.4871428571428Q792.68 700.0942857142857 791.4699999999999 699.4342857142857Q790.2599999999999 698.7742857142857 789.5214285714285 697.69Q788.7828571428571 696.6057142857143 788.7828571428571 694.8457142857143Q788.7828571428571 693.2114285714285 789.6471428571429 691.8442857142857Q790.5114285714285 690.4771428571429 792.3028571428571 689.6442857142857Q794.0942857142857 688.8114285714286 796.8914285714285 688.8114285714286Q798.7457142857143 688.8114285714286 800.5685714285714 689.3299999999999Q802.3914285714285 689.8485714285714 803.7114285714285 690.76L802.9257142857142 692.6142857142858Q801.5114285714285 691.6714285714286 799.9242857142856 691.2314285714285Q798.3371428571428 690.7914285714286 796.8599999999999 690.7914285714286Q794.8799999999999 690.7914285714286 793.5914285714284 691.3257142857143Q792.3028571428571 691.86 791.6899999999999 692.7557142857142Q791.0771428571428 693.6514285714286 791.0771428571428 694.7828571428571Q791.0771428571428 696.0714285714286 791.8157142857142 696.8571428571429Q792.5542857142856 697.6428571428571 793.7642857142856 698.0828571428572Q794.9742857142857 698.5228571428571 796.4199999999998 698.8685714285714Q797.8657142857141 699.2142857142857 799.2957142857142 699.6228571428571Q800.7257142857142 700.0314285714286 801.9357142857142 700.6757142857143Q803.1457142857142 701.32 803.8842857142856 702.3885714285715Q804.622857142857 703.4571428571429 804.622857142857 705.1857142857143Q804.622857142857 706.7885714285715 803.742857142857 708.1557142857143Q802.862857142857 709.5228571428571 801.0557142857142 710.3557142857143Q799.2485714285714 711.1885714285714 796.42 711.1885714285714Z"></path></symbol></defs></svg>
+
+<div class="progresso" id="progresso" aria-hidden="true"></div>
+<div class="proto"><div class="wrap"><b>Protótipo</b><span>Fotos ilustrativas, a substituir. Textos sujeitos a aprovação por escrito dos sócios. Campos <span class="pend">assim</span> são pendências.</span></div></div>
+
+<header class="top" id="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Batista &amp; Rocha Advogados Associados, início">
+      <svg viewBox="252 25 552 559" aria-hidden="true"><use href="#mono"/></svg>
+      <span><span class="nm">Batista &amp; Rocha</span><span class="sub">Advogados Associados</span></span>
+    </a>
+    <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#inicio">Início</a>
+      <a href="#escritorio">O escritório</a>
+      <a href="#areas" data-areas>Áreas de atuação</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#artigos">Artigos</a>
+      <a href="#contato" class="nav-cta">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- =================== INÍCIO =================== -->
+<div data-page="inicio">
+  <section class="hero" id="hero">
+    <div class="hero-img" id="hero-img"><img src="fotos/escritorio-biblioteca.jpg" alt="Biblioteca do escritório (foto ilustrativa)" width="1920" height="1100" fetchpriority="high"></div>
+    <svg class="agua" viewBox="252 25 552 559" aria-hidden="true"><use href="#mono"/></svg>
+    <div class="wrap">
+      <p class="rotulo">Brasília · Atuação nacional · Atendimento 24 horas</p>
+      <h1><span class="linha"><span>Penal, trabalhista</span></span><span class="linha"><span>e cível: quando uma</span></span><span class="linha"><span>frente afeta a outra.</span></span></h1>
+      <hr class="fio">
+      <p class="lead">O Batista &amp; Rocha Advogados Associados atua em defesa criminal, em processos perante órgãos de controle e no contencioso de empresas nas esferas penal, trabalhista e cível.</p>
+      <div class="portas">
+        <a class="porta cheia" href="#empresas">Para empresas e dirigentes <span class="seta">→</span></a>
+        <a class="porta" href="#pessoas">Para pessoas <span class="seta">→</span></a>
+      </div>
+    </div>
+    <span class="cred">Foto ilustrativa</span>
+  </section>
+
+  <section class="sec">
+    <div class="wrap split">
+      <div class="split-texto" data-reveal>
+        <p class="rotulo">O escritório</p>
+        <p class="manifesto">Muitas questões de uma empresa ou de um gestor correm em mais de uma esfera ao mesmo tempo.</p>
+        <hr class="fio">
+        <p class="lead">A sociedade reúne a defesa criminal de pessoas e o contencioso de empresas nas esferas penal, trabalhista e cível. A decisão tomada em uma frente afeta as outras, e o trabalho parte dessa leitura.</p>
+        <p><a class="link-seta" href="#escritorio">Conhecer o escritório <span class="seta">→</span></a></p>
+      </div>
+      <div class="foto-wrap split-foto" data-reveal>
+        <img src="fotos/escritorio-estudo.jpg" alt="Mesa de trabalho e estante (foto ilustrativa)" width="1200" height="1500" loading="lazy">
+        <span class="cred">Foto ilustrativa</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <p class="rotulo">Áreas de atuação</p>
+        <h2>Quatro áreas, uma leitura do risco</h2>
+      </div>
+      <div class="explorador">
+        <ul class="ex-lista" role="tablist" aria-label="Áreas de atuação" data-reveal>
+          <li><button class="ex-btn" role="tab" id="tab-pe" aria-controls="painel-pe" aria-selected="true"><span class="n">Empresas</span><span class="t">Penal Econômico e Empresarial</span><span class="s">→</span></button></li>
+          <li><button class="ex-btn" role="tab" id="tab-ce" aria-controls="painel-ce" aria-selected="false" tabindex="-1"><span class="n">Empresas</span><span class="t">Contencioso Empresarial</span><span class="s">→</span></button></li>
+          <li><button class="ex-btn" role="tab" id="tab-oc" aria-controls="painel-oc" aria-selected="false" tabindex="-1"><span class="n">Gestores</span><span class="t">Órgãos de Controle</span><span class="s">→</span></button></li>
+          <li><button class="ex-btn" role="tab" id="tab-dc" aria-controls="painel-dc" aria-selected="false" tabindex="-1"><span class="n">Pessoas</span><span class="t">Defesa Criminal</span><span class="s">→</span></button></li>
+        </ul>
+        <div class="ex-paineis" data-reveal data-d="1">
+          <div class="ex-painel" role="tabpanel" id="painel-pe" aria-labelledby="tab-pe">
+            <div class="foto-wrap"><img src="fotos/escritorio-biblioteca.jpg" alt="" loading="lazy"><span class="cred">Foto ilustrativa</span></div>
+            <p>Investigações e processos criminais ligados à atividade da empresa. A pergunta central costuma ser a mesma: quem, dentro da empresa, responde pelo quê.</p>
+            <ul><li>Crimes contra a ordem tributária</li><li>Lavagem de dinheiro</li><li>Crimes contra o sistema financeiro</li><li>Responsabilidade penal de administradores</li></ul>
+            <p class="quem">Atua: Lucas Rocha Freitas</p>
+            <p><a class="link-seta" href="#penal-economico">Entender a área <span class="seta">→</span></a></p>
+          </div>
+          <div class="ex-painel" role="tabpanel" id="painel-ce" aria-labelledby="tab-ce" hidden>
+            <div class="foto-wrap"><img src="fotos/escritorio-reuniao.jpg" alt="" loading="lazy"><span class="cred">Foto ilustrativa</span></div>
+            <p>Ações trabalhistas e cíveis da empresa, pela ótica do risco: o impacto no caixa, o reflexo sobre o patrimônio dos sócios e, quando existe, o contorno penal.</p>
+            <ul><li>Passivo trabalhista e acordos</li><li>Terceirização e responsabilidade da contratante</li><li>Contratos e disputas entre sócios</li><li>Desconsideração da personalidade jurídica</li></ul>
+            <p class="quem">Atuam: Lucas Rocha Freitas e <span class="pend">nome da advogada</span></p>
+            <p><a class="link-seta" href="#contencioso-empresarial">Entender a área <span class="seta">→</span></a></p>
+          </div>
+          <div class="ex-painel" role="tabpanel" id="painel-oc" aria-labelledby="tab-oc" hidden>
+            <div class="foto-wrap"><img src="fotos/escritorio-estudo.jpg" alt="" loading="lazy" style="object-position:50% 30%"><span class="cred">Foto ilustrativa</span></div>
+            <p>Processos perante o Tribunal de Contas da União e seus reflexos nas esferas de improbidade e penal, para gestores, ex-gestores e empresas contratadas pelo poder público.</p>
+            <ul><li>Tomada de contas especial</li><li>Responsabilização do gestor e erro grosseiro</li><li>Improbidade administrativa</li><li>Crimes em licitações e contratos</li></ul>
+            <p class="quem">Atua: Gustavo Batista</p>
+            <p><a class="link-seta" href="#orgaos-de-controle">Entender a área <span class="seta">→</span></a></p>
+          </div>
+          <div class="ex-painel" role="tabpanel" id="painel-dc" aria-labelledby="tab-dc" hidden>
+            <div class="foto-wrap"><img src="fotos/escritorio-biblioteca.jpg" alt="" loading="lazy" style="object-position:80% 50%"><span class="cred">Foto ilustrativa</span></div>
+            <p>Defesa técnica de pessoas investigadas ou acusadas, do inquérito policial aos tribunais superiores.</p>
+            <ul><li>Inquérito e investigação</li><li>Prisão em flagrante e audiência de custódia</li><li>Ação penal e recursos</li><li>Habeas corpus</li></ul>
+            <p class="quem">Atua: Gustavo Batista</p>
+            <p><a class="link-seta" href="#defesa-criminal">Entender a área <span class="seta">→</span></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <p class="rotulo">Por que olhar as esferas juntas</p>
+        <h2>Uma mesma situação pode correr em mais de uma esfera</h2>
+        <p class="lead">Escolha uma situação comum na vida de uma empresa. Explicação em tese.</p>
+      </div>
+      <div class="esferas-ui">
+        <div class="sit-lista" role="tablist" aria-label="Situações" id="sit-lista" data-reveal>
+          <button class="sit" role="tab" aria-selected="true" data-sit="0">Contribuição descontada e não repassada ao INSS <span class="seta">→</span></button>
+          <button class="sit" role="tab" aria-selected="false" data-sit="1" tabindex="-1">Contrato descumprido por uma das partes <span class="seta">→</span></button>
+          <button class="sit" role="tab" aria-selected="false" data-sit="2" tabindex="-1">Empresa sem patrimônio para pagar condenação <span class="seta">→</span></button>
+          <button class="sit" role="tab" aria-selected="false" data-sit="3" tabindex="-1">Irregularidade apontada em processo do TCU <span class="seta">→</span></button>
+        </div>
+        <div class="esf-painel" role="tabpanel" aria-live="polite" data-reveal data-d="1">
+          <div class="esf-grade">
+            <div class="esf" data-esf="trab"><small>Esfera</small><b>Trabalhista</b></div>
+            <div class="esf" data-esf="civ"><small>Esfera</small><b>Cível</b></div>
+            <div class="esf" data-esf="adm"><small>Esfera</small><b>Administrativa</b></div>
+            <div class="esf" data-esf="pen"><small>Esfera</small><b>Penal</b></div>
+          </div>
+          <p class="esf-txt lead" id="esf-txt"></p>
+          <p class="lei" id="esf-lei"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <p class="rotulo">Equipe</p>
+        <h2>Quem atua no escritório</h2>
+      </div>
+      <div class="equipe">
+        <div class="pessoa" data-reveal>
+          <div class="foto-wrap" data-reveal><img src="fotos/equipe-1.jpg" alt="Gustavo Batista (foto a inserir)" loading="lazy"><span class="cred">Foto a inserir</span></div>
+          <p class="papel">Sócio</p><h3>Gustavo Batista</h3><p class="oab">OAB/DF 60.823</p>
+          <p>Advogado criminalista há mais de oito anos. Atua em defesa criminal e em processos perante o Tribunal de Contas da União.</p>
+        </div>
+        <div class="pessoa" data-reveal data-d="1">
+          <div class="foto-wrap" data-reveal><img src="fotos/equipe-2.jpg" alt="Lucas Rocha Freitas (foto a inserir)" loading="lazy"><span class="cred">Foto a inserir</span></div>
+          <p class="papel">Sócio</p><h3>Lucas Rocha Freitas</h3><p class="oab">OAB/DF 74.242 · OAB/SP 505.896</p>
+          <p>Atua em processos penais envolvendo crimes econômicos e em contencioso empresarial nas esferas penal, trabalhista e cível.</p>
+        </div>
+        <div class="pessoa" data-reveal data-d="2">
+          <div class="foto-wrap" data-reveal><img src="fotos/equipe-3.jpg" alt="Advogada (foto a inserir)" loading="lazy"><span class="cred">Foto a inserir</span></div>
+          <p class="papel">Advogada</p><h3><span class="pend">Nome a confirmar</span></h3><p class="oab">OAB/DF 79.624</p>
+          <p>Atua em contencioso cível e trabalhista empresarial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap split inv">
+      <div class="foto-wrap split-foto paisagem" data-reveal>
+        <img src="fotos/escritorio-reuniao.jpg" alt="Sala de reunião do escritório (foto ilustrativa)" width="1600" height="1000" loading="lazy">
+        <span class="cred">Foto ilustrativa</span>
+      </div>
+      <div class="split-texto" data-reveal data-d="1">
+        <p class="rotulo">Primeiro atendimento</p>
+        <h2>Reunião sob sigilo, em Brasília ou por videoconferência</h2>
+        <p class="lead">O sigilo profissional vale desde a primeira conversa, haja ou não contratação. O escopo do trabalho fica definido em contrato antes de qualquer providência.</p>
+        <p class="lei">Lei 8.906/1994, art. 7º, II; Código de Ética e Disciplina da OAB, arts. 35 a 38</p>
+        <p><a class="link-seta" href="#escritorio">Como funciona <span class="seta">→</span></a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <p class="rotulo">Perguntas frequentes</p>
+        <h2>O que costumam perguntar na primeira conversa</h2>
+      </div>
+      <div class="faq" data-reveal>
+        <details><summary>Procurar um advogado criminalista significa admitir culpa?<span class="mais"></span></summary><div class="resp"><p>Não. A defesa técnica é um direito de toda pessoa investigada ou acusada, garantido pela Constituição. Ela pode começar ainda na fase de investigação, antes de qualquer acusação formal.</p><p class="lei">Constituição Federal, art. 5º, LV e LXIII</p></div></details>
+        <details><summary>O que é dito na primeira reunião fica em sigilo?<span class="mais"></span></summary><div class="resp"><p>Sim. O sigilo profissional protege as conversas, os documentos e as comunicações com o advogado, e vale também quando não há contratação.</p><p class="lei">Lei 8.906/1994, art. 7º, II; Código de Ética e Disciplina da OAB, arts. 35 a 38</p></div></details>
+        <details><summary>Uma autuação fiscal pode virar processo criminal?<span class="mais"></span></summary><div class="resp"><p>Pode. Nos crimes materiais contra a ordem tributária, o crime só se tipifica depois do lançamento definitivo do tributo. Por isso, o que se discute na esfera administrativa já tem efeito sobre a esfera penal.</p><p class="lei">Lei 8.137/1990; Súmula Vinculante 24 do STF</p></div></details>
+        <details><summary>O escritório atende fora do Distrito Federal?<span class="mais"></span></summary><div class="resp"><p>Sim. O escritório tem sede em Brasília e atuação em todo o território nacional. As reuniões podem ser presenciais ou por videoconferência.</p></div></details>
+        <details><summary>A empresa responde pelos empregados do prestador de serviço?<span class="mais"></span></summary><div class="resp"><p>Em regra, a empresa contratante responde de forma subsidiária pelas obrigações trabalhistas do prestador, durante o período em que se beneficiou do serviço. Fiscalizar o cumprimento dessas obrigações reduz esse risco.</p><p class="lei">Lei 6.019/1974, art. 5º-A, § 5º; Súmula 331 do TST</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head" data-reveal>
+        <p class="rotulo">Artigos</p>
+        <h2>Direito explicado para quem decide</h2>
+      </div>
+      <div class="artigos">
+        <article class="artigo" data-reveal><span class="tag">Pauta prevista</span><p class="rotulo">Penal econômico</p><h3>Diretor responde pessoalmente por crime da empresa?</h3><p>Ocupar um cargo não basta. O que a investigação analisa para ligar uma pessoa a uma conduta.</p><p class="meta">Lucas Rocha Freitas</p></article>
+        <article class="artigo" data-reveal data-d="1"><span class="tag">Pauta prevista</span><p class="rotulo">Contencioso empresarial</p><h3>Passivo trabalhista e patrimônio do sócio</h3><p>Quando a Justiça do Trabalho alcança os bens pessoais de quem está ou esteve no quadro societário.</p><p class="meta">Lucas Rocha Freitas</p></article>
+        <article class="artigo" data-reveal data-d="2"><span class="tag">Pauta prevista</span><p class="rotulo">Órgãos de controle</p><h3>Decisão do TCU pode virar processo criminal?</h3><p>Como as esferas de contas, improbidade e penal se comunicam.</p><p class="meta">Gustavo Batista</p></article>
+      </div>
+      <p style="margin-top:40px"><a class="link-seta" href="#artigos">Ver todos os artigos <span class="seta">→</span></a></p>
+    </div>
+  </section>
+
+  <section class="sec escura on-dark">
+    <div class="wrap split">
+      <div class="split-texto" data-reveal>
+        <p class="rotulo">Guia</p>
+        <h2>Prisão em flagrante: o que acontece nas primeiras 24 horas</h2>
+        <p>Os prazos previstos em lei, os direitos da pessoa presa e o papel da audiência de custódia, passo a passo.</p>
+        <p><a class="link-seta" href="#flagrante">Ler o guia <span class="seta">→</span></a></p>
+      </div>
+      <div class="split-texto" data-reveal data-d="1">
+        <p class="rotulo">Atendimento 24 horas</p>
+        <p>O atendimento é feito pelos sócios, inclusive em fins de semana e feriados.</p>
+        <p>Telefone e WhatsApp: <span class="pend">(61) a preencher</span></p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =================== PARA EMPRESAS =================== -->
+<div data-page="empresas" hidden>
+  <section class="pg-hero"><img class="bgimg" src="fotos/escritorio-reuniao.jpg" alt=""><div class="wrap">
+    <p class="trilha"><a href="#inicio">Início</a> / Para empresas e dirigentes</p>
+    <h1>Para empresas e dirigentes</h1><hr class="fio">
+    <p class="lead">Questões jurídicas da empresa raramente ficam em uma só área. Abaixo, situações comuns e a área do escritório que trata de cada uma.</p>
+  </div></section>
+  <div class="wrap duas">
+    <div>
+      <ul class="lista" data-reveal>
+        <li><strong>A empresa ou um diretor foi intimado a depor na Polícia Federal</strong><span>Investigação sobre tributos, movimentações financeiras ou contratos. <a href="#penal-economico">Penal Econômico e Empresarial</a></span></li>
+        <li><strong>A Receita Federal autuou a empresa e há representação fiscal para fins penais</strong><span>A fase administrativa já faz parte da defesa penal. <a href="#penal-economico">Penal Econômico e Empresarial</a></span></li>
+        <li><strong>O volume de ações trabalhistas cresceu</strong><span>Gestão do passivo, acordos e responsabilidade dos sócios. <a href="#contencioso-empresarial">Contencioso Empresarial</a></span></li>
+        <li><strong>Um contrato relevante foi descumprido</strong><span>Cobrança, execução e a fronteira entre inadimplemento e fraude. <a href="#contencioso-empresarial">Contencioso Empresarial</a></span></li>
+        <li><strong>Há conflito entre os sócios</strong><span>Disputa societária e, quando existe, o contorno penal do conflito. <a href="#contencioso-empresarial">Contencioso Empresarial</a></span></li>
+        <li><strong>A empresa contrata com o poder público e há processo no TCU</strong><span>Defesa no processo de contas e reflexos em improbidade e na esfera penal. <a href="#orgaos-de-controle">Órgãos de Controle</a></span></li>
+      </ul>
+    </div>
+    <aside class="lado">
+      <div class="lado-bloco"><p class="rotulo">Quem atua</p><p>Lucas Rocha Freitas, nas frentes penal, trabalhista e cível da empresa, com a advogada <span class="pend">nome</span> nas frentes cível e trabalhista. Gustavo Batista, nos processos perante órgãos de controle.</p></div>
+      <div class="lado-bloco"><p class="rotulo">Leia também</p><a href="#artigos">Diretor responde pessoalmente por crime da empresa?</a><a href="#artigos">Inadimplemento contratual ou estelionato?</a></div>
+    </aside>
+  </div>
+</div>
+
+<!-- =================== PARA PESSOAS =================== -->
+<div data-page="pessoas" hidden>
+  <section class="pg-hero"><img class="bgimg" src="fotos/escritorio-biblioteca.jpg" alt=""><div class="wrap">
+    <p class="trilha"><a href="#inicio">Início</a> / Para pessoas</p>
+    <h1>Para pessoas</h1><hr class="fio">
+    <p class="lead">Situações em que uma pessoa física costuma precisar de defesa técnica ou de orientação jurídica, e a área do escritório que trata de cada uma.</p>
+  </div></section>
+  <div class="wrap duas">
+    <div>
+      <ul class="lista" data-reveal>
+        <li><strong>Recebi uma intimação para depor</strong><span>Saber se a intimação é como testemunha ou como investigado muda os direitos. <a href="#defesa-criminal">Defesa Criminal</a></span></li>
+        <li><strong>Um familiar foi preso em flagrante</strong><span>Prazos, direitos e o que acontece na audiência de custódia. <a href="#flagrante">Guia das primeiras 24 horas</a></span></li>
+        <li><strong>Fui citado em um processo criminal</strong><span>Prazos de resposta e etapas da ação penal. <a href="#defesa-criminal">Defesa Criminal</a></span></li>
+        <li><strong>Fui gestor público e recebi citação do TCU</strong><span>Defesa no processo de contas e reflexos em outras esferas. <a href="#orgaos-de-controle">Órgãos de Controle</a></span></li>
+        <li><strong>Estou em disputa societária ou contratual de valor relevante</strong><span>Quando o conflito cível tem contorno penal, a estratégia muda. <a href="#contencioso-empresarial">Contencioso Empresarial</a></span></li>
+      </ul>
+    </div>
+    <aside class="lado">
+      <div class="atend on-dark"><p class="rotulo">Atendimento 24 horas</p><h3>Atendimento a qualquer hora</h3><p>O atendimento é feito pelos sócios, inclusive em fins de semana e feriados.</p><p>Telefone e WhatsApp: <span class="pend">(61) a preencher</span></p></div>
+    </aside>
+  </div>
+</div>
+
+<!-- =================== ÁREAS =================== -->
+<div data-page="areas" hidden>
+  <section class="pg-hero"><img class="bgimg" src="fotos/escritorio-estudo.jpg" alt="" style="object-position:50% 30%"><div class="wrap">
+    <p class="trilha"><a href="#inicio">Início</a> / Áreas de atuação</p>
+    <h1>Áreas de atuação</h1><hr class="fio">
+    <p class="lead">Cada página explica o que a área abrange, em que situações o tema costuma surgir e como ele se conecta às outras esferas.</p>
+  </div></section>
+  <div class="wrap" style="padding-block:clamp(56px,7vw,96px)">
+    <ul class="lista">
+      <li data-reveal><a href="#penal-economico" style="text-decoration:none;display:grid;gap:6px"><span class="rotulo">Empresas e dirigentes</span><h3>Penal Econômico e Empresarial</h3><span style="color:var(--body)">Crimes tributários, lavagem de dinheiro, crimes financeiros e responsabilidade penal de administradores.</span></a></li>
+      <li data-reveal><a href="#contencioso-empresarial" style="text-decoration:none;display:grid;gap:6px"><span class="rotulo">Empresas e sócios</span><h3>Contencioso Empresarial</h3><span style="color:var(--body)">Ações trabalhistas e cíveis da empresa: passivo, contratos, disputas entre sócios e patrimônio pessoal.</span></a></li>
+      <li data-reveal><a href="#orgaos-de-controle" style="text-decoration:none;display:grid;gap:6px"><span class="rotulo">Gestores públicos</span><h3>Órgãos de Controle</h3><span style="color:var(--body)">Processos perante o TCU e reflexos nas esferas de improbidade e penal.</span></a></li>
+      <li data-reveal><a href="#defesa-criminal" style="text-decoration:none;display:grid;gap:6px"><span class="rotulo">Pessoas</span><h3>Defesa Criminal</h3><span style="color:var(--body)">Defesa técnica de pessoas investigadas ou acusadas, do inquérito aos tribunais superiores.</span></a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- =================== PENAL ECONÔMICO =================== -->
+<div data-page="penal-economico" hidden>
+  <section class="pg-hero"><img class="bgimg" src="fotos/escritorio-biblioteca.jpg" alt=""><div class="wrap">
+    <p class="trilha"><a href="#inicio">Início</a> / <a href="#areas">Áreas de atuação</a> / Penal Econômico e Empresarial</p>
+    <h1>Penal Econômico e Empresarial</h1><hr class="fio">
+    <p class="lead">Investigações e processos criminais ligados à atividade da empresa: tributos, movimentações financeiras, contratos e decisões de gestão. A pergunta central costuma ser a mesma: quem, dentro da empresa, responde pelo quê.</p>
+  </div></section>
+  <div class="wrap duas">
+    <div>
+      <section class="bloco" data-reveal>
+        <p class="rotulo">O que a área abrange</p>
+        <ul class="lista">
+          <li><strong>Crimes contra a ordem tributária</strong><span class="lei">Lei 8.137/1990</span></li>
+          <li><strong>Lavagem de dinheiro</strong><span class="lei">Lei 9.613/1998</span></li>
+          <li><strong>Crimes contra o sistema financeiro nacional</strong><span class="lei">Lei 7.492/1986</span></li>
+          <li><strong>Apropriação indébita previdenciária</strong><span class="lei">Código Penal, art. 168-A</span></li>
+          <li><strong>Acordo de não persecução penal</strong><span class="lei">Código de Processo Penal, art. 28-A</span></li>
+        </ul>
+      </section>
+      <section class="bloco" data-reveal>
+        <p class="rotulo">Quando o tema costuma surgir</p>
+        <ul class="marcadores">
+          <li>Intimação para depor na Polícia Federal ou no Ministério Público.</li>
+          <li>Representação fiscal para fins penais depois de uma autuação da Receita Federal.</li>
+          <li>Busca e apreensão na sede da empresa ou em empresas do mesmo setor.</li>
+          <li>Comunicação de operação atípica ao COAF envolvendo a empresa ou seus dirigentes.</li>
+        </ul>
+      </section>
+      <section class="bloco" data-reveal>
+        <div class="ponto">
+          <p class="rotulo">Um ponto que muda a estratégia</p>
+          <h3>Responsabilidade penal é pessoal</h3>
+          <p>Ocupar um cargo de direção não basta para que alguém responda por crime da empresa. A investigação precisa ligar a pessoa à conduta: quem tinha poder de decisão, se sabia do que acontecia e se participou de fato.</p>
+          <p>Nos crimes materiais contra a ordem tributária, o crime não se tipifica antes do lançamento definitivo do tributo. Por isso, a discussão na esfera administrativa já faz parte da defesa.</p>
+          <p class="lei">Súmula Vinculante 24 do STF</p>
+        </div>
+      </section>
+      <section class="bloco" data-reveal>
+        <p class="rotulo">A ponte com outras áreas</p>
+        <div class="prose"><p>Um desconto previdenciário não repassado é débito com a Previdência e pode ser, ao mesmo tempo, crime. Uma autuação fiscal é processo administrativo e pode ser o início de uma ação penal. Conduzir uma frente sem olhar a outra é o erro mais comum nesses casos.</p></div>
+      </section>
+    </div>
+    <aside class="lado">
+      <div class="lado-bloco"><p class="rotulo">Quem atua</p><p><strong style="color:var(--ink)">Lucas Rocha Freitas</strong><br>OAB/DF 74.242 · OAB/SP 505.896</p><a href="#equipe">Ver equipe</a></div>
+      <div class="lado-bloco"><p class="rotulo">Leia também</p><a href="#artigos">Diretor responde pessoalmente por crime da empresa?</a><a href="#artigos">Apropriação indébita previdenciária</a></div>
+      <div class="lado-bloco"><p class="rotulo">Áreas relacionadas</p><a href="#contencioso-empresarial">Contencioso Empresarial</a><a href="#orgaos-de-controle">Órgãos de Controle</a></div>
+    </aside>
+  </div>
+</div>
+
+<!-- =================== ÓRGÃOS DE CONTROLE =================== -->
+<div data-page="orgaos-de-controle" hidden>
+  <section class="pg-hero"><img class="bgimg" src="fotos/escritorio-estudo.jpg" alt="" style="object-position:50% 30%"><div class="wrap">
+    <p class="trilha"><a href="#inicio">Início</a> / <a href="#areas">Áreas de atuação</a> / Órgãos de Controle</p>
+    <h1>Órgãos de Controle</h1><hr class="fio">
+    <p class="lead">Processos perante o Tribunal de Contas da União e outros tribunais de contas, e seus reflexos nas esferas de improbidade e penal. A área atende gestores, ex-gestores, ordenadores de despesa e empresas contratadas pelo poder público.</p>
+  </div></section>
+  <div class="wrap duas">
+    <div>
+      <section class="bloco" data-reveal>
+        <p class="rotulo">O que a área abrange</p>
+        <ul class="lista">
+          <li><strong>Tomada de contas especial e processos de contas</strong><span class="lei">Lei 8.443/1992 (Lei Orgânica do TCU)</span></li>
+          <li><strong>Responsabilização do gestor e erro grosseiro</strong><span class="lei">Decreto-Lei 4.657/1942 (LINDB), art. 28</span></li>
+          <li><strong>Improbidade administrativa</strong><span class="lei">Lei 8.429/1992, com as alterações da Lei 14.230/2021</span></li>
+          <li><strong>Crimes em licitações e contratos administrativos</strong><span class="lei">Código Penal, arts. 337-E a 337-P</span></li>
+        </ul>
+      </section>
+      <section class="bloco" data-reveal>
+        <p class="rotulo">Quando o tema costuma surgir</p>
+        <ul class="marcadores">
+          <li>Citação ou audiência em processo do TCU.</li>
+          <li>Instauração de tomada de contas especial pelo órgão em que a pessoa atuou.</li>
+          <li>Encaminhamento das conclusões do tribunal de contas ao Ministério Público.</li>
+          <li>Ação de improbidade proposta a partir de apontamentos do controle externo.</li>
+        </ul>
+      </section>
+      <section class="bloco" data-reveal>
+        <div class="ponto">
+          <p class="rotulo">Um ponto que muda a estratégia</p>
+          <h3>Esferas independentes, consequências conectadas</h3>
+          <p>O processo de contas, a ação de improbidade e a ação penal têm regras próprias de prova, prazo e defesa. Mas o que se afirma em um deles pode ser usado nos outros. Por isso, a defesa no processo de contas precisa considerar desde o início os reflexos nas demais esferas.</p>
+          <p>Desde a Lei 14.230/2021, a condenação por improbidade exige dolo. E a LINDB limita a responsabilização pessoal do agente público aos casos de dolo ou erro grosseiro.</p>
+          <p class="lei">Lei 8.429/1992, art. 1º, §§ 1º a 3º; LINDB, art. 28</p>
+        </div>
+      </section>
+    </div>
+    <aside class="lado">
+      <div class="lado-bloco"><p class="rotulo">Quem atua</p><p><strong style="color:var(--ink)">Gustavo Batista</strong><br>OAB/DF 60.823</p><a href="#equipe">Ver equipe</a></div>
+      <div class="lado-bloco"><p class="rotulo">Leia também</p><a href="#artigos">Decisão do TCU pode virar processo criminal?</a></div>
+      <div class="lado-bloco"><p class="rotulo">Áreas relacionadas</p><a href="#defesa-criminal">Defesa Criminal</a><a href="#penal-economico">Penal Econômico e Empresarial</a></div>
+    </aside>
+  </div>
+</div>
+
+<!-- =================== DEFESA CRIMINAL =================== -->
+<div data-page="defesa-criminal" hidden>
+  <section class="pg-hero"><img class="bgimg" src="fotos/escritorio-biblioteca.jpg" alt="" style="object-position:80% 50%"><div class="wrap">
+    <p class="trilha"><a href="#inicio">Início</a> / <a href="#areas">Áreas de atuação</a> / Defesa Criminal</p>
+    <h1>Defesa Criminal</h1><hr class="fio">
+    <p class="lead">Defesa técnica de pessoas investigadas ou acusadas, do inquérito policial aos tribunais superiores. Toda pessoa investigada tem direito a ela, e isso protege todos.</p>
+  </div></section>
+  <div class="wrap duas">
+    <div>
+      <section class="bloco" data-reveal>
+        <p class="rotulo">O que a área abrange</p>
+        <ul class="lista">
+          <li><strong>Inquérito policial e investigação do Ministério Público</strong><span class="lei">Código de Processo Penal, arts. 4º a 23</span></li>
+          <li><strong>Prisão em flagrante, audiência de custódia e prisão preventiva</strong><span class="lei">Código de Processo Penal, arts. 301 a 316</span></li>
+          <li><strong>Ação penal, do recebimento da denúncia à sentença</strong><span class="lei">Código de Processo Penal, arts. 394 a 405</span></li>
+          <li><strong>Habeas corpus</strong><span class="lei">Constituição Federal, art. 5º, LXVIII</span></li>
+          <li><strong>Recursos aos tribunais</strong><span class="lei">Código de Processo Penal, arts. 574 e seguintes</span></li>
+        </ul>
+      </section>
+      <section class="bloco" data-reveal>
+        <p class="rotulo">Quando o tema costuma surgir</p>
+        <ul class="marcadores">
+          <li>Intimação para depor como investigado ou como testemunha.</li>
+          <li>Prisão de um familiar.</li>
+          <li>Citação em processo criminal.</li>
+          <li>Medida cautelar imposta pelo juiz, como monitoramento ou proibição de contato.</li>
+        </ul>
+      </section>
+      <section class="bloco" data-reveal>
+        <div class="ponto">
+          <p class="rotulo">Um ponto que muda a estratégia</p>
+          <h3>Testemunha ou investigado?</h3>
+          <p>A condição em que a pessoa é ouvida muda os direitos. O investigado tem direito ao silêncio, e exercê-lo não pode ser usado contra ele. A testemunha, em regra, tem o dever de dizer a verdade. Saber em que condição se está antes do depoimento é o primeiro passo.</p>
+          <p class="lei">Constituição Federal, art. 5º, LXIII; Código Penal, art. 342</p>
+        </div>
+      </section>
+      <section class="bloco" data-reveal>
+        <p class="rotulo">Guia</p>
+        <p><a class="link-seta" href="#flagrante">Prisão em flagrante: o que acontece nas primeiras 24 horas <span class="seta">→</span></a></p>
+      </section>
+    </div>
+    <aside class="lado">
+      <div class="lado-bloco"><p class="rotulo">Quem atua</p><p><strong style="color:var(--ink)">Gustavo Batista</strong><br>OAB/DF 60.823</p><a href="#equipe">Ver equipe</a></div>
+      <div class="atend on-dark"><p class="rotulo">Atendimento 24 horas</p><p>O atendimento é feito pelos sócios, inclusive em fins de semana e feriados.</p><p>Telefone e WhatsApp: <span class="pend">(61) a preencher</span></p></div>
+      <div class="lado-bloco"><p class="rotulo">Leia também</p><a href="#artigos">Busca e apreensão: seus direitos durante a diligência</a></div>
+    </aside>
+  </div>
+</div>
+
+<!-- =================== CONTENCIOSO EMPRESARIAL =================== -->
+<div data-page="contencioso-empresarial" hidden>
+  <section class="pg-hero"><img class="bgimg" src="fotos/escritorio-reuniao.jpg" alt=""><div class="wrap">
+    <p class="trilha"><a href="#inicio">Início</a> / <a href="#areas">Áreas de atuação</a> / Contencioso Empresarial</p>
+    <h1>Contencioso Empresarial</h1><hr class="fio">
+    <p class="lead">Ações trabalhistas e cíveis da empresa, conduzidas pela ótica do risco: o impacto no caixa, o reflexo sobre o patrimônio dos sócios e, quando existe, o contorno penal.</p>
+  </div></section>
+  <div class="wrap duas">
+    <div>
+      <section class="bloco" data-reveal>
+        <p class="rotulo">Frente trabalhista</p>
+        <ul class="lista">
+          <li><strong>Gestão do passivo e acordo extrajudicial</strong><span>Homologação de acordo pela Justiça do Trabalho.</span><span class="lei">CLT, arts. 855-B a 855-E</span></li>
+          <li><strong>Terceirização e responsabilidade da contratante</strong><span>Quando a empresa responde pelo trabalhador do prestador de serviço.</span><span class="lei">Lei 6.019/1974; Súmula 331 do TST</span></li>
+          <li><strong>Justa causa</strong><span>O que precisa estar documentado antes da aplicação.</span><span class="lei">CLT, art. 482</span></li>
+          <li><strong>Responsabilidade do sócio, inclusive do que já saiu</strong><span class="lei">CLT, art. 10-A</span></li>
+        </ul>
+      </section>
+      <section class="bloco" data-reveal>
+        <p class="rotulo">Frente cível</p>
+        <ul class="lista">
+          <li><strong>Contratos, inadimplemento e cláusula penal</strong><span>Inclusive quando o juiz pode reduzir a multa contratual.</span><span class="lei">Código Civil, arts. 408 a 416</span></li>
+          <li><strong>Disputas entre sócios</strong><span>Exclusão, retirada, apuração de haveres e conflitos de gestão.</span></li>
+          <li><strong>Desconsideração da personalidade jurídica</strong><span>Quando o patrimônio do sócio responde por dívida da empresa.</span><span class="lei">Código Civil, art. 50; CPC, arts. 133 a 137</span></li>
+          <li><strong>Cobrança e execução</strong><span>Recuperação de valores relevantes e defesa em execuções.</span></li>
+        </ul>
+      </section>
+      <section class="bloco" data-reveal>
+        <div class="ponto">
+          <p class="rotulo">Um ponto que muda a estratégia</p>
+          <h3>Inadimplemento ou estelionato?</h3>
+          <p>Deixar de cumprir um contrato é, em regra, questão cível. O tema passa a ter contorno penal quando há fraude desde o início para obter a vantagem. Identificar essa fronteira cedo define a estratégia nas duas esferas e evita que uma prejudique a outra.</p>
+          <p class="lei">Código Penal, art. 171</p>
+        </div>
+      </section>
+    </div>
+    <aside class="lado">
+      <div class="lado-bloco"><p class="rotulo">Quem atua</p><p><strong style="color:var(--ink)">Lucas Rocha Freitas</strong><br>OAB/DF 74.242 · OAB/SP 505.896</p><p><strong style="color:var(--ink)"><span class="pend">Nome da advogada</span></strong><br>OAB/DF 79.624</p><a href="#equipe">Ver equipe</a></div>
+      <div class="lado-bloco"><p class="rotulo">Leia também</p><a href="#artigos">Passivo trabalhista e patrimônio do sócio</a><a href="#artigos">Inadimplemento contratual ou estelionato?</a></div>
+      <div class="lado-bloco"><p class="rotulo">Áreas relacionadas</p><a href="#penal-economico">Penal Econômico e Empresarial</a></div>
+    </aside>
+  </div>
+</div>
+
+<!-- =================== EQUIPE =================== -->
+<div data-page="equipe" hidden>
+  <section class="pg-hero"><img class="bgimg" src="fotos/escritorio-reuniao.jpg" alt=""><div class="wrap">
+    <p class="trilha"><a href="#inicio">Início</a> / Equipe</p>
+    <h1>Equipe</h1><hr class="fio">
+    <p class="lead">Três advogados, cada um responsável por uma frente, trabalhando juntos quando o caso atravessa mais de uma esfera.</p>
+  </div></section>
+  <div class="wrap" style="padding-block:clamp(56px,7vw,96px)">
+    <div class="equipe">
+      <div class="pessoa" data-reveal>
+        <div class="foto-wrap" data-reveal><img src="fotos/equipe-1.jpg" alt="Gustavo Batista (foto a inserir)" loading="lazy"><span class="cred">Foto a inserir</span></div>
+        <p class="papel">Sócio</p><h3>Gustavo Batista</h3><p class="oab">OAB/DF 60.823</p>
+        <p>Advogado criminalista há mais de oito anos. Atua em defesa criminal e em processos perante o Tribunal de Contas da União.</p>
+        <p class="lei">Formação: <span class="pend">a preencher</span></p>
+        <p><a href="#defesa-criminal">Defesa Criminal</a> · <a href="#orgaos-de-controle">Órgãos de Controle</a></p>
+      </div>
+      <div class="pessoa" data-reveal data-d="1">
+        <div class="foto-wrap" data-reveal><img src="fotos/equipe-2.jpg" alt="Lucas Rocha Freitas (foto a inserir)" loading="lazy"><span class="cred">Foto a inserir</span></div>
+        <p class="papel">Sócio</p><h3>Lucas Rocha Freitas</h3><p class="oab">OAB/DF 74.242 · OAB/SP 505.896</p>
+        <p>Atua em processos penais envolvendo crimes econômicos, como lavagem de dinheiro e fraudes, e em contencioso empresarial nas esferas penal, trabalhista e cível.</p>
+        <p class="lei">Formação: <span class="pend">a preencher</span></p>
+        <p><a href="#penal-economico">Penal Econômico</a> · <a href="#contencioso-empresarial">Contencioso Empresarial</a></p>
+      </div>
+      <div class="pessoa" data-reveal data-d="2">
+        <div class="foto-wrap" data-reveal><img src="fotos/equipe-3.jpg" alt="Advogada (foto a inserir)" loading="lazy"><span class="cred">Foto a inserir</span></div>
+        <p class="papel">Advogada</p><h3><span class="pend">Nome a confirmar</span></h3><p class="oab">OAB/DF 79.624</p>
+        <p>Atua em contencioso cível e trabalhista empresarial.</p>
+        <p class="lei">Formação: <span class="pend">a preencher</span></p>
+        <p><a href="#contencioso-empresarial">Contencioso Empresarial</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =================== O ESCRITÓRIO =================== -->
+<div data-page="escritorio" hidden>
+  <section class="pg-hero"><img class="bgimg" src="fotos/escritorio-biblioteca.jpg" alt=""><div class="wrap">
+    <p class="trilha"><a href="#inicio">Início</a> / O escritório</p>
+    <h1>O escritório</h1><hr class="fio">
+    <p class="lead">Advocacia criminal e empresarial integrada, com sede em Brasília e atuação em todo o território nacional.</p>
+  </div></section>
+  <section class="sec">
+    <div class="wrap split">
+      <div class="split-texto" data-reveal>
+        <p class="rotulo">História</p>
+        <h2>Duas frentes que costumam estar separadas</h2>
+        <div class="prose">
+          <p>O Batista &amp; Rocha Advogados Associados foi fundado em <span class="pend">ano</span> por Gustavo Batista e Lucas Rocha Freitas. <span class="pend">Origem da sociedade, em 2 a 3 frases, sem casos nem resultados</span></p>
+          <p>A sociedade reúne a defesa criminal de pessoas e o contencioso de empresas nas esferas penal, trabalhista e cível. Muitas questões jurídicas de uma empresa ou de um gestor correm em mais de uma esfera ao mesmo tempo, e a decisão tomada em uma delas afeta as outras.</p>
+        </div>
+      </div>
+      <div class="foto-wrap split-foto" data-reveal><img src="fotos/escritorio-estudo.jpg" alt="Mesa de trabalho e estante (foto ilustrativa)" loading="lazy"><span class="cred">Foto ilustrativa</span></div>
+    </div>
+  </section>
+  <section class="sec band">
+    <div class="wrap split inv">
+      <div class="foto-wrap split-foto paisagem" data-reveal><img src="fotos/escritorio-reuniao.jpg" alt="Sala de reunião (foto ilustrativa)" loading="lazy"><span class="cred">Foto ilustrativa</span></div>
+      <div class="split-texto" data-reveal data-d="1">
+        <p class="rotulo">Como funciona o primeiro atendimento</p>
+        <ol class="tempo">
+          <li><p class="quando">Contato</p><h3>Agendamento</h3><p>Por telefone, WhatsApp ou e-mail. Basta informar o assunto de forma geral para que a reunião seja marcada com o advogado da área.</p></li>
+          <li><p class="quando">Reunião</p><h3>Conversa sob sigilo</h3><p>Presencial em Brasília ou por videoconferência. O advogado ouve a situação e analisa os documentos disponíveis.</p></li>
+          <li><p class="quando">Proposta</p><h3>Plano de atuação por escrito</h3><p>Se houver contratação, o escopo do trabalho e as responsabilidades de cada parte ficam definidos em contrato antes de qualquer providência.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap duas" style="padding-block:0">
+      <div class="ponto" data-reveal>
+        <p class="rotulo">Sigilo profissional</p>
+        <h3>O que é dito ao advogado fica com o advogado</h3>
+        <p>O sigilo profissional é dever do advogado e garantia de quem o procura. Ele protege as conversas, os documentos e as comunicações relativas ao exercício da defesa, e vale também para a primeira reunião, haja ou não contratação.</p>
+        <p class="lei">Lei 8.906/1994 (Estatuto da Advocacia), art. 7º, II; Código de Ética e Disciplina da OAB, arts. 35 a 38</p>
+      </div>
+      <aside class="lado">
+        <div class="lado-bloco"><p class="rotulo">Sede</p><p><span class="pend">Endereço a preencher</span><br>Brasília · DF</p></div>
+        <div class="lado-bloco"><p class="rotulo">Registro</p><p>Sociedade de advogados registrada na OAB/DF sob o nº <span class="pend">verificar</span></p></div>
+      </aside>
+    </div>
+  </section>
+</div>
+
+<!-- =================== ARTIGOS =================== -->
+<div data-page="artigos" hidden>
+  <section class="pg-hero"><img class="bgimg" src="fotos/escritorio-estudo.jpg" alt="" style="object-position:50% 30%"><div class="wrap">
+    <p class="trilha"><a href="#inicio">Início</a> / Artigos</p>
+    <h1>Artigos</h1><hr class="fio">
+    <p class="lead">Textos que explicam, em tese, temas de Direito Penal, Trabalhista e Civil que afetam empresas, dirigentes e gestores públicos. Um novo artigo por mês.</p>
+  </div></section>
+  <div class="wrap" style="padding-block:clamp(56px,7vw,96px)">
+    <div class="artigos">
+      <article class="artigo" data-reveal><span class="tag">Pauta prevista</span><p class="rotulo">Penal econômico</p><h3>Diretor responde pessoalmente por crime da empresa?</h3><p>Ocupar um cargo não basta. O que a investigação analisa para ligar uma pessoa a uma conduta.</p><p class="meta">Lucas Rocha Freitas</p></article>
+      <article class="artigo" data-reveal data-d="1"><span class="tag">Pauta prevista</span><p class="rotulo">Contencioso empresarial</p><h3>Passivo trabalhista e patrimônio do sócio</h3><p>Quando a Justiça do Trabalho alcança os bens pessoais de quem está ou esteve no quadro societário.</p><p class="meta">Lucas Rocha Freitas</p></article>
+      <article class="artigo" data-reveal data-d="2"><span class="tag">Pauta prevista</span><p class="rotulo">Contencioso empresarial</p><h3>Inadimplemento contratual ou estelionato?</h3><p>Onde passa a fronteira entre o cível e o criminal, e por que ela muda a estratégia.</p><p class="meta">Lucas Rocha Freitas</p></article>
+      <article class="artigo" data-reveal><span class="tag">Pauta prevista</span><p class="rotulo">Penal econômico</p><h3>Apropriação indébita previdenciária</h3><p>Quando o desconto do INSS feito no salário e não repassado deixa de ser só dívida.</p><p class="meta">Lucas Rocha Freitas</p></article>
+      <article class="artigo" data-reveal data-d="1"><span class="tag">Pauta prevista</span><p class="rotulo">Órgãos de controle</p><h3>Decisão do TCU pode virar processo criminal?</h3><p>Como as esferas de contas, improbidade e penal se comunicam.</p><p class="meta">Gustavo Batista</p></article>
+      <article class="artigo" data-reveal data-d="2"><span class="tag">Pauta prevista</span><p class="rotulo">Defesa criminal</p><h3>Busca e apreensão: seus direitos durante a diligência</h3><p>O que a equipe pode e não pode fazer quando a diligência acontece na empresa.</p><p class="meta">Gustavo Batista</p></article>
+    </div>
+  </div>
+</div>
+
+<!-- =================== FLAGRANTE =================== -->
+<div data-page="flagrante" hidden>
+  <section class="pg-hero"><img class="bgimg" src="fotos/escritorio-biblioteca.jpg" alt=""><div class="wrap">
+    <p class="trilha"><a href="#inicio">Início</a> / Guias</p>
+    <h1>Prisão em flagrante: o que acontece nas primeiras 24 horas</h1><hr class="fio">
+    <p class="lead">A lei fixa prazos curtos para cada etapa depois de uma prisão em flagrante. Saber a ordem dos acontecimentos ajuda a família a entender o que está acontecendo e o que pode fazer.</p>
+  </div></section>
+  <div class="wrap duas">
+    <div>
+      <section class="bloco" data-reveal>
+        <p class="rotulo">A sequência prevista em lei</p>
+        <ol class="tempo">
+          <li><p class="quando">Imediatamente</p><h3>Comunicação da prisão</h3><p>A prisão e o local onde a pessoa se encontra devem ser comunicados ao juiz, ao Ministério Público e à família ou a quem a pessoa presa indicar.</p><p class="lei">Constituição Federal, art. 5º, LXII; CPP, art. 306</p></li>
+          <li><p class="quando">Na delegacia</p><h3>Auto de prisão em flagrante</h3><p>A autoridade policial ouve quem conduziu a pessoa, as testemunhas e, por último, a pessoa presa, que pode permanecer em silêncio.</p><p class="lei">CPP, art. 304; Constituição Federal, art. 5º, LXIII</p></li>
+          <li><p class="quando">Em até 24 horas</p><h3>Envio ao juiz e nota de culpa</h3><p>O auto é encaminhado ao juiz. Se a pessoa não informar o nome de um advogado, uma cópia vai à Defensoria Pública. A pessoa presa recebe a nota de culpa, com o motivo da prisão e os nomes de quem a conduziu e das testemunhas.</p><p class="lei">CPP, art. 306, §§ 1º e 2º</p></li>
+          <li><p class="quando">Em até 24 horas do recebimento do auto</p><h3>Audiência de custódia</h3><p>O juiz ouve a pessoa presa, com a presença do advogado ou defensor e do Ministério Público. Ali não se discute se a pessoa é culpada. O juiz decide se a prisão foi legal e se a pessoa responde ao processo presa ou em liberdade: pode relaxar a prisão ilegal, converter em prisão preventiva ou conceder liberdade provisória, com ou sem fiança e outras medidas cautelares.</p><p class="lei">CPP, art. 310, I a III</p></li>
+        </ol>
+      </section>
+      <section class="bloco" data-reveal>
+        <p class="rotulo">Direitos da pessoa presa</p>
+        <ul class="lista">
+          <li><strong>Permanecer em silêncio</strong><span>Exercer esse direito não pode ser interpretado contra ela.</span><span class="lei">Constituição Federal, art. 5º, LXIII</span></li>
+          <li><strong>Assistência da família e de advogado</strong><span class="lei">Constituição Federal, art. 5º, LXIII</span></li>
+          <li><strong>Saber quem foi responsável pela prisão e pelo interrogatório</strong><span class="lei">Constituição Federal, art. 5º, LXIV</span></li>
+          <li><strong>Respeito à integridade física e moral</strong><span class="lei">Constituição Federal, art. 5º, XLIX</span></li>
+        </ul>
+      </section>
+      <section class="bloco" data-reveal>
+        <p class="rotulo">O que a família pode fazer</p>
+        <ul class="marcadores">
+          <li>Confirmar em qual delegacia a pessoa está.</li>
+          <li>Reunir documentos pessoais dela: identidade, comprovante de residência e, se houver, comprovante de trabalho.</li>
+          <li>Informar à delegacia o nome do advogado que acompanhará o caso, se houver.</li>
+        </ul>
+        <p class="lei">Em crimes com pena máxima de até 4 anos, a própria autoridade policial pode conceder fiança (CPP, art. 322).</p>
+      </section>
+    </div>
+    <aside class="lado">
+      <div class="atend on-dark"><p class="rotulo">Atendimento 24 horas</p><h3>O escritório atende a qualquer hora</h3><p>O atendimento é feito pelos sócios, inclusive em fins de semana e feriados.</p><p>Telefone e WhatsApp: <span class="pend">(61) a preencher</span></p></div>
+      <div class="lado-bloco"><p class="rotulo">Área relacionada</p><a href="#defesa-criminal">Defesa Criminal</a></div>
+      <div class="lado-bloco"><p class="rotulo">Sobre este guia</p><p>Conteúdo informativo, em tese. Cada situação tem particularidades que só a análise do caso concreto permite avaliar.</p></div>
+    </aside>
+  </div>
+</div>
+
+<!-- =================== CONTATO =================== -->
+<div data-page="contato" hidden>
+  <section class="pg-hero"><img class="bgimg" src="fotos/escritorio-reuniao.jpg" alt=""><div class="wrap">
+    <p class="trilha"><a href="#inicio">Início</a> / Contato</p>
+    <h1>Contato</h1><hr class="fio">
+    <p class="lead">Para agendar uma reunião em Brasília ou por videoconferência.</p>
+  </div></section>
+  <div class="wrap" style="padding-block:clamp(56px,7vw,96px);display:grid;gap:56px">
+    <div class="dados" data-reveal>
+      <div class="dado"><p class="rotulo">Telefone e WhatsApp</p><p class="v"><span class="pend">(61) a preencher</span></p></div>
+      <div class="dado"><p class="rotulo">E-mail</p><p class="v" id="email">geral@batistaerochaadvogadosassociados.com</p><button class="copiar" id="copiar-email" type="button">Copiar e-mail</button></div>
+      <div class="dado"><p class="rotulo">Endereço</p><p class="v"><span class="pend">a preencher</span></p><p>Brasília · DF</p></div>
+      <div class="dado"><p class="rotulo">Horário</p><p class="v">Atendimento 24 horas</p><p>Reuniões presenciais: <span class="pend">dias e horário</span></p></div>
+    </div>
+    <div class="ponto" style="max-width:760px" data-reveal>
+      <p class="rotulo">Antes de enviar a primeira mensagem</p>
+      <h3>Não envie detalhes do seu caso por mensagem</h3>
+      <p>Informe apenas o assunto de forma geral e o melhor horário para contato. Os detalhes e os documentos são tratados na reunião, sob sigilo profissional.</p>
+    </div>
+    <p class="lei">Os dados enviados ao escritório são usados apenas para responder ao contato. Veja a <a href="#privacidade">política de privacidade</a>.</p>
+  </div>
+</div>
+
+<!-- =================== PRIVACIDADE =================== -->
+<div data-page="privacidade" hidden>
+  <section class="pg-hero"><img class="bgimg" src="fotos/escritorio-estudo.jpg" alt=""><div class="wrap">
+    <p class="trilha"><a href="#inicio">Início</a> / Política de privacidade</p>
+    <h1>Política de privacidade</h1><hr class="fio">
+    <p class="lead">Como o escritório trata os dados pessoais recebidos por este site, nos termos da Lei Geral de Proteção de Dados (Lei 13.709/2018).</p>
+  </div></section>
+  <div class="wrap"><div class="prose" style="padding-block:clamp(56px,7vw,96px)">
+    <h3>Quem trata os dados</h3>
+    <p>Batista &amp; Rocha Advogados Associados, CNPJ <span class="pend">a preencher</span>, com sede em <span class="pend">endereço</span>, Brasília-DF.</p>
+    <h3>Quais dados</h3>
+    <p>Somente os dados que a pessoa envia voluntariamente ao entrar em contato: nome, telefone, e-mail e o assunto da mensagem.</p>
+    <h3>Para quê</h3>
+    <p>Responder ao contato e agendar reuniões. Os dados não são vendidos nem compartilhados com terceiros para fins comerciais.</p>
+    <h3>Cookies</h3>
+    <p><span class="pend">Definir conforme a hospedagem e as ferramentas de medição</span></p>
+    <h3>Direitos do titular</h3>
+    <p>A pessoa pode pedir confirmação, acesso, correção ou eliminação dos seus dados a qualquer momento, pelo e-mail geral@batistaerochaadvogadosassociados.com.</p>
+    <p class="lei">Lei 13.709/2018, art. 18</p>
+  </div></div>
+</div>
+
+</main>
+
+<footer class="rodape on-dark">
+  <div class="wrap">
+    <div><svg class="logo" viewBox="17 17 931 719" role="img" aria-label="Batista &amp; Rocha Advogados Associados"><use href="#logo"/></svg></div>
+    <div><span class="rotulo">Áreas de atuação</span><ul>
+      <li><a href="#penal-economico">Penal Econômico e Empresarial</a></li>
+      <li><a href="#contencioso-empresarial">Contencioso Empresarial</a></li>
+      <li><a href="#orgaos-de-controle">Órgãos de Controle</a></li>
+      <li><a href="#defesa-criminal">Defesa Criminal</a></li></ul></div>
+    <div><span class="rotulo">Escritório</span><ul>
+      <li><a href="#escritorio">O escritório</a></li><li><a href="#equipe">Equipe</a></li><li><a href="#artigos">Artigos</a></li>
+      <li><a href="#flagrante">Prisão em flagrante: guia</a></li><li><a href="#contato">Contato</a></li></ul></div>
+    <div><span class="rotulo">Contato</span>
+      <p><span class="pend">Endereço</span><br>Brasília · DF<br><span class="pend">(61) telefone</span><br>geral@batistaerochaadvogadosassociados.com<br>Atendimento 24 horas</p></div>
+    <div class="legal">
+      <span>Gustavo Batista · OAB/DF 60.823</span>
+      <span>Lucas Rocha Freitas · OAB/DF 74.242 · OAB/SP 505.896</span>
+      <span><span class="pend">Nome</span> · OAB/DF 79.624</span>
+      <span>Sociedade registrada na OAB/DF nº <span class="pend">verificar</span></span>
+      <a href="#privacidade">Política de privacidade</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wpp" href="#contato" aria-label="WhatsApp do escritório">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z" stroke-linejoin="round"/></svg>
+  WhatsApp
+</a>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var reduz=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if('IntersectionObserver' in window && !reduz) root.classList.add('js');
+
+  /* revelar ao rolar */
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+  },{rootMargin:'0px 0px -8% 0px',threshold:.08}):null;
+  function observar(scope){[].forEach.call((scope||document).querySelectorAll('[data-reveal]:not(.in)'),function(el){io?io.observe(el):el.classList.add('in')})}
+
+  /* rotas */
+  var pages=[].slice.call(document.querySelectorAll('[data-page]'));
+  var ids=pages.map(function(p){return p.dataset.page});
+  var nav=document.getElementById('nav'), btn=document.getElementById('menu-btn');
+  var areaIds=['areas','penal-economico','orgaos-de-controle','defesa-criminal','contencioso-empresarial'];
+  var atual='inicio';
+  function show(id,scroll){
+    if(ids.indexOf(id)<0) id='inicio'; atual=id;
+    pages.forEach(function(p){p.hidden=p.dataset.page!==id});
+    [].forEach.call(nav.querySelectorAll('a'),function(a){
+      var t=a.getAttribute('href').slice(1);
+      var on=t===id||(a.hasAttribute('data-areas')&&areaIds.indexOf(id)>=0);
+      if(on)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
+    });
+    nav.classList.remove('open');btn.setAttribute('aria-expanded','false');
+    if(scroll!==false)window.scrollTo({top:0,behavior:'instant'});
+    observar(document.querySelector('[data-page="'+id+'"]'));
+    tick();
+  }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="#"]');if(!a)return;
+    var id=a.getAttribute('href').slice(1);if(!id)return;
+    e.preventDefault();show(id);
+    try{history.replaceState(null,'','#'+id)}catch(err){}
+  });
+  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false')});
+  window.addEventListener('hashchange',function(){show(location.hash.slice(1))});
+
+  /* rolagem: cabeçalho, barra de progresso, parallax da abertura */
+  var topo=document.getElementById('topo'), prog=document.getElementById('progresso'), heroImg=document.getElementById('hero-img'), pend=false;
+  function tick(){
+    var y=window.scrollY||0, h=document.documentElement.scrollHeight-innerHeight;
+    topo.classList.toggle('rolou',y>24);
+    prog.style.transform='scaleX('+(h>0?Math.min(y/h,1):0)+')';
+    if(heroImg&&atual==='inicio'&&!reduz) heroImg.style.transform='translate3d(0,'+(y*.28)+'px,0)';
+    pend=false;
+  }
+  window.addEventListener('scroll',function(){if(!pend){pend=true;requestAnimationFrame(tick)}},{passive:true});
+  window.addEventListener('resize',tick);
+
+  /* abas genéricas com teclado */
+  function abas(botoes,ativar){
+    botoes.forEach(function(b,i){
+      b.addEventListener('click',function(){ativar(i)});
+      b.addEventListener('mouseenter',function(){if(matchMedia('(hover:hover)').matches&&b.classList.contains('ex-btn'))ativar(i)});
+      b.addEventListener('keydown',function(e){
+        var k=e.key,n=null;
+        if(k==='ArrowDown'||k==='ArrowRight')n=(i+1)%botoes.length;
+        if(k==='ArrowUp'||k==='ArrowLeft')n=(i-1+botoes.length)%botoes.length;
+        if(n!==null){e.preventDefault();ativar(n);botoes[n].focus()}
+      });
+    });
+  }
+  /* explorador de áreas */
+  var exB=[].slice.call(document.querySelectorAll('.ex-btn'));
+  abas(exB,function(i){
+    exB.forEach(function(b,j){var on=i===j;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).hidden=!on});
+  });
+  /* esferas */
+  var SIT=[
+    {e:['trab','adm','pen'],t:'Além da cobrança do valor, a falta de repasse da contribuição descontada do empregado pode configurar apropriação indébita previdenciária.',l:'Código Penal, art. 168-A'},
+    {e:['civ','pen'],t:'Em regra, é questão cível de cobrança e indenização. Ganha contorno penal quando há fraude desde o início para obter a vantagem.',l:'Código Civil, arts. 389 e 408; Código Penal, art. 171'},
+    {e:['trab','civ'],t:'Os bens pessoais dos sócios podem ser alcançados pela desconsideração da personalidade jurídica, inclusive os de quem já deixou a sociedade, nos limites da lei.',l:'Código Civil, art. 50; CPC, arts. 133 a 137; CLT, art. 10-A'},
+    {e:['adm','civ','pen'],t:'O processo de contas corre no tribunal de contas, mas suas conclusões podem ser encaminhadas ao Ministério Público e dar origem a ação de improbidade e a ação penal.',l:'Lei 8.443/1992; Lei 8.429/1992; Código Penal, arts. 337-E a 337-P'}
+  ];
+  var sitB=[].slice.call(document.querySelectorAll('.sit')), esf=[].slice.call(document.querySelectorAll('.esf'));
+  var txt=document.getElementById('esf-txt'), lei=document.getElementById('esf-lei');
+  function sit(i){
+    sitB.forEach(function(b,j){var on=i===j;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1});
+    esf.forEach(function(el){el.classList.toggle('ativa',SIT[i].e.indexOf(el.dataset.esf)>=0)});
+    txt.textContent=SIT[i].t; lei.textContent=SIT[i].l;
+  }
+  abas(sitB,sit); sit(0);
+
+  /* copiar e-mail */
+  var cp=document.getElementById('copiar-email');
+  cp.addEventListener('click',function(){
+    var el=document.getElementById('email'),t=el.textContent;
+    function ok(){cp.textContent='E-mail copiado';setTimeout(function(){cp.textContent='Copiar e-mail'},2000)}
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);cp.textContent='Selecionado: use Ctrl+C'}
+    try{navigator.clipboard.writeText(t).then(ok,sel)}catch(err){sel()}
+  });
+
+  show(location.hash.slice(1)||'inicio',false);
+  var hero=document.getElementById('hero'); requestAnimationFrame(function(){requestAnimationFrame(function(){hero.classList.add('pronto')})});
+})();
+</script>
+</body>
+</html>
